@@ -4,12 +4,12 @@ import { useState } from "react";
 import { List, X } from "phosphor-react";
 import { cn } from "@/lib/utils";
 import { useProposalModal } from "@/lib/proposal-modal-context";
+import { WillowLogo } from "./willow-logo";
 
 const navLinks = [
-  { name: "Features", href: "#features" },
-  { name: "How It Works", href: "#how-it-works" },
-  { name: "Testimonials", href: "#testimonials" },
-  { name: "FAQ", href: "#faq" },
+  { name: "The Challenge", href: "/the-challenge" },
+  { name: "About Us", href: "/about" },
+  { name: "Curriculum", href: "/curriculum" },
 ];
 
 export function Header() {
@@ -22,7 +22,7 @@ export function Header() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <div className="w-32 h-8 bg-gray-300 rounded" />
+            <WillowLogo className="h-8 w-auto" />
           </div>
 
           {/* Desktop Navigation */}
