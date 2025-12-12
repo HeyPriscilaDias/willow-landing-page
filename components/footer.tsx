@@ -50,7 +50,7 @@ export function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-12">
           {/* Logo & Description */}
           <div className="col-span-2 md:col-span-1">
-            <div className="w-32 h-8 bg-gray-300 rounded mb-4" />
+            <div className="w-32 h-8 bg-gray-300 rounded-xl mb-4" />
             <p className="text-gray-400 text-sm">
               Transforming career readiness through innovative curriculum and
               technology.

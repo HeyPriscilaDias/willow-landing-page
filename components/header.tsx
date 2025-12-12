@@ -38,7 +38,7 @@ export function Header() {
             ))}
             <button
               onClick={openModal}
-              className="bg-gray-900 text-white px-6 py-2 rounded-lg hover:bg-gray-800 transition-colors font-semibold"
+              className="bg-gray-900 text-white px-6 py-2 rounded-xl hover:bg-gray-800 transition-colors font-semibold"
             >
               Request a Proposal
             </button>

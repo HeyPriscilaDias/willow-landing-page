@@ -96,10 +96,10 @@ export function ProposalForm({ isOpen, onClose }: ProposalFormProps) {
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         exit={{ opacity: 0, scale: 0.95 }}
-        className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto"
+        className="bg-white rounded-xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto"
       >
         {/* Header */}
-        <div className="sticky top-0 bg-white border-b border-gray-200 px-6 py-4 flex justify-between items-center rounded-t-2xl">
+        <div className="sticky top-0 bg-white border-b border-gray-200 px-6 py-4 flex justify-between items-center rounded-t-xl">
           <h2 className="font-heading text-2xl font-semibold text-gray-900">
             Request a Proposal
           </h2>
@@ -149,7 +149,7 @@ export function ProposalForm({ isOpen, onClose }: ProposalFormProps) {
                 type="text"
                 id="firstName"
                 className={cn(
-                  "w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent transition-colors",
+                  "w-full px-4 py-2 border rounded-xl focus:ring-2 focus:ring-gray-900 focus:border-transparent transition-colors",
                   errors.firstName ? "border-gray-400" : "border-gray-300"
                 )}
               />
@@ -172,7 +172,7 @@ export function ProposalForm({ isOpen, onClose }: ProposalFormProps) {
                 type="text"
                 id="lastName"
                 className={cn(
-                  "w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent transition-colors",
+                  "w-full px-4 py-2 border rounded-xl focus:ring-2 focus:ring-gray-900 focus:border-transparent transition-colors",
                   errors.lastName ? "border-gray-400" : "border-gray-300"
                 )}
               />
@@ -198,7 +198,7 @@ export function ProposalForm({ isOpen, onClose }: ProposalFormProps) {
                 type="email"
                 id="email"
                 className={cn(
-                  "w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent transition-colors",
+                  "w-full px-4 py-2 border rounded-xl focus:ring-2 focus:ring-gray-900 focus:border-transparent transition-colors",
                   errors.email ? "border-gray-400" : "border-gray-300"
                 )}
               />
@@ -221,7 +221,7 @@ export function ProposalForm({ isOpen, onClose }: ProposalFormProps) {
                 type="tel"
                 id="phone"
                 className={cn(
-                  "w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent transition-colors",
+                  "w-full px-4 py-2 border rounded-xl focus:ring-2 focus:ring-gray-900 focus:border-transparent transition-colors",
                   errors.phone ? "border-gray-400" : "border-gray-300"
                 )}
               />
@@ -294,7 +294,7 @@ export function ProposalForm({ isOpen, onClose }: ProposalFormProps) {
                 {...register("schoolSize")}
                 id="schoolSize"
                 className={cn(
-                  "w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent transition-colors",
+                  "w-full px-4 py-2 border rounded-xl focus:ring-2 focus:ring-gray-900 focus:border-transparent transition-colors",
                   errors.schoolSize ? "border-gray-400" : "border-gray-300"
                 )}
               >
@@ -323,7 +323,7 @@ export function ProposalForm({ isOpen, onClose }: ProposalFormProps) {
                 type="text"
                 id="state"
                 className={cn(
-                  "w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent transition-colors",
+                  "w-full px-4 py-2 border rounded-xl focus:ring-2 focus:ring-gray-900 focus:border-transparent transition-colors",
                   errors.state ? "border-gray-400" : "border-gray-300"
                 )}
               />
@@ -348,7 +348,7 @@ export function ProposalForm({ isOpen, onClose }: ProposalFormProps) {
               type="text"
               id="interests"
               placeholder="e.g., Career curriculum, Professional development, Platform access"
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent transition-colors"
+              className="w-full px-4 py-2 border border-gray-300 rounded-xl focus:ring-2 focus:ring-gray-900 focus:border-transparent transition-colors"
             />
           </div>
 
@@ -365,7 +365,7 @@ export function ProposalForm({ isOpen, onClose }: ProposalFormProps) {
               id="message"
               rows={4}
               placeholder="Tell us more about your needs..."
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent transition-colors resize-none"
+              className="w-full px-4 py-2 border border-gray-300 rounded-xl focus:ring-2 focus:ring-gray-900 focus:border-transparent transition-colors resize-none"
             />
           </div>
 
@@ -374,14 +374,14 @@ export function ProposalForm({ isOpen, onClose }: ProposalFormProps) {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="flex-1 bg-gray-900 text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition-colors font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
+              className="flex-1 bg-gray-900 text-white px-6 py-3 rounded-xl hover:bg-gray-800 transition-colors font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {isSubmitting ? "Submitting..." : "Submit Request"}
             </button>
             <button
               type="button"
               onClick={onClose}
-              className="px-6 py-3 border-2 border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors font-semibold"
+              className="px-6 py-3 border-2 border-gray-300 text-gray-700 rounded-xl hover:bg-gray-50 transition-colors font-semibold"
             >
               Cancel
             </button>

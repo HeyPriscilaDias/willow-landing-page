@@ -42,7 +42,7 @@ export function LogoCarousel() {
               {logo.type === "circle" ? (
                 <div className="w-16 h-16 bg-gray-300 rounded-full" />
               ) : (
-                <div className="w-16 h-16 bg-gray-300 rounded-lg" />
+                <div className="w-16 h-16 bg-gray-300 rounded-xl" />
               )}
             </div>
           ))}

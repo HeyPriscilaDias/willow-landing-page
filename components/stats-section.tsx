@@ -63,7 +63,7 @@ function StatCard({ stat, index }: { stat: Stat; index: number }) {
       initial={{ opacity: 0, y: 20 }}
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200"
+      className="bg-white rounded-xl p-8 shadow-lg border border-gray-200"
     >
       <div className="text-center">
         <div className="font-heading text-5xl font-semibold text-gray-900 mb-2">

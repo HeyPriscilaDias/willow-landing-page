@@ -28,11 +28,11 @@ export function Hero() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <button
                 onClick={openModal}
-                className="bg-gray-900 text-white px-8 py-4 rounded-lg hover:bg-gray-800 transition-colors font-semibold text-lg shadow-lg"
+                className="bg-gray-900 text-white px-8 py-4 rounded-xl hover:bg-gray-800 transition-colors font-semibold text-lg shadow-lg"
               >
                 Request a Proposal
               </button>
-              <button className="bg-white text-gray-900 px-8 py-4 rounded-lg hover:bg-gray-50 transition-colors font-semibold text-lg border-2 border-gray-900">
+              <button className="bg-white text-gray-900 px-8 py-4 rounded-xl hover:bg-gray-50 transition-colors font-semibold text-lg border-2 border-gray-900">
                 Learn More
               </button>
             </div>

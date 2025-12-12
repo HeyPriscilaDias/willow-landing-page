@@ -75,7 +75,7 @@ function StepCard({ step, index }: { step: Step; index: number }) {
       transition={{ duration: 0.5, delay: index * 0.2 }}
       className="relative"
     >
-      <div className="bg-white rounded-2xl p-8 h-full shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
+      <div className="bg-white rounded-xl p-8 h-full shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
         {/* Animated Icon */}
         <motion.div
           initial={{ scale: 0 }}

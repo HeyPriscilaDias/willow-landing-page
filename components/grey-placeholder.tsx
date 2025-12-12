@@ -21,7 +21,7 @@ export function GreyPlaceholder({
   return (
     <div
       className={cn(
-        "bg-gray-200 rounded-lg flex items-center justify-center",
+        "bg-gray-200 rounded-xl flex items-center justify-center",
         aspectRatioClasses[aspectRatio],
         className
       )}
