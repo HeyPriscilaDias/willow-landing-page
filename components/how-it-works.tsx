@@ -92,18 +92,10 @@ function StepCard({ step, index }: { step: Step; index: number }) {
         </div>
 
         {/* Title */}
-        <h3 className="font-heading text-2xl font-semibold text-gray-900 mb-4">
+        <h3 className="font-heading text-2xl font-semibold text-gray-900">
           {step.title}
         </h3>
-
-        {/* Description */}
-        <p className="text-gray-600 leading-relaxed">{step.description}</p>
       </div>
-
-      {/* Connector Line (hidden on last item and mobile) */}
-      {index < steps.length - 1 && (
-        <div className="hidden md:block absolute top-1/4 -right-6 w-12 h-0.5 bg-gray-300" />
-      )}
     </motion.div>
   );
 }
