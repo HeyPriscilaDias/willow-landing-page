@@ -11,29 +11,29 @@ interface Feature {
 
 const features: Feature[] = [
   {
-    title: "Comprehensive Career Curriculum",
+    title: "Curriculum-led",
     description:
-      "Our research-backed curriculum introduces students to diverse career pathways, helping them discover opportunities aligned with their interests and strengths.",
+      "Our comprehensive curriculum guides students through a structured journey of self-discovery and career exploration, ensuring every learner has the foundation to make informed decisions about their future.",
   },
   {
-    title: "Interactive Platform",
+    title: "Personality Quiz",
     description:
-      "Engage students with our intuitive platform featuring interactive assessments, career exploration tools, and personalized learning pathways.",
+      "Students complete an engaging personality assessment that reveals their unique strengths, work preferences, and natural talents, providing valuable insights to guide their career exploration journey.",
   },
   {
-    title: "Data-Driven Insights",
+    title: "Alma AI",
     description:
-      "Track student engagement and progress with powerful analytics. Make informed decisions to improve outcomes and demonstrate program impact.",
+      "Meet Alma, our AI-powered assistant that provides personalized guidance and answers students' questions about career pathways, programs, and opportunities in real-time.",
   },
   {
-    title: "Professional Development",
+    title: "Career Exploration",
     description:
-      "Equip educators with training and resources to effectively deliver career exploration content and support student growth.",
+      "Students explore hundreds of career options through interactive tools that showcase job responsibilities, salary ranges, required education, and real-world career trajectories.",
   },
   {
-    title: "Community Connections",
+    title: "College and Professional Program Exploration",
     description:
-      "Connect students with local employers, mentors, and industry professionals to provide real-world context and networking opportunities.",
+      "Discover best-fit educational pathways with our comprehensive database of colleges, universities, and professional programs, complete with ROI data, completion rates, and program outcomes.",
   },
 ];
 
@@ -47,8 +47,8 @@ export function FeaturesSection() {
             Everything You Need to Transform Career Readiness
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Our comprehensive platform provides all the tools and resources to
-            deliver impactful career exploration experiences.
+            By helping students make quality next steps, we can transform the
+            economic and social mobility of communities.
           </p>
         </div>
 
