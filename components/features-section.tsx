@@ -13,7 +13,7 @@ const features: Feature[] = [
   {
     title: "Curriculum-led",
     description:
-      "Our comprehensive curriculum guides students through a structured journey of self-discovery and career exploration, ensuring every learner has the foundation to make informed decisions about their future.",
+      "Our comprehensive curriculum guides students through a structured journey from self-discovery and career exploration to postsecondary program research and application support, ensuring every learner has the foundation to make informed decisions about their future.",
   },
   {
     title: "Personality Quiz",
