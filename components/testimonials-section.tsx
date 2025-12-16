@@ -80,16 +80,14 @@ export function TestimonialsSection() {
     // Kill any existing ScrollTriggers and remove pin-spacers
     ScrollTrigger.getAll().forEach(st => st.kill());
     document.querySelectorAll('.pin-spacer').forEach(el => el.remove());
-    console.log("All ScrollTriggers killed and pin-spacers removed");
 
     // Create GSAP timeline with ScrollTrigger
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: section,
         start: "top top",
-        end: "bottom top",
+        end: "+=150%",
         pin: true,
-        pinSpacing: false,
         scrub: 1,
         anticipatePin: 1,
         invalidateOnRefresh: true,
@@ -135,30 +133,6 @@ export function TestimonialsSection() {
       )
       // Add a tiny hold at the end to ensure timeline matches scroll duration
       .to({}, { duration: 0.1 }, "+=0");
-
-    console.log("Timeline built. Duration:", tl.duration(), "seconds");
-
-    // Add callback to unpin when timeline completes
-    tl.eventCallback("onComplete", () => {
-      console.log("Timeline animations complete!");
-    });
-
-    // Force ScrollTrigger to refresh and manually fix pin-spacer height
-    setTimeout(() => {
-      ScrollTrigger.refresh();
-      const spacer = document.querySelector('.pin-spacer') as HTMLElement;
-      if (spacer) {
-        const originalHeight = window.getComputedStyle(spacer).height;
-        console.log("Pin-spacer found! Original height:", originalHeight);
-        // Force pin-spacer to be 100vh (same as section)
-        spacer.style.height = '100vh';
-        spacer.style.maxHeight = '100vh';
-        console.log("Pin-spacer height forced to 100vh");
-      } else {
-        console.log("No pin-spacer found (pinSpacing: false is working)");
-      }
-      console.log("ScrollTrigger refreshed");
-    }, 100);
 
     // Cleanup
     return () => {
