@@ -1,7 +1,13 @@
 "use client";
 
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+// Register GSAP plugin
+if (typeof window !== "undefined") {
+  gsap.registerPlugin(ScrollTrigger);
+}
 
 interface Testimonial {
   quote: string;
@@ -56,70 +62,144 @@ const testimonials: Testimonial[] = [
 ];
 
 export function TestimonialsSection() {
+  const sectionRef = useRef<HTMLElement>(null);
+  const cardsContainerRef = useRef<HTMLDivElement>(null);
+  const titleLeftRef = useRef<HTMLHeadingElement>(null);
+  const titleRightRef = useRef<HTMLHeadingElement>(null);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+
+    const section = sectionRef.current;
+    const cardsContainer = cardsContainerRef.current;
+    const titleLeft = titleLeftRef.current;
+    const titleRight = titleRightRef.current;
+
+    if (!section || !cardsContainer || !titleLeft || !titleRight) return;
+
+    // Create GSAP timeline with ScrollTrigger
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: section,
+        start: "top top",
+        end: "+=400%",
+        pin: true,
+        scrub: 1,
+        anticipatePin: 1,
+      },
+    });
+
+    // Animate cards scrolling up through the title
+    tl.to(cardsContainer, {
+      y: "-250%",
+      ease: "none",
+      duration: 3,
+    })
+      // Then animate title split and fade
+      .to(
+        titleLeft,
+        {
+          x: "-30%",
+          opacity: 0,
+          ease: "power2.inOut",
+          duration: 1,
+        },
+        ">"
+      )
+      .to(
+        titleRight,
+        {
+          x: "30%",
+          opacity: 0,
+          ease: "power2.inOut",
+          duration: 1,
+        },
+        "<"
+      );
+
+    // Cleanup
+    return () => {
+      if (tl.scrollTrigger) {
+        tl.scrollTrigger.kill();
+      }
+      tl.kill();
+    };
+  }, []);
+
   return (
-    <section id="testimonials" className="py-16 sm:py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-semibold text-gray-900 mb-4">
-            What Our Partners Think
+    <section
+      id="testimonials"
+      ref={sectionRef}
+      className="testimonial-scroll-section relative overflow-hidden"
+      style={{
+        height: "100vh",
+        backgroundColor: "#041D1A",
+        backgroundImage: `radial-gradient(circle, rgba(255, 255, 255, 0.08) 1px, transparent 1px)`,
+        backgroundSize: "16px 16px",
+      }}
+    >
+      <div className="pin-wrapper-testimonials h-full flex justify-center items-center relative">
+        {/* Title - Split Left and Right */}
+        <div className="absolute inset-0 flex items-center justify-between px-8 pointer-events-none" style={{ zIndex: 10 }}>
+          <h2
+            ref={titleLeftRef}
+            className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white whitespace-nowrap"
+          >
+            What partners
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Hear from educators and administrators who are transforming career
-            readiness with Willow Education.
-          </p>
+          <h2
+            ref={titleRightRef}
+            className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white whitespace-nowrap"
+          >
+            are saying
+          </h2>
         </div>
 
-        {/* Testimonials Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Cards Container */}
+        <div
+          ref={cardsContainerRef}
+          className="cards-container-testimonials absolute w-full max-w-[600px]"
+          style={{
+            top: "100%",
+            zIndex: 5,
+          }}
+        >
           {testimonials.map((testimonial, index) => (
-            <TestimonialCard
+            <div
               key={index}
-              testimonial={testimonial}
-              index={index}
-            />
+              className="testimonial-card bg-white/10 backdrop-blur-md rounded-[12px] p-8 mb-10 shadow-2xl"
+            >
+              {/* Quote */}
+              <p className="text-gray-100 mb-6 leading-relaxed text-base">
+                &ldquo;{testimonial.quote}&rdquo;
+              </p>
+
+              {/* Author Info */}
+              <div className="flex items-center gap-3">
+                {/* Author Image Placeholder */}
+                <div className="w-12 h-12 bg-gray-600 rounded-full flex-shrink-0" />
+
+                {/* Author Details */}
+                <div>
+                  <div className="font-semibold text-white text-base">
+                    {testimonial.author}
+                  </div>
+                  {testimonial.role && (
+                    <div className="text-sm text-gray-300">
+                      {testimonial.role}
+                    </div>
+                  )}
+                  {testimonial.school && (
+                    <div className="text-sm text-gray-400">
+                      {testimonial.school}
+                    </div>
+                  )}
+                </div>
+              </div>
+            </div>
           ))}
         </div>
       </div>
     </section>
-  );
-}
-
-function TestimonialCard({
-  testimonial,
-  index,
-}: {
-  testimonial: Testimonial;
-  index: number;
-}) {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-50px" });
-
-  return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 20 }}
-      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-      transition={{ duration: 0.4, delay: index * 0.05 }}
-      className="bg-gray-50 rounded-xl p-6 border border-gray-200 hover:border-gray-300 transition-colors"
-    >
-      {/* Quote */}
-      <p className="text-gray-700 mb-6 leading-relaxed italic">
-        &ldquo;{testimonial.quote}&rdquo;
-      </p>
-
-      {/* Author Info */}
-      <div className="flex items-center gap-3">
-        {/* Author Image Placeholder - Grey Circle */}
-        <div className="w-12 h-12 bg-gray-300 rounded-full flex-shrink-0" />
-
-        {/* Author Details */}
-        <div>
-          <div className="font-semibold text-gray-900">{testimonial.author}</div>
-          <div className="text-sm text-gray-600">{testimonial.role}</div>
-          <div className="text-sm text-gray-500">{testimonial.school}</div>
-        </div>
-      </div>
-    </motion.div>
   );
 }
