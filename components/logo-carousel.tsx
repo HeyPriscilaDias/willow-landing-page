@@ -1,13 +1,18 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export function LogoCarousel() {
-  // Create placeholder logos - circles and squares
-  const logos = Array.from({ length: 12 }, (_, i) => ({
-    id: i,
-    type: i % 2 === 0 ? "circle" : "square",
-  }));
+  // Partner logos
+  const logos = [
+    { id: 1, src: "/partner-logos/achievement_first.svg", alt: "Achievement First" },
+    { id: 2, src: "/partner-logos/activate_work.svg", alt: "Activate Work" },
+    { id: 3, src: "/partner-logos/colorado_succeeds.svg", alt: "Colorado Succeeds" },
+    { id: 4, src: "/partner-logos/denver_scholarship_foundation.svg", alt: "Denver Scholarship Foundation" },
+    { id: 5, src: "/partner-logos/hope-ignites.svg", alt: "Hope Ignites" },
+    { id: 6, src: "/partner-logos/kipp.svg", alt: "KIPP" },
+  ];
 
   // Duplicate for infinite scroll
   const duplicatedLogos = [...logos, ...logos];
@@ -21,7 +26,7 @@ export function LogoCarousel() {
 
         {/* Scrolling container */}
         <motion.div
-          className="flex gap-12"
+          className="flex gap-12 items-center"
           animate={{
             x: [0, -50 * logos.length],
           }}
@@ -37,13 +42,14 @@ export function LogoCarousel() {
           {duplicatedLogos.map((logo, index) => (
             <div
               key={`${logo.id}-${index}`}
-              className="flex-shrink-0"
+              className="flex-shrink-0 w-32 h-16 relative flex items-center justify-center"
             >
-              {logo.type === "circle" ? (
-                <div className="w-16 h-16 bg-gray-300 rounded-full" />
-              ) : (
-                <div className="w-16 h-16 bg-gray-300 rounded-lg" />
-              )}
+              <Image
+                src={logo.src}
+                alt={logo.alt}
+                fill
+                className="object-contain"
+              />
             </div>
           ))}
         </motion.div>
