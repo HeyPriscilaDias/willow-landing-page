@@ -1,0 +1,7 @@
+<svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="56" height="56" rx="8" fill="#062F29"/>
+  <path d="M28 16L20 20V26C20 31.55 23.84 36.74 28 38C32.16 36.74 36 31.55 36 26V20L28 16Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M28 28V32" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="28" cy="24" r="1" fill="white"/>
+  <text x="28" y="48" font-family="Inter, sans-serif" font-size="8" font-weight="600" fill="white" text-anchor="middle">GDPR</text>
+</svg>

@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { GreyPlaceholder } from "./grey-placeholder";
 import { useProposalModal } from "@/lib/proposal-modal-context";
 import { Button } from "./button";
+import Link from "next/link";
 
 export function Hero() {
   const { openModal } = useProposalModal();
@@ -29,9 +30,11 @@ export function Hero() {
               <Button onClick={openModal}>
                 Request a proposal
               </Button>
-              <Button variant="secondary">
-                Get a curriculum sample
-              </Button>
+              <Link href="/curriculum-sample">
+                <Button variant="secondary">
+                  Get a curriculum sample
+                </Button>
+              </Link>
             </div>
           </motion.div>
 

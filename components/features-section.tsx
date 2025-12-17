@@ -3,6 +3,8 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { GreyPlaceholder } from "./grey-placeholder";
+import { Button } from "./button";
+import Link from "next/link";
 
 interface Feature {
   title: string;
@@ -92,10 +94,18 @@ function FeatureBlock({
         <p className="text-secondary text-lg mb-6 leading-relaxed">
           {feature.description}
         </p>
-        <button className="text-content-link font-semibold hover:text-[#025f80] transition-colors inline-flex items-center gap-2 border-b-2 border-content-link pb-1">
-          Learn More
-          <span aria-hidden="true">→</span>
-        </button>
+        {index === 0 ? (
+          <Link href="/curriculum-sample">
+            <Button variant="secondary">
+              Get a curriculum sample
+            </Button>
+          </Link>
+        ) : (
+          <button className="text-content-link font-semibold hover:text-[#025f80] transition-colors inline-flex items-center gap-2 border-b-2 border-content-link pb-1">
+            Learn More
+            <span aria-hidden="true">→</span>
+          </button>
+        )}
       </div>
     </motion.div>
   );
