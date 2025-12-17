@@ -101,7 +101,7 @@ function FAQItem({ faq }: { faq: FAQ }) {
         onClick={() => setIsOpen(!isOpen)}
         className="w-full px-6 py-5 flex items-center justify-between gap-4 hover:bg-gray-50 transition-colors text-left"
       >
-        <span className="font-heading font-semibold text-primary text-lg">
+        <span className="font-sans font-semibold text-primary text-base">
           {faq.question}
         </span>
         <div className="flex-shrink-0">

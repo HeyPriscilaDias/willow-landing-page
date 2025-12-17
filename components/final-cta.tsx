@@ -20,7 +20,7 @@ export function FinalCTA() {
           className="bg-gray-900 rounded-3xl p-8 sm:p-12 lg:p-16 text-center shadow-2xl"
         >
           <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-semibold text-white mb-6">
-            Ready to Transform Career Readiness at Your School?
+            Ready to transform career readiness at your school?
           </h2>
           <p className="text-lg sm:text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Join hundreds of schools nationwide using Willow Education to

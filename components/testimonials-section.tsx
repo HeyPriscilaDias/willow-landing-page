@@ -59,6 +59,13 @@ const testimonials: Testimonial[] = [
     role: "",
     school: "KIPP Colorado",
   },
+  {
+    quote:
+      "Willow has embedded our entire Pathsmith framework into the Willow curriculum and platform. It's like an 'Intel Inside' approach—if you want to deliver really high-quality durable skills development, you use a validated framework, and it's already baked in. You shouldn't be able to separate durable skills from learning. That's how Willow has built it.",
+    author: "Tim Taylor",
+    role: "President @ America Succeeds",
+    school: "",
+  },
 ];
 
 export function TestimonialsSection() {
@@ -86,7 +93,7 @@ export function TestimonialsSection() {
       scrollTrigger: {
         trigger: section,
         start: "top top",
-        end: "+=150%",
+        end: "+=350%",
         pin: true,
         scrub: 1,
         anticipatePin: 1,
