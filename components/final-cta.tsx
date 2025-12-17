@@ -3,6 +3,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { useProposalModal } from "@/lib/proposal-modal-context";
+import { Button } from "./button";
 
 export function FinalCTA() {
   const ref = useRef(null);
@@ -28,15 +29,12 @@ export function FinalCTA() {
             today to get started.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button
-              onClick={openModal}
-              className="bg-white text-primary px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-semibold text-lg shadow-lg"
-            >
+            <Button onClick={openModal} variant="white">
               Request a proposal
-            </button>
-            <button className="bg-transparent text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-colors font-semibold text-lg border-2 border-white">
+            </Button>
+            <Button variant="white-outline">
               Schedule a demo
-            </button>
+            </Button>
           </div>
         </motion.div>
       </div>

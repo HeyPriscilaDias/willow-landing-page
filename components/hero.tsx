@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { GreyPlaceholder } from "./grey-placeholder";
 import { useProposalModal } from "@/lib/proposal-modal-context";
+import { Button } from "./button";
 
 export function Hero() {
   const { openModal } = useProposalModal();
@@ -25,15 +26,12 @@ export function Hero() {
               to significantly increase economic mobility for students.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <button
-                onClick={openModal}
-                className="bg-gray-900 text-white px-8 py-4 rounded-lg hover:bg-gray-800 transition-colors font-semibold text-lg"
-              >
+              <Button onClick={openModal}>
                 Request a proposal
-              </button>
-              <button className="bg-white text-primary px-8 py-4 rounded-lg hover:bg-gray-50 transition-colors font-semibold text-lg border-2 border-gray-900">
+              </Button>
+              <Button variant="secondary">
                 Learn More
-              </button>
+              </Button>
             </div>
           </motion.div>
 

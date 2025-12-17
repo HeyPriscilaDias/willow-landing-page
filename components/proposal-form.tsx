@@ -8,6 +8,7 @@ import { X, CheckCircle } from "phosphor-react";
 import { proposalFormSchema, type ProposalFormData } from "@/lib/validations";
 import { supabase } from "@/lib/supabase";
 import { cn } from "@/lib/utils";
+import { Button } from "./button";
 
 interface ProposalFormProps {
   isOpen: boolean;
@@ -371,20 +372,20 @@ export function ProposalForm({ isOpen, onClose }: ProposalFormProps) {
 
           {/* Submit Button */}
           <div className="flex gap-4">
-            <button
+            <Button
               type="submit"
               disabled={isSubmitting}
-              className="flex-1 bg-gray-900 text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition-colors font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
+              className="flex-1 disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {isSubmitting ? "Submitting..." : "Submit request"}
-            </button>
-            <button
+            </Button>
+            <Button
               type="button"
               onClick={onClose}
-              className="px-6 py-3 border-2 border-gray-300 text-primary rounded-lg hover:bg-gray-50 transition-colors font-semibold"
+              variant="secondary"
             >
               Cancel
-            </button>
+            </Button>
           </div>
         </form>
       </motion.div>

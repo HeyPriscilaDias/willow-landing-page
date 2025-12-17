@@ -5,6 +5,7 @@ import { List, X } from "phosphor-react";
 import { cn } from "@/lib/utils";
 import { useProposalModal } from "@/lib/proposal-modal-context";
 import { WillowLogo } from "./willow-logo";
+import { Button } from "./button";
 
 const navLinks = [
   { name: "The Challenge", href: "/the-challenge" },
@@ -40,12 +41,9 @@ export function Header() {
 
           {/* Desktop CTA Button */}
           <div className="hidden md:block ml-auto">
-            <button
-              onClick={openModal}
-              className="bg-gray-900 text-white px-6 py-2 rounded-lg hover:bg-gray-800 transition-colors font-semibold"
-            >
+            <Button onClick={openModal}>
               Request a proposal
-            </button>
+            </Button>
           </div>
 
           {/* Mobile menu button */}
@@ -81,15 +79,15 @@ export function Header() {
                 {link.name}
               </a>
             ))}
-            <button
+            <Button
               onClick={() => {
                 openModal();
                 setMobileMenuOpen(false);
               }}
-              className="bg-gray-900 text-white px-6 py-2 rounded-lg hover:bg-gray-800 transition-colors font-semibold w-full"
+              className="w-full"
             >
               Request a proposal
-            </button>
+            </Button>
           </div>
         </div>
       </nav>

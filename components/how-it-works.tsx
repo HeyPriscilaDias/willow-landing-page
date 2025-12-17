@@ -18,7 +18,7 @@ const steps: Step[] = [
     image: "/plan.png",
   },
   {
-    title: "Launch",
+    title: "Kickoff",
     description:
       "Onboard staff, get kids on platform, start curriculum.",
     image: "/launch.png",
@@ -26,7 +26,7 @@ const steps: Step[] = [
   {
     title: "Refine & Grow",
     description:
-      "Data tracking, observations, coaching, etc.",
+      "Continuous data tracking, observations, coaching, etc.",
     image: "/grow.png",
   },
 ];
