@@ -16,13 +16,13 @@ export default function AboutPage() {
         {/* Hero Section - Mission & Vision */}
         <section className="bg-gradient-to-b from-gray-50 to-white py-16 sm:py-24">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-semibold text-heading mb-12">
+            <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-medium text-heading mb-12">
               About us
             </h1>
 
             <div className="space-y-8">
               <div>
-                <h2 className="font-heading text-2xl font-semibold text-heading mb-4">
+                <h2 className="font-heading text-2xl font-medium text-heading mb-4">
                   Our mission
                 </h2>
                 <p className="text-lg text-secondary leading-relaxed">
@@ -33,7 +33,7 @@ export default function AboutPage() {
               </div>
 
               <div>
-                <h2 className="font-heading text-2xl font-semibold text-heading mb-4">
+                <h2 className="font-heading text-2xl font-medium text-heading mb-4">
                   Our vision
                 </h2>
                 <p className="text-lg text-secondary leading-relaxed">
@@ -49,7 +49,7 @@ export default function AboutPage() {
         {/* Theory of Action */}
         <section className="py-16 sm:py-24 bg-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="font-heading text-3xl sm:text-4xl font-semibold text-heading mb-6">
+            <h2 className="font-heading text-3xl sm:text-4xl font-medium text-heading mb-6">
               Theory of action
             </h2>
             <p className="text-lg text-secondary leading-relaxed">
@@ -67,7 +67,7 @@ export default function AboutPage() {
         {/* Our Solution */}
         <section className="py-16 sm:py-24 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="font-heading text-3xl sm:text-4xl font-semibold text-heading mb-12 text-center">
+            <h2 className="font-heading text-3xl sm:text-4xl font-medium text-heading mb-12 text-center">
               Our solution
             </h2>
 
@@ -91,7 +91,7 @@ export default function AboutPage() {
         {/* Meet the Team */}
         <section className="py-16 sm:py-24 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="font-heading text-3xl sm:text-4xl font-semibold text-heading mb-16 text-center">
+            <h2 className="font-heading text-3xl sm:text-4xl font-medium text-heading mb-16 text-center">
               Meet the team
             </h2>
 
@@ -104,7 +104,7 @@ export default function AboutPage() {
                     className="w-48 h-48 rounded-full"
                   />
                 </div>
-                <h3 className="font-heading text-xl font-semibold text-heading mb-1">
+                <h3 className="font-heading text-xl font-medium text-heading mb-1">
                   James Cryan
                 </h3>
                 <p className="text-secondary font-medium mb-4">
@@ -133,7 +133,7 @@ export default function AboutPage() {
                     className="w-48 h-48 rounded-full"
                   />
                 </div>
-                <h3 className="font-heading text-xl font-semibold text-heading mb-1">
+                <h3 className="font-heading text-xl font-medium text-heading mb-1">
                   Ryan York
                 </h3>
                 <p className="text-secondary font-medium mb-4">
@@ -163,7 +163,7 @@ export default function AboutPage() {
                     className="w-48 h-48 rounded-full"
                   />
                 </div>
-                <h3 className="font-heading text-xl font-semibold text-heading mb-1">
+                <h3 className="font-heading text-xl font-medium text-heading mb-1">
                   Jaime Hudgins
                 </h3>
                 <p className="text-secondary font-medium mb-4">

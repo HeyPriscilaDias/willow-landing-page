@@ -20,7 +20,7 @@ export function FinalCTA() {
           transition={{ duration: 0.6 }}
           className="bg-gray-900 rounded-3xl p-8 sm:p-12 lg:p-16 text-center shadow-subtle"
         >
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-semibold text-white mb-6">
+          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-white mb-6">
             Ready to transform career readiness at your school?
           </h2>
           <p className="text-lg sm:text-xl text-gray-300 mb-8 max-w-3xl mx-auto">

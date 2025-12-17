@@ -43,7 +43,7 @@ export function FeaturesSection() {
       <div className="max-w-7xl mx-auto px-5 md:px-10 lg:px-16">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-semibold text-heading mb-4">
+          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-heading mb-4">
             Everything you need to transform career readiness
           </h2>
           <p className="text-lg text-secondary max-w-3xl mx-auto">
@@ -97,7 +97,7 @@ function FeatureBlock({
 
       {/* Content */}
       <div className={`${reverse ? "lg:order-1" : ""}`}>
-        <h3 className="font-heading text-2xl sm:text-3xl font-semibold text-heading mb-4">
+        <h3 className="font-heading text-2xl sm:text-3xl font-medium text-heading mb-4">
           {feature.title}
         </h3>
         <p className="text-secondary text-lg mb-6 leading-relaxed">

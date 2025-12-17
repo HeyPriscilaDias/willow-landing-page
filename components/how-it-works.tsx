@@ -37,7 +37,7 @@ export function HowItWorks() {
       <div className="max-w-7xl mx-auto px-5 md:px-10 lg:px-16">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-semibold text-heading mb-4">
+          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-heading mb-4">
             How does it work?
           </h2>
           <p className="text-lg text-secondary max-w-3xl mx-auto">
@@ -92,7 +92,7 @@ function StepCard({ step, index }: { step: Step; index: number }) {
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : { opacity: 0 }}
             transition={{ duration: 0.5, delay: index * 0.2 + 0.5 }}
-            className="font-heading text-2xl md:text-3xl font-semibold text-white mb-4"
+            className="font-heading text-2xl md:text-3xl font-medium text-white mb-4"
           >
             {step.title}
           </motion.h3>

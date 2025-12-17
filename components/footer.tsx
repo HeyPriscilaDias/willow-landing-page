@@ -59,7 +59,7 @@ export function Footer() {
 
           {/* Product Links */}
           <div>
-            <h3 className="font-heading font-semibold text-white mb-4">
+            <h3 className="font-heading font-medium text-white mb-4">
               Product
             </h3>
             <ul className="space-y-2">
@@ -78,7 +78,7 @@ export function Footer() {
 
           {/* Company Links */}
           <div>
-            <h3 className="font-heading font-semibold text-white mb-4">
+            <h3 className="font-heading font-medium text-white mb-4">
               Company
             </h3>
             <ul className="space-y-2">
@@ -97,7 +97,7 @@ export function Footer() {
 
           {/* Resources Links */}
           <div>
-            <h3 className="font-heading font-semibold text-white mb-4">
+            <h3 className="font-heading font-medium text-white mb-4">
               Resources
             </h3>
             <ul className="space-y-2">
@@ -116,7 +116,7 @@ export function Footer() {
 
           {/* Legal Links */}
           <div>
-            <h3 className="font-heading font-semibold text-white mb-4">
+            <h3 className="font-heading font-medium text-white mb-4">
               Legal
             </h3>
             <ul className="space-y-2">

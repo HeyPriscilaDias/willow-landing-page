@@ -18,7 +18,7 @@ export function Hero() {
             transition={{ duration: 0.6 }}
             className="text-center lg:text-left"
           >
-            <h1 className="font-heading text-[32px] md:text-5xl lg:text-[60px] font-semibold text-heading mb-6 leading-tight">
+            <h1 className="font-heading text-[32px] md:text-5xl lg:text-[60px] font-medium text-heading mb-6 leading-tight">
               Unlock economic mobility through career exploration
             </h1>
             <p className="text-base text-secondary mb-8 max-w-2xl mx-auto lg:mx-0">
@@ -30,7 +30,7 @@ export function Hero() {
                 Request a proposal
               </Button>
               <Button variant="secondary">
-                Learn More
+                Get a curriculum sample
               </Button>
             </div>
           </motion.div>

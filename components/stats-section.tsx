@@ -66,7 +66,7 @@ function StatCard({ stat, index }: { stat: Stat; index: number }) {
       className="bg-card-bg rounded-card p-8 shadow-subtle border border-gray-200"
     >
       <div className="text-center">
-        <div className="font-heading text-5xl font-semibold text-status-good mb-2">
+        <div className="font-heading text-5xl font-medium text-status-good mb-2">
           {hasAnimated ? (
             <>
               <CountUp
@@ -81,7 +81,7 @@ function StatCard({ stat, index }: { stat: Stat; index: number }) {
             <>0{stat.suffix}</>
           )}
         </div>
-        <div className="font-heading text-xl font-semibold text-primary mb-3">
+        <div className="font-heading text-xl font-medium text-primary mb-3">
           {stat.label}
         </div>
         <p className="text-secondary text-sm leading-relaxed">

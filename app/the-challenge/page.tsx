@@ -23,7 +23,7 @@ export default function TheChallengePage() {
                   Specific challenge
                 </span>
               </div>
-              <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-semibold text-heading mb-6">
+              <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-medium text-heading mb-6">
                 Overwhelmed and underinformed
               </h1>
             </div>
@@ -39,7 +39,7 @@ export default function TheChallengePage() {
                 <div className="w-12 h-12 bg-gray-900 rounded-full flex items-center justify-center mb-4">
                   <div className="w-6 h-6 bg-white rounded-full" />
                 </div>
-                <h3 className="font-heading text-xl font-semibold text-heading mb-3">
+                <h3 className="font-heading text-xl font-medium text-heading mb-3">
                   A maze of choices
                 </h3>
                 <p className="text-secondary leading-relaxed">
@@ -56,7 +56,7 @@ export default function TheChallengePage() {
                 <div className="w-12 h-12 bg-gray-900 rounded-full flex items-center justify-center mb-4">
                   <div className="w-6 h-6 bg-white rounded-full" />
                 </div>
-                <h3 className="font-heading text-xl font-semibold text-heading mb-3">
+                <h3 className="font-heading text-xl font-medium text-heading mb-3">
                   Lack of quality information
                 </h3>
                 <p className="text-secondary leading-relaxed">
@@ -72,7 +72,7 @@ export default function TheChallengePage() {
                 <div className="w-12 h-12 bg-gray-900 rounded-full flex items-center justify-center mb-4">
                   <div className="w-6 h-6 bg-white rounded-full" />
                 </div>
-                <h3 className="font-heading text-xl font-semibold text-heading mb-3">
+                <h3 className="font-heading text-xl font-medium text-heading mb-3">
                   Counselor constraints
                 </h3>
                 <p className="text-secondary leading-relaxed">
@@ -88,7 +88,7 @@ export default function TheChallengePage() {
                 <div className="w-12 h-12 bg-gray-900 rounded-full flex items-center justify-center mb-4">
                   <div className="w-6 h-6 bg-white rounded-full" />
                 </div>
-                <h3 className="font-heading text-xl font-semibold text-heading mb-3">
+                <h3 className="font-heading text-xl font-medium text-heading mb-3">
                   Opaque alternatives
                 </h3>
                 <p className="text-secondary leading-relaxed">
@@ -106,7 +106,7 @@ export default function TheChallengePage() {
         {/* Introduction Section */}
         <section className="py-16 sm:py-24 bg-gray-50">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="font-heading text-3xl sm:text-4xl font-semibold text-heading mb-6">
+            <h2 className="font-heading text-3xl sm:text-4xl font-medium text-heading mb-6">
               The challenge
             </h2>
             <p className="text-lg text-secondary leading-relaxed mb-4">
@@ -122,14 +122,14 @@ export default function TheChallengePage() {
         {/* Navigating a Broken System */}
         <section className="py-16 sm:py-24 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="font-heading text-3xl sm:text-4xl font-semibold text-heading mb-12 text-center">
+            <h2 className="font-heading text-3xl sm:text-4xl font-medium text-heading mb-12 text-center">
               Navigating a broken system
             </h2>
 
             <div className="grid md:grid-cols-3 gap-12 max-w-6xl mx-auto">
               {/* Completion Crisis */}
               <div>
-                <h3 className="font-heading text-2xl font-semibold text-heading mb-4">
+                <h3 className="font-heading text-2xl font-medium text-heading mb-4">
                   Completion crisis
                 </h3>
                 <p className="text-secondary leading-relaxed mb-4">
@@ -145,7 +145,7 @@ export default function TheChallengePage() {
 
               {/* Economic Disparities */}
               <div>
-                <h3 className="font-heading text-2xl font-semibold text-heading mb-4">
+                <h3 className="font-heading text-2xl font-medium text-heading mb-4">
                   Economic disparities
                 </h3>
                 <p className="text-secondary leading-relaxed">
@@ -158,7 +158,7 @@ export default function TheChallengePage() {
 
               {/* Bad Investments */}
               <div>
-                <h3 className="font-heading text-2xl font-semibold text-heading mb-4">
+                <h3 className="font-heading text-2xl font-medium text-heading mb-4">
                   Bad investments
                 </h3>
                 <p className="text-secondary leading-relaxed mb-4">
@@ -177,7 +177,7 @@ export default function TheChallengePage() {
         <section className="py-16 sm:py-24 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="font-heading text-3xl sm:text-4xl font-semibold text-heading mb-4">
+              <h2 className="font-heading text-3xl sm:text-4xl font-medium text-heading mb-4">
                 Willow&apos;s response
               </h2>
               <p className="text-xl text-secondary max-w-3xl mx-auto">
@@ -189,7 +189,7 @@ export default function TheChallengePage() {
               {/* Personalized Guidance */}
               <div className="grid lg:grid-cols-2 gap-8 items-center">
                 <div>
-                  <h3 className="font-heading text-2xl font-semibold text-heading mb-4">
+                  <h3 className="font-heading text-2xl font-medium text-heading mb-4">
                     Personalized guidance
                   </h3>
                   <p className="text-lg text-secondary leading-relaxed">
@@ -205,7 +205,7 @@ export default function TheChallengePage() {
               {/* Comprehensive Exploration */}
               <div className="grid lg:grid-cols-2 gap-8 items-center">
                 <div className="lg:order-2">
-                  <h3 className="font-heading text-2xl font-semibold text-heading mb-4">
+                  <h3 className="font-heading text-2xl font-medium text-heading mb-4">
                     Comprehensive exploration
                   </h3>
                   <p className="text-lg text-secondary leading-relaxed">
@@ -222,7 +222,7 @@ export default function TheChallengePage() {
               {/* Ongoing Support */}
               <div className="grid lg:grid-cols-2 gap-8 items-center">
                 <div>
-                  <h3 className="font-heading text-2xl font-semibold text-heading mb-4">
+                  <h3 className="font-heading text-2xl font-medium text-heading mb-4">
                     Ongoing support
                   </h3>
                   <p className="text-lg text-secondary leading-relaxed">
@@ -238,7 +238,7 @@ export default function TheChallengePage() {
               {/* Transparent Data */}
               <div className="grid lg:grid-cols-2 gap-8 items-center">
                 <div className="lg:order-2">
-                  <h3 className="font-heading text-2xl font-semibold text-heading mb-4">
+                  <h3 className="font-heading text-2xl font-medium text-heading mb-4">
                     Transparent data
                   </h3>
                   <p className="text-lg text-secondary leading-relaxed">
