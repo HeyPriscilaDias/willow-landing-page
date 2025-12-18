@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useMemo, useCallback, useEffect } from "react";
-import { ArrowLeft, ArrowRight, Star, Briefcase, Target, BookOpen, Heart, Quotes } from "phosphor-react";
+import { ArrowLeft, ArrowRight, Star, Briefcase, Target, BookOpen, Heart, Quotes, EnvelopeSimple } from "phosphor-react";
 import quizQuestions from "@/lib/data/quiz-questions.json";
 import personalityTypes from "@/lib/data/personality-types.json";
 
@@ -60,7 +60,7 @@ interface PersonalityType {
   }>;
 }
 
-type QuizView = "start" | "questions" | "results";
+type QuizView = "start" | "questions" | "email" | "results";
 
 // Alignment enums for scoring
 const HOLLAND_ALIGNMENTS = [
@@ -119,7 +119,7 @@ function calculateResults(answers: Answer[]): string {
 
   for (const holland of HOLLAND_ALIGNMENTS) {
     for (const big5 of BIG5_ALIGNMENTS) {
-      const key = `${holland}_${big5.replace("-", "_")}`;
+      const key = `${holland}_${big5}`;
       combinedScores[key] = alignmentCounts[holland] * alignmentCounts[big5];
     }
   }
@@ -277,6 +277,8 @@ export default function PersonalityQuizPage() {
   const [selectedOptions, setSelectedOptions] = useState<string[]>([]);
   const [personalityResult, setPersonalityResult] = useState<PersonalityType | null>(null);
   const [isHydrated, setIsHydrated] = useState(false);
+  const [email, setEmail] = useState("");
+  const [emailError, setEmailError] = useState("");
 
   // Load saved state from localStorage on mount
   useEffect(() => {
@@ -383,7 +385,7 @@ export default function PersonalityQuizPage() {
     setAnswers(updatedAnswers);
 
     if (isLastQuestion) {
-      // Calculate results
+      // Calculate results and store them, but go to email capture first
       const resultId = calculateResults(updatedAnswers);
       const result = (personalityTypes as PersonalityType[]).find(
         pt => pt.id === resultId
@@ -391,12 +393,11 @@ export default function PersonalityQuizPage() {
 
       if (result) {
         setPersonalityResult(result);
-        setView("results");
       } else {
         // Fallback to first personality type if no match found
         setPersonalityResult(personalityTypes[0] as PersonalityType);
-        setView("results");
       }
+      setView("email");
     } else {
       // Move to next question
       setCurrentQuestionIndex(prev => prev + 1);
@@ -450,7 +451,58 @@ export default function PersonalityQuizPage() {
     setAnswers([]);
     setSelectedOptions([]);
     setPersonalityResult(null);
+    setEmail("");
+    setEmailError("");
   }, []);
+
+  // Handle email submission
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleEmailSubmit = useCallback(async (e: React.FormEvent) => {
+    e.preventDefault();
+    setEmailError("");
+
+    // Basic email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!email.trim()) {
+      setEmailError("Please enter your email address.");
+      return;
+    }
+    if (!emailRegex.test(email.trim())) {
+      setEmailError("Please enter a valid email address.");
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch("/api/quiz-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email: email.trim(),
+          personalityTypeId: personalityResult?.id || null,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        setEmailError(data.error || "Failed to submit email. Please try again.");
+        setIsSubmitting(false);
+        return;
+      }
+
+      // Success - proceed to results
+      setView("results");
+    } catch (error) {
+      console.error("Email submission error:", error);
+      setEmailError("An error occurred. Please try again.");
+      setIsSubmitting(false);
+    }
+  }, [email, personalityResult]);
 
   // Show loading state until hydrated to prevent flash
   if (!isHydrated) {
@@ -506,6 +558,84 @@ export default function PersonalityQuizPage() {
           >
             Start the Quiz
           </button>
+        </div>
+      </div>
+    );
+  }
+
+  // Email Capture View
+  if (view === "email") {
+    return (
+      <div className="min-h-screen bg-[#062F29] px-4 pb-4 overflow-y-auto">
+        {/* Header */}
+        <header className="py-4">
+          <div className="flex items-center justify-between">
+            <div className="h-10 w-10">
+              <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+                <path d="M20 4C11.164 4 4 11.164 4 20s7.164 16 16 16 16-7.164 16-16S28.836 4 20 4z" fill="white"/>
+                <path d="M20 8c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12S26.627 8 20 8z" fill="#062F29"/>
+                <path d="M20 12c-4.418 0-8 3.582-8 8s3.582 8 8 8 8-3.582 8-8-3.582-8-8-8z" fill="white"/>
+              </svg>
+            </div>
+            <span className="hidden md:block font-sans font-semibold text-base text-white">
+              Willow&apos;s Personality Quiz
+            </span>
+            <div className="w-10" />
+          </div>
+        </header>
+
+        {/* Main Content */}
+        <div className="flex flex-col items-center justify-center min-h-[calc(100vh-120px)] max-w-[500px] mx-auto text-center">
+          <div className="w-16 h-16 rounded-full bg-[#D8FBDB] flex items-center justify-center mb-6">
+            <EnvelopeSimple size={32} className="text-[#062F29]" />
+          </div>
+
+          <h1 className="font-heading font-semibold text-[32px] md:text-[40px] leading-[130%] tracking-tight text-white">
+            Your results are ready!
+          </h1>
+
+          <p className="mt-4 font-sans text-base leading-6 text-neutral-300">
+            To see your results, enter your email address below.
+          </p>
+
+          <form onSubmit={handleEmailSubmit} className="w-full mt-8">
+            <div className="relative">
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => {
+                  setEmail(e.target.value);
+                  setEmailError("");
+                }}
+                placeholder="Enter your email address"
+                className={`w-full px-4 py-3 rounded-xl bg-white/10 border ${
+                  emailError ? "border-red-400" : "border-white/20"
+                } text-white placeholder-white/50 focus:outline-none focus:border-white/40 transition-colors`}
+              />
+            </div>
+            {emailError && (
+              <p className="mt-2 text-sm text-red-400 text-left">{emailError}</p>
+            )}
+
+            <button
+              type="submit"
+              disabled={isSubmitting}
+              className="w-full mt-4 px-8 py-3 bg-[#D8FBDB] hover:bg-[#c8f0cb] disabled:bg-[#D8FBDB]/50 disabled:cursor-not-allowed text-[#062F29] font-semibold rounded-xl transition-colors flex items-center justify-center gap-2"
+            >
+              {isSubmitting ? (
+                "Submitting..."
+              ) : (
+                <>
+                  Submit &amp; See Results
+                  <ArrowRight size={20} />
+                </>
+              )}
+            </button>
+          </form>
+
+          <p className="mt-6 font-sans text-xs text-neutral-400">
+            We&apos;ll send you a copy of your results and occasional updates about Willow.
+          </p>
         </div>
       </div>
     );
