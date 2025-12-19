@@ -67,8 +67,8 @@ export function Hero() {
         className="mt-12 md:mt-16 px-5 md:px-10 lg:px-16 max-w-7xl mx-auto"
       >
         <div className="relative w-[76%] mx-auto -translate-x-[5%]">
-          {/* UI Frame - Base layer, cropped 20% from bottom */}
-          <div className="overflow-hidden [aspect-ratio:1223/646]">
+          {/* UI Frame - Base layer */}
+          <div className="overflow-hidden [aspect-ratio:1223/743]">
             <Image
               src="/hero-img-ui.png"
               alt="Willow curriculum interface"
