@@ -12,6 +12,7 @@ export function LogoCarousel() {
     { id: 4, src: "/partner-logos/denver_scholarship_foundation.svg", alt: "Denver Scholarship Foundation" },
     { id: 5, src: "/partner-logos/hope-ignites.svg", alt: "Hope Ignites" },
     { id: 6, src: "/partner-logos/kipp.svg", alt: "KIPP" },
+    { id: 7, src: "/partner-logos/pathsmith.svg", alt: "Pathsmith" },
   ];
 
   // Logo dimensions: 102px width + 40px gap = 142px per logo
