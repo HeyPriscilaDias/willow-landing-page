@@ -14,10 +14,10 @@ export function LogoCarousel() {
     { id: 6, src: "/partner-logos/kipp.svg", alt: "KIPP" },
   ];
 
-  // Logo dimensions: 128px width + 48px gap = 176px per logo
-  // Total width of one set: 6 logos * 176px = 1056px
-  const logoWidth = 128; // w-32 = 8rem = 128px
-  const gapWidth = 48; // gap-12 = 3rem = 48px
+  // Logo dimensions: 102px width + 40px gap = 142px per logo
+  // Total width of one set: 6 logos * 142px = 852px
+  const logoWidth = 102; // 20% smaller than original 128px
+  const gapWidth = 40; // gap-10 = 2.5rem = 40px
   const totalSetWidth = logos.length * (logoWidth + gapWidth);
 
   return (
@@ -29,7 +29,7 @@ export function LogoCarousel() {
 
         {/* Scrolling container */}
         <motion.div
-          className="flex gap-12 items-center"
+          className="flex gap-10 items-center"
           animate={{
             x: [0, -totalSetWidth],
           }}
@@ -47,7 +47,7 @@ export function LogoCarousel() {
             logos.map((logo, logoIndex) => (
               <div
                 key={`${setIndex}-${logo.id}-${logoIndex}`}
-                className="flex-shrink-0 w-32 h-16 relative flex items-center justify-center"
+                className="flex-shrink-0 w-[102px] h-[51px] relative flex items-center justify-center"
               >
                 <Image
                   src={logo.src}
