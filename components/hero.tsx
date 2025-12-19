@@ -42,21 +42,20 @@ export function Hero() {
         className="text-center px-5 md:px-10 max-w-4xl mx-auto"
       >
         <h1 className="font-heading text-[32px] md:text-5xl lg:text-[60px] font-medium text-heading mb-6 leading-tight">
-          Unlock economic mobility through career exploration
+          The &ldquo;Science of Reading&rdquo; for Postsecondary Success
         </h1>
         <p className="text-base md:text-lg text-secondary mb-8 max-w-2xl mx-auto">
-          A comprehensive career exploration curriculum and platform designed
-          to significantly increase economic mobility for students.
+          Beyond &ldquo;random acts of dual enrollment.&rdquo; An AI-native roadmap built for economic mobility.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button onClick={openModal}>
-            Request a proposal
-          </Button>
           <Link href="/curriculum-sample">
             <Button variant="secondary">
               Get a curriculum sample
             </Button>
           </Link>
+          <Button onClick={openModal}>
+            Request a proposal
+          </Button>
         </div>
       </motion.div>
 

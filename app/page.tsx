@@ -3,11 +3,10 @@
 import { Header } from "@/components/header";
 import { Hero } from "@/components/hero";
 import { LogoCarousel } from "@/components/logo-carousel";
-import { StatsSection } from "@/components/stats-section";
+import { DiscoveryBridge } from "@/components/discovery-bridge";
 import { FeaturesSection } from "@/components/features-section";
 import { HowItWorks } from "@/components/how-it-works";
 import { TestimonialsSection } from "@/components/testimonials-section";
-import { FAQSection } from "@/components/faq-section";
 import { FinalCTA } from "@/components/final-cta";
 import { Footer } from "@/components/footer";
 import { ProposalForm } from "@/components/proposal-form";
@@ -22,11 +21,10 @@ export default function Home() {
       <main>
         <Hero />
         <LogoCarousel />
-        <StatsSection />
+        <DiscoveryBridge />
         <FeaturesSection />
         <HowItWorks />
         <TestimonialsSection />
-        <FAQSection />
         <FinalCTA />
       </main>
       <Footer />
