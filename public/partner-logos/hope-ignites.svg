@@ -11,7 +11,7 @@
       }
 
       .cls-3 {
-        fill: #f79e1f;
+        fill: #A4A7AE;
       }
 
       .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9 {
@@ -19,11 +19,11 @@
       }
 
       .cls-4 {
-        fill: #0b6180;
+        fill: #A4A7AE;
       }
 
       .cls-5 {
-        fill: #0a6280;
+        fill: #A4A7AE;
       }
 
       .cls-6 {
@@ -31,15 +31,15 @@
       }
 
       .cls-7, .cls-10 {
-        fill: #f07322;
+        fill: #A4A7AE;
       }
 
       .cls-8 {
-        fill: #002a42;
+        fill: #A4A7AE;
       }
 
       .cls-9 {
-        fill: #002a43;
+        fill: #A4A7AE;
       }
 
       .cls-10 {

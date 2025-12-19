@@ -21,14 +21,14 @@ export function LogoCarousel() {
     <section className="py-12 bg-white overflow-hidden">
       <div className="relative">
         {/* Gradient overlays for fade effect */}
-        <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-white to-transparent z-10" />
-        <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-white to-transparent z-10" />
+        <div className="absolute left-0 top-0 bottom-0 w-56 bg-gradient-to-r from-white to-transparent z-10" />
+        <div className="absolute right-0 top-0 bottom-0 w-56 bg-gradient-to-l from-white to-transparent z-10" />
 
         {/* Scrolling container */}
         <motion.div
           className="flex gap-12 items-center"
           animate={{
-            x: [0, -50 * logos.length],
+            x: ["0%", "-50%"],
           }}
           transition={{
             x: {
@@ -48,7 +48,7 @@ export function LogoCarousel() {
                 src={logo.src}
                 alt={logo.alt}
                 fill
-                className="object-contain"
+                className="object-contain grayscale opacity-70"
               />
             </div>
           ))}
