@@ -1,0 +1,562 @@
+[
+    {
+      "id": "H1_activities",
+      "active": true,
+      "questionType": "ms",
+      "questionText": "Which of these activities do you enjoy the most?",
+      "options": [
+        {
+          "optionId": "H1_investigative",
+          "optionText": "Conducting research or solving complex problems",
+          "optionAlignment": "Investigative"
+        },
+        {
+          "optionId": "H1_conventional",
+          "optionText": "Organizing, analyzing data, or working with numbers",
+          "optionAlignment": "Conventional"
+        },
+        {
+          "optionId": "H1_social",
+          "optionText": "Helping others, volunteering, or teaching",
+          "optionAlignment": "Social"
+        },
+        {
+          "optionId": "H1_realistic",
+          "optionText": "Building or repairing things",
+          "optionAlignment": "Realistic"
+        },
+        {
+          "optionId": "H1_artistic",
+          "optionText": "Creating art, music, or writing",
+          "optionAlignment": "Artistic"
+        },
+        {
+          "optionId": "H1_enterprising",
+          "optionText": "Persuading others, managing projects, or leading teams",
+          "optionAlignment": "Enterprising"
+        }
+      ],
+      "order": 1
+    },
+    {
+      "id": "H2_groupproject",
+      "active": true,
+      "questionType": "ms",
+      "questionText": "In a group project, you prefer to",
+      "options": [
+        {
+          "optionId": "H2_artistic",
+          "optionText": "Provide creative ideas and input",
+          "optionAlignment": "Artistic"
+        },
+        {
+          "optionId": "H2_realistic",
+          "optionText": "Build or design the final product",
+          "optionAlignment": "Realistic"
+        },
+        {
+          "optionId": "H2_social",
+          "optionText": "Act as a mediator and ensure everyone's voice is heard",
+          "optionAlignment": "Social"
+        },
+        {
+          "optionId": "H2_enterprising",
+          "optionText": "Take charge and make decisions",
+          "optionAlignment": "Enterprising"
+        },
+        {
+          "optionId": "H2_conventional",
+          "optionText": "Work behind the scenes to ensure everything runs smoothly",
+          "optionAlignment": "Conventional"
+        },
+        {
+          "optionId": "H2_investigative",
+          "optionText": "Research and analyze information to support the team",
+          "optionAlignment": "Investigative"
+        }
+      ],
+      "order": 2
+    },
+    {
+      "id": "H3_environment",
+      "active": true,
+      "questionType": "ms",
+      "questionText": "Which work environment appeals to you the most?",
+      "options": [
+        {
+          "optionId": "H3_enterprising",
+          "optionText": "Fast-paced and competitive, such as a sales or marketing office",
+          "optionAlignment": "Enterprising"
+        },
+        {
+          "optionId": "H3_artistic",
+          "optionText": "A collaborative and creative space, like a studio",
+          "optionAlignment": "Artistic"
+        },
+        {
+          "optionId": "H3_realistic",
+          "optionText": "Outdoors or a hands-on setting",
+          "optionAlignment": "Realistic"
+        },
+        {
+          "optionId": "H3_conventional",
+          "optionText": "Structured and organized, like an accounting firm or government office",
+          "optionAlignment": "Conventional"
+        },
+        {
+          "optionId": "H3_investigative",
+          "optionText": "Quiet and independent, such as a lab or library",
+          "optionAlignment": "Investigative"
+        },
+        {
+          "optionId": "H3_social",
+          "optionText": "A people-oriented setting, like a school, hospital, or counseling center",
+          "optionAlignment": "Social"
+        }
+      ],
+      "order": 3
+    },
+    {
+      "id": "H4_weekend",
+      "active": true,
+      "questionType": "ms",
+      "questionText": "It's the weekend and you have a free day. Which activity would you find most fulfilling?",
+      "options": [
+        {
+          "optionId": "H4_realistic",
+          "optionText": "Spend the day outside in the mountains enjoying nature",
+          "optionAlignment": "Realistic"
+        },
+        {
+          "optionId": "H4_investigative",
+          "optionText": "Visit a science museum and participate in interactive exhibits",
+          "optionAlignment": "Investigative"
+        },
+        {
+          "optionId": "H4_artistic",
+          "optionText": "Attend a local art class or workshop to learn a new technique",
+          "optionAlignment": "Artistic"
+        },
+        {
+          "optionId": "H4_social",
+          "optionText": "Volunteer at a local shelter, helping to care for animals or people in need",
+          "optionAlignment": "Social"
+        },
+        {
+          "optionId": "H4_enterprising",
+          "optionText": "Organize a small yard sale or market to sell homemade crafts and goods",
+          "optionAlignment": "Enterprising"
+        },
+        {
+          "optionId": "H4_conventional",
+          "optionText": "Spend the day organizing your space and planning out your schedule",
+          "optionAlignment": "Conventional"
+        }
+      ],
+      "order": 4
+    },
+    {
+      "id": "H5_problemsolving",
+      "active": true,
+      "questionType": "ms",
+      "questionText": "How do you prefer to solve problems?",
+      "order": 5,
+      "options": [
+        {
+          "optionId": "H5_artistic",
+          "optionText": "Through brainstorming and thinking outside the box",
+          "optionAlignment": "Artistic"
+        },
+        {
+          "optionId": "H5_conventional",
+          "optionText": "By following established rules and procedures",
+          "optionAlignment": "Conventional"
+        },
+        {
+          "optionId": "H5_investigative",
+          "optionText": "By gathering data and using logic and analysis",
+          "optionAlignment": "Investigative"
+        },
+        {
+          "optionId": "H5_enterprising",
+          "optionText": "By taking charge and making decisive actions",
+          "optionAlignment": "Enterprising"
+        },
+        {
+          "optionId": "H5_realistic",
+          "optionText": "By experimenting and learning through trial and error",
+          "optionAlignment": "Realistic"
+        },
+        {
+          "optionId": "H5_social",
+          "optionText": "By collaborating with others and discussing solutions",
+          "optionAlignment": "Social"
+        }
+      ]
+    },
+    {
+      "id": "H6_skills",
+      "active": true,
+      "questionType": "ms",
+      "questionText": "Which of the following skills do you consider your strongest?",
+      "order": 6,
+      "options": [
+        {
+          "optionId": "H6_investigative",
+          "optionText": "Analytical and problem-solving skills",
+          "optionAlignment": "Investigative"
+        },
+        {
+          "optionId": "H6_realistic",
+          "optionText": "Technical or mechanical skills",
+          "optionAlignment": "Realistic"
+        },
+        {
+          "optionId": "H6_artistic",
+          "optionText": "Creativity and artistic skills",
+          "optionAlignment": "Artistic"
+        },
+        {
+          "optionId": "H6_social",
+          "optionText": "Interpersonal and communication skills",
+          "optionAlignment": "Social"
+        },
+        {
+          "optionId": "H6_enterprising",
+          "optionText": "Leadership and persuasion skills",
+          "optionAlignment": "Enterprising"
+        },
+        {
+          "optionId": "H6_conventional",
+          "optionText": "Organizational and attention-to-detail skills",
+          "optionAlignment": "Conventional"
+        }
+      ]
+    },
+    {
+      "id": "B5_1_challenge",
+      "active": true,
+      "questionType": "ms",
+      "questionText": "When faced with a new challenge, I tend to",
+      "order": 7,
+      "options": [
+        {
+          "optionId": "B5_1_openness",
+          "optionText": "Get excited and brainstorm creative possibilities",
+          "optionAlignment": "Openness"
+        },
+        {
+          "optionId": "B5_1_conscientiousness",
+          "optionText": "Make a clear plan and work through it step by step",
+          "optionAlignment": "Conscientiousness"
+        },
+        {
+          "optionId": "B5_1_extraversion",
+          "optionText": "Talk to others and get their input",
+          "optionAlignment": "Extraversion"
+        },
+        {
+          "optionId": "B5_1_agreeableness",
+          "optionText": "Think about how I can make it easier for everyone involved",
+          "optionAlignment": "Agreeableness"
+        },
+        {
+          "optionId": "B5_1_emotionalstability",
+          "optionText": "Stay calm and trust I'll figure it out",
+          "optionAlignment": "Emotional-Stability"
+        }
+      ]
+    },
+    {
+      "id": "B5_2_social",
+      "active": true,
+      "questionType": "ms",
+      "questionText": "In social situations, I am usually",
+      "order": 8,
+      "options": [
+        {
+          "optionId": "B5_2_extraversion",
+          "optionText": "Energized and eager to meet new people",
+          "optionAlignment": "Extraversion"
+        },
+        {
+          "optionId": "B5_2_agreeableness",
+          "optionText": "Warm and focused on making others feel comfortable",
+          "optionAlignment": "Agreeableness"
+        },
+        {
+          "optionId": "B5_2_openness",
+          "optionText": "Curious about people's unique perspectives and ideas",
+          "optionAlignment": "Openness"
+        },
+        {
+          "optionId": "B5_2_emotionalstability",
+          "optionText": "Relaxed and easygoing, even if things get awkward",
+          "optionAlignment": "Emotional-Stability"
+        },
+        {
+          "optionId": "B5_2_conscientiousness",
+          "optionText": "Polite and mindful of making a good impression",
+          "optionAlignment": "Conscientiousness"
+        }
+      ]
+    },
+    {
+      "id": "B5_3_project",
+      "active": true,
+      "questionType": "ms",
+      "questionText": "When working on a project, I typically",
+      "order": 9,
+      "options": [
+        {
+          "optionId": "B5_3_emotionalstability",
+          "optionText": "Remain calm and composed, even under pressure",
+          "optionAlignment": "Emotional-Stability"
+        },
+        {
+          "optionId": "B5_3_extraversion",
+          "optionText": "Enjoy collaborating and brainstorming with others",
+          "optionAlignment": "Extraversion"
+        },
+        {
+          "optionId": "B5_3_conscientiousness",
+          "optionText": "Create a detailed plan and stick to it",
+          "optionAlignment": "Conscientiousness"
+        },
+        {
+          "optionId": "B5_3_agreeableness",
+          "optionText": "Prioritize harmony and make sure everyone feels included",
+          "optionAlignment": "Agreeableness"
+        },
+        {
+          "optionId": "B5_3_openness",
+          "optionText": "Explore unconventional ideas and creative approaches",
+          "optionAlignment": "Openness"
+        }
+      ]
+    },
+    {
+      "id": "B5_4_decisions",
+      "active": true,
+      "questionType": "ms",
+      "questionText": "When making decisions, I tend to focus on",
+      "order": 10,
+      "options": [
+        {
+          "optionId": "B5_4_agreeableness",
+          "optionText": "What will keep everyone happy and maintain harmony",
+          "optionAlignment": "Agreeableness"
+        },
+        {
+          "optionId": "B5_4_conscientiousness",
+          "optionText": "The most logical and efficient course of action",
+          "optionAlignment": "Conscientiousness"
+        },
+        {
+          "optionId": "B5_4_openness",
+          "optionText": "The potential for growth and new experiences",
+          "optionAlignment": "Openness"
+        },
+        {
+          "optionId": "B5_4_extraversion",
+          "optionText": "Getting different perspectives by talking it through with people",
+          "optionAlignment": "Extraversion"
+        },
+        {
+          "optionId": "B5_4_emotionalstability",
+          "optionText": "Staying grounded and trusting my gut",
+          "optionAlignment": "Emotional-Stability"
+        }
+      ]
+    },
+    {
+      "id": "B5_bin1",
+      "active": true,
+      "questionType": "selectBetween",
+      "questionText": "I prefer",
+      "order": 11,
+      "options": [
+        {
+          "optionId": "B5_bin1_conscientiousness",
+          "optionText": "Sticking to established routines and methods",
+          "optionAlignment": "Conscientiousness"
+        },
+        {
+          "optionId": "B5_bin1_openness",
+          "optionText": "Exploring new ideas and experiences",
+          "optionAlignment": "Openness"
+        }
+      ]
+    },
+    {
+      "id": "B5_bin2",
+      "active": true,
+      "questionType": "selectBetween",
+      "questionText": "At a social event, I'm more likely to",
+      "order": 12,
+      "options": [
+        {
+          "optionId": "B5_bin2_extraversion",
+          "optionText": "Seek out conversations and introduce myself to new people",
+          "optionAlignment": "Extraversion"
+        },
+        {
+          "optionId": "B5_bin2_emotionalstability",
+          "optionText": "Feel comfortable whether I'm talking to many people or just a few",
+          "optionAlignment": "Emotional-Stability"
+        }
+      ]
+    },
+    {
+      "id": "B5_bin3",
+      "active": true,
+      "questionType": "selectBetween",
+      "questionText": "When working on a project, I prioritize",
+      "order": 13,
+      "options": [
+        {
+          "optionId": "B5_bin3_agreeableness",
+          "optionText": "Maintaining harmony and consensus within the team",
+          "optionAlignment": "Agreeableness"
+        },
+        {
+          "optionId": "B5_bin3_conscientiousness",
+          "optionText": "Ensuring the most logical and efficient approach",
+          "optionAlignment": "Conscientiousness"
+        }
+      ]
+    },
+    {
+      "id": "B5_bin4",
+      "active": true,
+      "questionType": "selectBetween",
+      "questionText": "When things change unexpectedly, I",
+      "order": 14,
+      "options": [
+        {
+          "optionId": "B5_bin4_openness",
+          "optionText": "Get curious and see it as a chance to try something new",
+          "optionAlignment": "Openness"
+        },
+        {
+          "optionId": "B5_bin4_emotionalstability",
+          "optionText": "Stay steady and don't let it throw me off",
+          "optionAlignment": "Emotional-Stability"
+        }
+      ]
+    },
+    {
+      "id": "B5_bin5",
+      "active": true,
+      "questionType": "selectBetween",
+      "questionText": "In a difficult group situation, I",
+      "order": 15,
+      "options": [
+        {
+          "optionId": "B5_bin5_extraversion",
+          "optionText": "Speak up and get everyone talking about it",
+          "optionAlignment": "Extraversion"
+        },
+        {
+          "optionId": "B5_bin5_agreeableness",
+          "optionText": "Quietly make sure everyone's needs are being considered",
+          "optionAlignment": "Agreeableness"
+        }
+      ]
+    },
+    {
+      "id": "B5_bin6",
+      "active": true,
+      "questionType": "selectBetween",
+      "questionText": "When a plan isn't working, I prefer to",
+      "order": 16,
+      "options": [
+        {
+          "optionId": "B5_bin6_emotionalstability",
+          "optionText": "Stay the course and trust things will work out",
+          "optionAlignment": "Emotional-Stability"
+        },
+        {
+          "optionId": "B5_bin6_openness",
+          "optionText": "Experiment with a completely different approach",
+          "optionAlignment": "Openness"
+        }
+      ]
+    },
+    {
+      "id": "B5_bin7",
+      "active": true,
+      "questionType": "selectBetween",
+      "questionText": "When making a big decision, I",
+      "order": 17,
+      "options": [
+        {
+          "optionId": "B5_bin7_agreeableness",
+          "optionText": "Quietly weigh how it will affect the people I care about",
+          "optionAlignment": "Agreeableness"
+        },
+        {
+          "optionId": "B5_bin7_extraversion",
+          "optionText": "Want to hash it out in conversation with others",
+          "optionAlignment": "Extraversion"
+        }
+      ]
+    },
+    {
+      "id": "B5_bin8",
+      "active": true,
+      "questionType": "selectBetween",
+      "questionText": "When I'm stressed, I recharge by",
+      "order": 18,
+      "options": [
+        {
+          "optionId": "B5_bin8_emotionalstability",
+          "optionText": "Taking quiet time alone to reset",
+          "optionAlignment": "Emotional-Stability"
+        },
+        {
+          "optionId": "B5_bin8_extraversion",
+          "optionText": "Being around people and talking things through",
+          "optionAlignment": "Extraversion"
+        }
+      ]
+    },
+    {
+      "id": "B5_bin9",
+      "active": true,
+      "questionType": "selectBetween",
+      "questionText": "I take more pride in",
+      "order": 19,
+      "options": [
+        {
+          "optionId": "B5_bin9_conscientiousness",
+          "optionText": "Being reliable and finishing what I start",
+          "optionAlignment": "Conscientiousness"
+        },
+        {
+          "optionId": "B5_bin9_agreeableness",
+          "optionText": "Being generous and helping others when they need it",
+          "optionAlignment": "Agreeableness"
+        }
+      ]
+    },
+    {
+      "id": "B5_bin10",
+      "active": true,
+      "questionType": "selectBetween",
+      "questionText": "I find more satisfaction in",
+      "order": 20,
+      "options": [
+        {
+          "optionId": "B5_bin10_openness",
+          "optionText": "Discovering new perspectives and challenging assumptions",
+          "optionAlignment": "Openness"
+        },
+        {
+          "optionId": "B5_bin10_conscientiousness",
+          "optionText": "Completing tasks thoroughly and meeting high standards",
+          "optionAlignment": "Conscientiousness"
+        }
+      ]
+    }
+  ]
