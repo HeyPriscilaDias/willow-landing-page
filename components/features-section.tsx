@@ -100,6 +100,12 @@ function FeatureBlock({
               Get a curriculum sample
             </Button>
           </Link>
+        ) : index === 1 ? (
+          <Link href="/personality-quiz">
+            <Button variant="secondary">
+              Take the quiz
+            </Button>
+          </Link>
         ) : (
           <button className="text-content-link font-semibold hover:text-[#025f80] transition-colors inline-flex items-center gap-2 border-b-2 border-content-link pb-1">
             Learn More

@@ -27,21 +27,23 @@ export function Header() {
             <WillowLogo className="h-8 w-auto" />
           </div>
 
-          {/* Desktop Navigation - Centered */}
-          <div className="hidden md:flex items-center space-x-8 absolute left-1/2 transform -translate-x-1/2">
+          {/* Desktop Navigation - Right aligned */}
+          <div className="hidden md:flex items-center gap-8 ml-auto">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className="text-primary hover:text-heading transition-colors font-medium"
+                className="text-[14px] text-primary hover:text-heading transition-colors font-medium"
               >
                 {link.name}
               </a>
             ))}
-          </div>
-
-          {/* Desktop CTA Button */}
-          <div className="hidden md:block ml-auto">
+            <a
+              href="https://app.willowed.org/public/login"
+              className="text-secondary text-[14px] font-normal hover:text-heading transition-colors"
+            >
+              Login
+            </a>
             <Button onClick={openModal}>
               Request a proposal
             </Button>
@@ -75,11 +77,18 @@ export function Header() {
                 key={link.name}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="text-primary hover:text-heading transition-colors font-medium"
+                className="text-[14px] text-primary hover:text-heading transition-colors font-medium"
               >
                 {link.name}
               </a>
             ))}
+            <a
+              href="https://app.willowed.org/public/login"
+              onClick={() => setMobileMenuOpen(false)}
+              className="text-secondary text-[14px] font-normal hover:text-heading transition-colors"
+            >
+              Login
+            </a>
             <Button
               onClick={() => {
                 openModal();

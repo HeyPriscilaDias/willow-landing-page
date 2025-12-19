@@ -14,8 +14,11 @@ export function LogoCarousel() {
     { id: 6, src: "/partner-logos/kipp.svg", alt: "KIPP" },
   ];
 
-  // Duplicate for infinite scroll
-  const duplicatedLogos = [...logos, ...logos];
+  // Logo dimensions: 128px width + 48px gap = 176px per logo
+  // Total width of one set: 6 logos * 176px = 1056px
+  const logoWidth = 128; // w-32 = 8rem = 128px
+  const gapWidth = 48; // gap-12 = 3rem = 48px
+  const totalSetWidth = logos.length * (logoWidth + gapWidth);
 
   return (
     <section className="py-12 bg-white overflow-hidden">
@@ -28,7 +31,7 @@ export function LogoCarousel() {
         <motion.div
           className="flex gap-12 items-center"
           animate={{
-            x: ["0%", "-50%"],
+            x: [0, -totalSetWidth],
           }}
           transition={{
             x: {
@@ -39,19 +42,22 @@ export function LogoCarousel() {
             },
           }}
         >
-          {duplicatedLogos.map((logo, index) => (
-            <div
-              key={`${logo.id}-${index}`}
-              className="flex-shrink-0 w-32 h-16 relative flex items-center justify-center"
-            >
-              <Image
-                src={logo.src}
-                alt={logo.alt}
-                fill
-                className="object-contain grayscale opacity-70"
-              />
-            </div>
-          ))}
+          {/* Render logos 4 times for seamless infinite scroll */}
+          {[...Array(4)].map((_, setIndex) =>
+            logos.map((logo, logoIndex) => (
+              <div
+                key={`${setIndex}-${logo.id}-${logoIndex}`}
+                className="flex-shrink-0 w-32 h-16 relative flex items-center justify-center"
+              >
+                <Image
+                  src={logo.src}
+                  alt={logo.alt}
+                  fill
+                  className="object-contain grayscale opacity-70"
+                />
+              </div>
+            ))
+          )}
         </motion.div>
       </div>
     </section>

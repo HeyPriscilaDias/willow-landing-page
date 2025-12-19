@@ -4,6 +4,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { useProposalModal } from "@/lib/proposal-modal-context";
 import { Button } from "./button";
+import Image from "next/image";
 
 export function FinalCTA() {
   const ref = useRef(null);
@@ -18,22 +19,20 @@ export function FinalCTA() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6 }}
-          className="bg-gray-900 rounded-3xl p-8 sm:p-12 lg:p-16 text-center shadow-subtle"
+          className="relative bg-[#ACF7B2] rounded-[12px] p-[80px] text-center overflow-hidden"
         >
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-white mb-6">
-            Ready to transform career readiness at your school?
-          </h2>
-          <p className="text-lg sm:text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Join hundreds of schools nationwide using Willow Education to
-            increase economic mobility for their students. Request a proposal
-            today to get started.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button onClick={openModal} variant="white">
+          <Image
+            src="/cta-bg.png"
+            alt=""
+            fill
+            className="object-cover opacity-10 pointer-events-none"
+          />
+          <div className="relative z-10">
+            <h2 className="font-heading text-[30px] font-medium text-[#13271C] mb-8 max-w-4xl mx-auto leading-tight">
+              Join hundreds of schools nationwide using Willow Education to increase economic mobility for their students.
+            </h2>
+            <Button onClick={openModal} variant="primary">
               Request a proposal
-            </Button>
-            <Button variant="white-outline">
-              Schedule a demo
             </Button>
           </div>
         </motion.div>
