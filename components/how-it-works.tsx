@@ -35,7 +35,7 @@ export function HowItWorks() {
       <div className="max-w-5xl mx-auto px-5 md:px-10 lg:px-16">
         {/* Section Header */}
         <div className="text-center mb-16 md:mb-20">
-          <h2 className="text-gray-900 mb-6">
+          <h2 className="text-heading mb-6">
             A Proven Roadmap That Doesn't Add to Your Workload
           </h2>
           <p className="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed">
@@ -72,7 +72,7 @@ export function HowItWorks() {
               </div>
 
               {/* Title */}
-              <h3 className="font-heading text-lg font-medium text-gray-900 mb-2">
+              <h3 className="font-heading text-lg font-medium text-heading mb-2">
                 {step.title}
               </h3>
 

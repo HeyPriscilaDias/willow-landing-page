@@ -101,7 +101,7 @@ export default function QuizResultsEmailSignupsPage() {
               </div>
             </div>
 
-            <h1 className="text-2xl font-semibold text-center text-[#0f172a] mb-2">
+            <h1 className="text-2xl font-semibold text-center text-heading mb-2">
               Quiz Email Signups
             </h1>
             <p className="text-neutral-500 text-center mb-6">
@@ -171,7 +171,7 @@ export default function QuizResultsEmailSignupsPage() {
                   <path d="M20 12c-4.418 0-8 3.582-8 8s3.582 8 8 8 8-3.582 8-8-3.582-8-8-8z" fill="#062F29"/>
                 </svg>
               </div>
-              <h1 className="font-semibold text-lg text-[#062F29]">
+              <h1 className="font-semibold text-lg text-heading">
                 Quiz Email Signups
               </h1>
             </div>
@@ -193,7 +193,7 @@ export default function QuizResultsEmailSignupsPage() {
           <div className="flex items-center gap-8">
             <div>
               <p className="text-sm text-neutral-500">Total Signups</p>
-              <p className="text-3xl font-semibold text-[#062F29]">{emails.length}</p>
+              <p className="text-3xl font-semibold text-heading">{emails.length}</p>
             </div>
           </div>
         </div>
@@ -232,7 +232,7 @@ export default function QuizResultsEmailSignupsPage() {
                       <td className="px-6 py-4 text-sm text-neutral-500">
                         {index + 1}
                       </td>
-                      <td className="px-6 py-4 text-sm text-[#062F29] font-medium">
+                      <td className="px-6 py-4 text-sm text-heading font-medium">
                         {email.email}
                       </td>
                       <td className="px-6 py-4 text-sm text-neutral-600">

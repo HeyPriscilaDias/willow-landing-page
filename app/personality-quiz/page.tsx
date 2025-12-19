@@ -214,7 +214,7 @@ function QuestionCard({
 
   return (
     <div className="mt-4">
-      <h2 className="font-heading font-semibold text-[30px] leading-9 tracking-tight text-[#0f172a]">
+      <h2 className="font-heading font-semibold text-[30px] leading-9 tracking-tight text-heading">
         {question.questionText}
       </h2>
       <p className="font-sans text-base leading-6 text-neutral-500 mt-6">
@@ -587,7 +587,7 @@ export default function PersonalityQuizPage() {
         {/* Main Content */}
         <div className="flex flex-col items-center justify-center min-h-[calc(100vh-120px)] max-w-[500px] mx-auto text-center">
           <div className="w-16 h-16 rounded-full bg-[#D8FBDB] flex items-center justify-center mb-6">
-            <EnvelopeSimple size={32} className="text-[#062F29]" />
+            <EnvelopeSimple size={32} className="text-heading" />
           </div>
 
           <h1 className="font-heading font-semibold text-[32px] md:text-[40px] leading-[130%] tracking-tight text-white">
@@ -620,7 +620,7 @@ export default function PersonalityQuizPage() {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full mt-4 px-8 py-3 bg-[#D8FBDB] hover:bg-[#c8f0cb] disabled:bg-[#D8FBDB]/50 disabled:cursor-not-allowed text-[#062F29] font-semibold rounded-xl transition-colors flex items-center justify-center gap-2"
+              className="w-full mt-4 px-8 py-3 bg-[#D8FBDB] hover:bg-[#c8f0cb] disabled:bg-[#D8FBDB]/50 disabled:cursor-not-allowed text-heading font-semibold rounded-xl transition-colors flex items-center justify-center gap-2"
             >
               {isSubmitting ? (
                 "Submitting..."
@@ -661,12 +661,12 @@ export default function PersonalityQuizPage() {
                   <path d="M20 12c-4.418 0-8 3.582-8 8s3.582 8 8 8 8-3.582 8-8-3.582-8-8-8z" fill="#062F29"/>
                 </svg>
               </div>
-              <span className="font-sans font-semibold text-base text-[#062F29]">
+              <span className="font-sans font-semibold text-base text-heading">
                 Your Results
               </span>
               <button
                 onClick={handleRetake}
-                className="text-sm text-[#062F29] hover:underline"
+                className="text-sm text-heading hover:underline"
               >
                 Retake Quiz
               </button>
@@ -705,8 +705,8 @@ export default function PersonalityQuizPage() {
           {/* Superpowers Section */}
           <div className="mt-10">
             <div className="flex items-center gap-2 mb-6">
-              <Star size={24} className="text-[#062F29]" />
-              <h2 className="font-heading font-semibold text-2xl text-[#062F29]">
+              <Star size={24} className="text-heading" />
+              <h2 className="font-heading font-semibold text-2xl text-heading">
                 Your super powers
               </h2>
             </div>
@@ -717,7 +717,7 @@ export default function PersonalityQuizPage() {
                 const description = parts.slice(1).join(": ").trim() || "";
                 return (
                   <div key={index} className="bg-neutral-100 rounded-xl p-4">
-                    <h3 className="font-sans font-semibold text-[#062F29]">{title}</h3>
+                    <h3 className="font-sans font-semibold text-heading">{title}</h3>
                     {description && (
                       <p className="font-sans text-sm text-neutral-600 mt-2">{description}</p>
                     )}
@@ -731,8 +731,8 @@ export default function PersonalityQuizPage() {
           {personalityResult.workStyle && (
             <div className="mt-10">
               <div className="flex items-center gap-2 mb-6">
-                <Briefcase size={24} className="text-[#062F29]" />
-                <h2 className="font-heading font-semibold text-2xl text-[#062F29]">
+                <Briefcase size={24} className="text-heading" />
+                <h2 className="font-heading font-semibold text-2xl text-heading">
                   Your work style
                 </h2>
               </div>
@@ -746,8 +746,8 @@ export default function PersonalityQuizPage() {
           {personalGoals.length > 0 && (
             <div className="mt-10">
               <div className="flex items-center gap-2 mb-6">
-                <Target size={24} className="text-[#062F29]" />
-                <h2 className="font-heading font-semibold text-2xl text-[#062F29]">
+                <Target size={24} className="text-heading" />
+                <h2 className="font-heading font-semibold text-2xl text-heading">
                   Personal development goals
                 </h2>
               </div>
@@ -759,9 +759,9 @@ export default function PersonalityQuizPage() {
                   return (
                     <div key={index} className="border border-neutral-200 rounded-xl p-4">
                       <div className="w-10 h-10 rounded-full bg-[#D8FBDB] flex items-center justify-center mb-3">
-                        <Target size={20} className="text-[#062F29]" />
+                        <Target size={20} className="text-heading" />
                       </div>
-                      <h3 className="font-sans font-semibold text-[#062F29] mb-2">{title}</h3>
+                      <h3 className="font-sans font-semibold text-heading mb-2">{title}</h3>
                       {body && (
                         <p className="font-sans text-sm text-neutral-600">{body}</p>
                       )}
@@ -778,8 +778,8 @@ export default function PersonalityQuizPage() {
             {studyTips.length > 0 && (
               <div>
                 <div className="flex items-center gap-2 mb-6">
-                  <BookOpen size={24} className="text-[#062F29]" />
-                  <h2 className="font-heading font-semibold text-2xl text-[#062F29]">
+                  <BookOpen size={24} className="text-heading" />
+                  <h2 className="font-heading font-semibold text-2xl text-heading">
                     Study tips
                   </h2>
                 </div>
@@ -790,7 +790,7 @@ export default function PersonalityQuizPage() {
                     const body = parts.slice(1).join(": ").trim() || "";
                     return (
                       <div key={index} className="border-b border-neutral-200 pb-4 last:border-b-0">
-                        <h3 className="font-sans font-semibold text-[#062F29]">{title}</h3>
+                        <h3 className="font-sans font-semibold text-heading">{title}</h3>
                         {body && (
                           <p className="font-sans text-sm text-neutral-600 mt-1">{body}</p>
                         )}
@@ -805,8 +805,8 @@ export default function PersonalityQuizPage() {
             {personalityResult.relationshipTips && (
               <div>
                 <div className="flex items-center gap-2 mb-6">
-                  <Heart size={24} className="text-[#062F29]" />
-                  <h2 className="font-heading font-semibold text-2xl text-[#062F29]">
+                  <Heart size={24} className="text-heading" />
+                  <h2 className="font-heading font-semibold text-2xl text-heading">
                     Relationship tips
                   </h2>
                 </div>
@@ -820,7 +820,7 @@ export default function PersonalityQuizPage() {
           {/* Recommended Careers */}
           {personalityResult.recommendedCareers && personalityResult.recommendedCareers.length > 0 && (
             <div className="mt-10">
-              <h2 className="font-heading font-semibold text-2xl text-[#062F29] mb-6">
+              <h2 className="font-heading font-semibold text-2xl text-heading mb-6">
                 Recommended Careers
               </h2>
               {personalityResult.recommendedCareersOpening && (
@@ -842,9 +842,9 @@ export default function PersonalityQuizPage() {
                   >
                     <div className="flex items-center gap-3">
                       <div className="w-10 h-10 rounded-full bg-[#D8FBDB] flex items-center justify-center">
-                        <Star size={20} className="text-[#062F29]" />
+                        <Star size={20} className="text-heading" />
                       </div>
-                      <span className="font-sans font-semibold text-[#062F29]">{career.title}</span>
+                      <span className="font-sans font-semibold text-heading">{career.title}</span>
                     </div>
                     <p className="font-sans text-sm text-neutral-600 max-w-md text-right">
                       {career.description}
@@ -858,13 +858,13 @@ export default function PersonalityQuizPage() {
           {/* Possible Majors */}
           {personalityResult.possibleMajors && personalityResult.possibleMajors.length > 0 && (
             <div className="mt-10">
-              <h2 className="font-heading font-semibold text-2xl text-[#062F29] mb-6">
+              <h2 className="font-heading font-semibold text-2xl text-heading mb-6">
                 Possible Majors
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {personalityResult.possibleMajors.map((major, index) => (
                   <div key={index} className="bg-white border border-neutral-200 rounded-xl p-4">
-                    <h3 className="font-sans font-semibold text-[#062F29]">{major.title}</h3>
+                    <h3 className="font-sans font-semibold text-heading">{major.title}</h3>
                     <p className="font-sans text-sm text-neutral-600 mt-2">{major.description}</p>
                   </div>
                 ))}
@@ -875,7 +875,7 @@ export default function PersonalityQuizPage() {
           {/* Inspirational Quotes */}
           {inspirationalQuotes.length > 0 && (
             <div className="mt-10">
-              <h2 className="font-heading font-semibold text-2xl text-[#062F29] mb-6">
+              <h2 className="font-heading font-semibold text-2xl text-heading mb-6">
                 Inspiration from famous mentors
               </h2>
               <div className="space-y-4">
@@ -892,11 +892,11 @@ export default function PersonalityQuizPage() {
                           </span>
                         </div>
                         <div className="absolute -right-2 top-1 w-8 h-8 rounded-full bg-[#D8FBDB] flex items-center justify-center">
-                          <Quotes size={16} className="text-[#062F29]" />
+                          <Quotes size={16} className="text-heading" />
                         </div>
                       </div>
                       <div className="ml-2">
-                        <p className="font-sans font-semibold text-[#062F29]">{quote.name}</p>
+                        <p className="font-sans font-semibold text-heading">{quote.name}</p>
                         <p className="font-sans text-sm text-neutral-600">{quote.description}</p>
                       </div>
                     </div>

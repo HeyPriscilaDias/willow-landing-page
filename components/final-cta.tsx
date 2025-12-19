@@ -29,7 +29,7 @@ export function FinalCTA() {
             className="object-cover opacity-10 pointer-events-none"
           />
           <div className="relative z-10">
-            <h2 className="font-heading text-[26px] md:text-[30px] font-medium text-[#13271C] mb-8 max-w-4xl mx-auto leading-tight">
+            <h2 className="font-heading text-[26px] md:text-[30px] font-medium text-heading mb-8 max-w-4xl mx-auto leading-tight">
               Ready to bridge the gap from graduation to career?
             </h2>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
