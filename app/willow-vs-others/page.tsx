@@ -5,17 +5,15 @@ import { motion, useInView } from "framer-motion";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { Button } from "@/components/button";
-import { GreyPlaceholder } from "@/components/grey-placeholder";
 import { ProposalForm } from "@/components/proposal-form";
 import { useProposalModal } from "@/lib/proposal-modal-context";
-import Link from "next/link";
 import {
   CheckCircle,
   XCircle,
   MinusCircle,
-  Buildings,
-  Robot,
-  Books,
+  TrendUp,
+  Book,
+  Path,
 } from "phosphor-react";
 
 export default function WillowVsOthersPage() {
@@ -26,27 +24,19 @@ export default function WillowVsOthersPage() {
       <Header />
       <main className="min-h-screen bg-white">
         {/* Hero Section */}
-        <HeroSection openModal={openModal} />
+        <HeroSection />
 
-        {/* Three Cards Section */}
-        <ThreeCardsSection />
-
-        {/* Feature Section 1: College & Professional Programs */}
-        <FeatureSection
-          title="College & Professional Programs"
-          description="Access over 220,000 programs across colleges, universities, trade schools, bootcamps, and professional certifications. Willow is the only platform that combines both college and professional programs in one place, giving students a complete picture of their postsecondary options."
-          reverse={false}
-        />
-
-        {/* Feature Section 2: ROI Projections */}
-        <FeatureSection
-          title="ROI Projections"
-          description="Make informed decisions with personalized, program-level ROI projections. Students can see expected earnings, costs, and time to completion for each pathway, helping them choose programs that maximize their economic mobility."
-          reverse={true}
-        />
+        {/* KPI Cards Section */}
+        <KPICardsSection />
 
         {/* Comparison Table */}
         <ComparisonTableSection />
+
+        {/* Science of Reading Section */}
+        <ScienceOfReadingSection />
+
+        {/* Final CTA */}
+        <FinalCTASection openModal={openModal} />
       </main>
       <Footer />
       <ProposalForm isOpen={isOpen} onClose={closeModal} />
@@ -54,7 +44,7 @@ export default function WillowVsOthersPage() {
   );
 }
 
-function HeroSection({ openModal }: { openModal: () => void }) {
+function HeroSection() {
   return (
     <section className="relative bg-gradient-to-b from-gray-50 to-white pt-16 md:pt-24 pb-16 md:pb-20">
       <motion.div
@@ -63,52 +53,36 @@ function HeroSection({ openModal }: { openModal: () => void }) {
         transition={{ duration: 0.6 }}
         className="text-center px-5 md:px-10 max-w-4xl mx-auto"
       >
-        <div className="inline-block px-4 py-2 bg-white border border-gray-300 rounded-full mb-6">
-          <span className="text-sm font-medium text-primary">
-            Platform comparison
-          </span>
-        </div>
         <h1 className="font-heading text-[32px] md:text-5xl lg:text-[60px] font-medium text-heading mb-6 leading-tight">
-          Willow vs Others
+          From Graduation Compliance to Economic Mobility
         </h1>
-        <p className="text-base md:text-lg text-secondary mb-8 max-w-2xl mx-auto">
-          See how Willow compares to other career exploration platforms. Our
-          mission-driven approach, AI-native technology, and comprehensive
-          curriculum set us apart.
+        <p className="text-base md:text-lg text-secondary max-w-3xl mx-auto leading-relaxed">
+          Legacy platforms help you track who graduates. Willow helps you ensure they thrive. We provide a structured, data-driven roadmap designed to meet district KPIs and break the cycle of student debt.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button onClick={openModal}>Request a proposal</Button>
-          <Link href="/curriculum-sample">
-            <Button variant="secondary">Get a curriculum sample</Button>
-          </Link>
-        </div>
       </motion.div>
     </section>
   );
 }
 
-function ThreeCardsSection() {
+function KPICardsSection() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const cards = [
     {
-      icon: Buildings,
-      title: "Mission Aligned",
-      description:
-        "As a Public Benefit Corporation, our mission is baked into our charter. We exist to increase economic mobility for students, not to maximize profits.",
+      icon: TrendUp,
+      heading: "50% Higher ROI Pathways",
+      body: "The only platform prioritizing program-level ROI. Pilot students were 50% more likely to select high-value pathways.",
     },
     {
-      icon: Robot,
-      title: "AI-Native",
-      description:
-        "Meet Alma, our friendly and safe AI counselor. Alma supports students at every step of their journey, providing personalized guidance 24/7.",
+      icon: Book,
+      heading: "150+ Scripted Lessons",
+      body: "Zero-prep, turnkey curriculum that fits directly into existing advisory blocks. No additional work for overstretched staff.",
     },
     {
-      icon: Books,
-      title: "Comprehensive",
-      description:
-        "Over 150 lesson modules covering self-discovery, career exploration, program research, and application support. A complete curriculum, not just a tool.",
+      icon: Path,
+      heading: "220,000+ Vetted Pathways",
+      body: "Serve the 40% seeking professional certificates. Trade schools and professional programs side-by-side with college.",
     },
   ];
 
@@ -124,7 +98,7 @@ function ThreeCardsSection() {
         >
           {cards.map((card, index) => (
             <motion.div
-              key={card.title}
+              key={card.heading}
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -134,59 +108,13 @@ function ThreeCardsSection() {
                 <card.icon size={24} weight="regular" className="text-white" />
               </div>
               <h3 className="font-heading text-xl font-medium text-heading mb-3">
-                {card.title}
+                {card.heading}
               </h3>
               <p className="text-secondary leading-relaxed">
-                {card.description}
+                {card.body}
               </p>
             </motion.div>
           ))}
-        </motion.div>
-      </div>
-    </section>
-  );
-}
-
-function FeatureSection({
-  title,
-  description,
-  reverse,
-}: {
-  title: string;
-  description: string;
-  reverse: boolean;
-}) {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
-
-  return (
-    <section className="py-16 md:py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-5 md:px-10 lg:px-16">
-        <motion.div
-          ref={ref}
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.6 }}
-          className={`grid lg:grid-cols-2 gap-8 lg:gap-12 items-center`}
-        >
-          {/* Image Placeholder */}
-          <div className={`${reverse ? "lg:order-2" : ""}`}>
-            <GreyPlaceholder aspectRatio="video" className="w-full" />
-          </div>
-
-          {/* Content */}
-          <div className={`${reverse ? "lg:order-1" : ""}`}>
-            <h3 className="font-heading text-2xl sm:text-3xl font-medium text-heading mb-4">
-              {title}
-            </h3>
-            <p className="text-secondary text-lg mb-6 leading-relaxed">
-              {description}
-            </p>
-            <button className="text-content-link font-semibold hover:text-[#025f80] transition-colors inline-flex items-center gap-2 border-b-2 border-content-link pb-1">
-              Learn More
-              <span aria-hidden="true">&rarr;</span>
-            </button>
-          </div>
         </motion.div>
       </div>
     </section>
@@ -215,7 +143,7 @@ function ComparisonTableSection() {
       ],
     },
     {
-      name: "Quality Indicators",
+      name: "Quality indicators",
       subtitle: "",
       values: [
         { status: "check", note: "Personalized, program-level ROI projections" },
@@ -274,7 +202,7 @@ function ComparisonTableSection() {
       ],
     },
     {
-      name: "Comprehensive Curriculum",
+      name: "Comprehensive curriculum",
       subtitle: "",
       values: [
         {
@@ -327,13 +255,6 @@ function ComparisonTableSection() {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="font-heading text-3xl sm:text-4xl font-medium text-heading mb-4 text-center">
-            Willow compared
-          </h2>
-          <p className="text-secondary text-lg text-center mb-12 max-w-2xl mx-auto">
-            See how Willow stacks up against other career exploration platforms
-          </p>
-
           {/* Desktop Table */}
           <div className="hidden lg:block overflow-x-auto">
             <table className="w-full border-collapse">
@@ -446,6 +367,58 @@ function ComparisonTableSection() {
               </div>
             ))}
           </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
+
+function ScienceOfReadingSection() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+
+  return (
+    <section className="py-16 md:py-24 bg-white">
+      <div className="max-w-3xl mx-auto px-5 md:px-10 lg:px-16">
+        <motion.div
+          ref={ref}
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          transition={{ duration: 0.6 }}
+          className="text-center"
+        >
+          <h2 className="font-heading text-3xl sm:text-4xl font-medium text-heading mb-6">
+            The Science of Reading for Postsecondary Success.
+          </h2>
+          <p className="text-lg text-secondary leading-relaxed">
+            Just as the Science of Reading replaced &ldquo;guessing&rdquo; with structure, Willow replaces &ldquo;career exposure&rdquo; with a data-backed process. Most platforms are just libraries of options; Willow is the literacy required to navigate them. We don&rsquo;t just add a tool to your district; we provide a proven framework for mobility.
+          </p>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
+
+function FinalCTASection({ openModal }: { openModal: () => void }) {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+
+  return (
+    <section className="py-16 md:py-24 bg-[#062F29]">
+      <div className="max-w-3xl mx-auto px-5 md:px-10 lg:px-16">
+        <motion.div
+          ref={ref}
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          transition={{ duration: 0.6 }}
+          className="text-center"
+        >
+          <p className="text-lg md:text-xl text-white/90 mb-8">
+            See how Willow compares to your current platform in a live demo.
+          </p>
+          <Button variant="white" onClick={openModal}>
+            Book a 15-Minute Comparison Call
+          </Button>
         </motion.div>
       </div>
     </section>
