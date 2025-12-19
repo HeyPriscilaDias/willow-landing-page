@@ -3,39 +3,31 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { GreyPlaceholder } from "./grey-placeholder";
-import { Button } from "./button";
-import Link from "next/link";
 
 interface Feature {
   title: string;
   description: string;
+  imagePlaceholder: string;
 }
 
 const features: Feature[] = [
   {
-    title: "Curriculum-led",
+    title: "ROI-Focused Discovery",
     description:
-      "Our comprehensive curriculum guides students through a structured journey from self-discovery and career exploration to postsecondary program research and application support, ensuring every learner has the foundation to make informed decisions about their future.",
+      "Compare 220,000+ college and professional programs side-by-side with personalized ROI projections.",
+    imagePlaceholder: "Recommendation Engine / ROI Dashboard",
   },
   {
-    title: "Personality Quiz",
+    title: "Plug-and-Play Curriculum",
     description:
-      "Students complete an engaging personality assessment that reveals their unique strengths, work preferences, and natural talents, providing valuable insights to guide their career exploration journey.",
+      "150+ fully facilitated, zero-prep lessons designed for 25 or 45-minute advisory blocks.",
+    imagePlaceholder: "Scripted Lesson / Curriculum View",
   },
   {
-    title: "Alma AI",
+    title: "Alma: AI Success Coach",
     description:
-      "Meet Alma, our AI-powered assistant that provides personalized guidance and answers students' questions about career pathways, programs, and opportunities in real-time.",
-  },
-  {
-    title: "Career Exploration",
-    description:
-      "Students explore hundreds of career options through interactive tools that showcase job responsibilities, salary ranges, required education, and real-world career trajectories.",
-  },
-  {
-    title: "College and Professional Program Exploration",
-    description:
-      "Discover best-fit educational pathways with our comprehensive database of colleges, universities, and professional programs, complete with ROI data, completion rates, and program outcomes.",
+      "A safe, 24/7 AI counselor that acts as a force multiplier for your overstretched staff.",
+    imagePlaceholder: "Alma AI Chat Interface",
   },
 ];
 
@@ -83,7 +75,11 @@ function FeatureBlock({
     >
       {/* Image Placeholder */}
       <div className={`${reverse ? "lg:order-2" : ""}`}>
-        <GreyPlaceholder aspectRatio="video" className="w-full" />
+        <GreyPlaceholder aspectRatio="video" className="w-full">
+          <span className="text-gray-500 text-sm text-center px-4">
+            {feature.imagePlaceholder}
+          </span>
+        </GreyPlaceholder>
       </div>
 
       {/* Content */}
@@ -91,27 +87,9 @@ function FeatureBlock({
         <h3 className="font-heading text-2xl sm:text-3xl font-medium text-heading mb-4">
           {feature.title}
         </h3>
-        <p className="text-secondary text-lg mb-6 leading-relaxed">
+        <p className="text-secondary text-lg leading-relaxed">
           {feature.description}
         </p>
-        {index === 0 ? (
-          <Link href="/curriculum-sample">
-            <Button variant="secondary">
-              Get a curriculum sample
-            </Button>
-          </Link>
-        ) : index === 1 ? (
-          <Link href="/personality-quiz">
-            <Button variant="secondary">
-              Take the quiz
-            </Button>
-          </Link>
-        ) : (
-          <button className="text-content-link font-semibold hover:text-[#025f80] transition-colors inline-flex items-center gap-2 border-b-2 border-content-link pb-1">
-            Learn More
-            <span aria-hidden="true">→</span>
-          </button>
-        )}
       </div>
     </motion.div>
   );

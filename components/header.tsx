@@ -8,7 +8,6 @@ import { WillowLogo } from "./willow-logo";
 import { Button } from "./button";
 
 const navLinks = [
-  { name: "The challenge", href: "/the-challenge" },
   { name: "Willow vs Others", href: "/willow-vs-others" },
   { name: "About us", href: "/about" },
   { name: "Curriculum", href: "/curriculum" },

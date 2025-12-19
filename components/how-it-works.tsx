@@ -14,19 +14,19 @@ const steps: Step[] = [
   {
     title: "Plan",
     description:
-      "Assess needs, determine how to partner (advisory, seminar, etc.), draft implementation plan/SAS.",
+      "Assess district needs and draft a custom implementation plan for advisory or seminar blocks.",
     image: "/plan.png",
   },
   {
     title: "Kickoff",
     description:
-      "Onboard staff, get kids on platform, start curriculum.",
+      "Seamless staff onboarding and student launch to start the curriculum on day one.",
     image: "/launch.png",
   },
   {
     title: "Refine & Grow",
     description:
-      "Continuous data tracking, observations, coaching, etc.",
+      "Ongoing data tracking, observations, and coaching for long-term success.",
     image: "/grow.png",
   },
 ];
@@ -38,12 +38,8 @@ export function HowItWorks() {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-heading mb-4">
-            How does it work?
+            A Partnership for Real Outcomes.
           </h2>
-          <p className="text-lg text-secondary max-w-3xl mx-auto">
-            Our proven three-step process makes it easy to bring transformative
-            career exploration to your school.
-          </p>
         </div>
 
         {/* Steps */}
