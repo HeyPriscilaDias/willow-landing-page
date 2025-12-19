@@ -8,9 +8,9 @@ import { WillowLogo } from "./willow-logo";
 import { Button } from "./button";
 
 const navLinks = [
-  { name: "Willow vs Others", href: "/willow-vs-others" },
-  { name: "About us", href: "/about" },
   { name: "Curriculum", href: "/curriculum" },
+  { name: "About us", href: "/about" },
+  { name: "Willow vs Others", href: "/willow-vs-others" },
 ];
 
 export function Header() {

@@ -101,6 +101,9 @@ export function Hero() {
           </motion.div>
         </div>
       </motion.div>
+
+      {/* Divider line */}
+      <div className="w-full h-px bg-[#D5D7DA]" />
     </section>
   );
 }

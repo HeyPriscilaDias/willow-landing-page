@@ -3,6 +3,7 @@
 import { Header } from "@/components/header";
 import { Hero } from "@/components/hero";
 import { LogoCarousel } from "@/components/logo-carousel";
+import { DataStats } from "@/components/data-stats";
 import { DiscoveryBridge } from "@/components/discovery-bridge";
 import { FeaturesSection } from "@/components/features-section";
 import { HowItWorks } from "@/components/how-it-works";
@@ -21,6 +22,7 @@ export default function Home() {
       <main>
         <Hero />
         <LogoCarousel />
+        <DataStats />
         <DiscoveryBridge />
         <FeaturesSection />
         <HowItWorks />

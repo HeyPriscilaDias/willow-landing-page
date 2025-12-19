@@ -1,0 +1,70 @@
+"use client";
+
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
+
+interface Stat {
+  number: string;
+  label: string;
+  subtext: string;
+}
+
+const stats: Stat[] = [
+  {
+    number: "$300B",
+    label: "The Debt Trap",
+    subtext:
+      "Held by 40M Americans who didn't complete a degree. Willow ensures students start on the right path.",
+  },
+  {
+    number: "50%",
+    label: "Higher ROI",
+    subtext:
+      "Students using Willow are more likely to choose programs that lead to family-sustaining wages.",
+  },
+  {
+    number: "220,000+",
+    label: "Vetted Pathways",
+    subtext:
+      "Explore college and professional programs side-by-side to find the best-fit future.",
+  },
+];
+
+export function DataStats() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+
+  return (
+    <section className="py-20 md:py-28 bg-white">
+      <div className="max-w-7xl mx-auto px-5 md:px-10 lg:px-16">
+        <motion.div
+          ref={ref}
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          transition={{ duration: 0.6 }}
+          className="grid md:grid-cols-3 gap-8 lg:gap-12"
+        >
+          {stats.map((stat, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+              transition={{ duration: 0.5, delay: 0.1 * (index + 1) }}
+              className="text-center px-4"
+            >
+              <p className="font-heading text-[60px] font-medium text-primary mb-3 tracking-tight">
+                {stat.number}
+              </p>
+              <p className="text-[14px] font-semibold text-heading mb-4">
+                {stat.label}
+              </p>
+              <p className="text-secondary text-[14px] leading-relaxed">
+                {stat.subtext}
+              </p>
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
+    </section>
+  );
+}
