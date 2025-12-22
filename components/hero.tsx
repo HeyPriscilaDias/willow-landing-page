@@ -49,10 +49,10 @@ export function Hero() {
         alt=""
         width={1006}
         height={478}
-        className="absolute bottom-0 right-0 w-[65%] max-w-[723px] h-auto z-[1] pointer-events-none"
+        className="absolute bottom-[-2px] right-0 w-[65%] max-w-[723px] h-auto z-[1] pointer-events-none"
         aria-hidden="true"
       />
-      <div className="absolute bottom-0 right-0 w-[68%] max-w-[765px] h-auto z-0 pointer-events-none drop-shadow-[0_4px_12px_rgba(0,0,0,0.15)]">
+      <div className="absolute bottom-[-2px] right-0 w-[68%] max-w-[765px] h-auto z-0 pointer-events-none drop-shadow-[0_4px_12px_rgba(0,0,0,0.15)]">
         <Image
           src="/hero-assets/paper-scrap-2.svg"
           alt=""
@@ -81,11 +81,11 @@ export function Hero() {
         alt=""
         width={1373}
         height={570}
-        className="absolute bottom-0 left-0 w-[83%] max-w-[918px] h-auto z-0 pointer-events-none drop-shadow-[0_4px_12px_rgba(0,0,0,0.15)]"
+        className="absolute bottom-[-2px] left-0 w-[83%] max-w-[918px] h-auto z-0 pointer-events-none drop-shadow-[0_4px_12px_rgba(0,0,0,0.15)]"
         aria-hidden="true"
       />
       {/* Paper scrap 3 (black) - in front */}
-      <div className="absolute bottom-0 left-0 w-[83%] max-w-[918px] h-auto z-[1] pointer-events-none">
+      <div className="absolute bottom-[-2px] left-0 w-[75%] max-w-[826px] h-auto z-[1] pointer-events-none">
         <Image
           src="/hero-assets/paper-scrap-3.svg"
           alt=""
@@ -113,11 +113,11 @@ export function Hero() {
         alt=""
         width={924}
         height={519}
-        className="absolute bottom-0 left-0 w-[30%] max-w-[319px] h-auto z-[2] pointer-events-none drop-shadow-[0_4px_12px_rgba(0,0,0,0.15)]"
+        className="absolute bottom-[-2px] left-0 w-[30%] max-w-[319px] h-auto z-[2] pointer-events-none drop-shadow-[0_4px_12px_rgba(0,0,0,0.15)]"
         aria-hidden="true"
       />
       {/* Paper scrap 5 (black) - in front */}
-      <div className="absolute bottom-0 left-0 w-[27%] max-w-[298px] h-auto z-[3] pointer-events-none">
+      <div className="absolute bottom-[-2px] left-0 w-[27%] max-w-[298px] h-auto z-[3] pointer-events-none">
         <Image
           src="/hero-assets/paper-scrap-5.svg"
           alt=""
@@ -169,7 +169,7 @@ export function Hero() {
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.2 }}
-        className="relative z-10 mt-12 md:mt-16 px-5 md:px-10 lg:px-16 max-w-7xl mx-auto"
+        className="relative z-10 mt-12 md:mt-16 px-5 md:px-10 lg:px-16 max-w-7xl mx-auto mb-[-2px]"
       >
         <div className="relative w-[76%] mx-auto -translate-x-[5%]">
           {/* UI Frame - Base layer */}
