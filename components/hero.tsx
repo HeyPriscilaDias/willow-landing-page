@@ -190,7 +190,7 @@ export function Hero() {
           {/* Slide Image - On top, positioned right, smooth scroll animation */}
           <motion.div
             style={{ x: slideX, y: slideY }}
-            className="absolute top-[5%] right-[-30%] w-[62%] z-10"
+            className="absolute top-[15%] right-[-30%] w-[62%] z-10"
           >
             <Image
               src="/hero-img-slide.png"
