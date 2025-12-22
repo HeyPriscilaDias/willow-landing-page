@@ -11,22 +11,22 @@ interface Stat {
 
 const stats: Stat[] = [
   {
-    number: "$300B",
-    label: "The Debt Trap",
+    number: "60%",
+    label: "of jobs face AI disruption",
     subtext:
-      "Held by 40M Americans who didn't complete a degree. Willow ensures students start on the right path.",
+      "As technology rapidly reshapes the workforce, postsecondary education has never been more critical.",
+  },
+  {
+    number: "240+",
+    label: "flexible, skill-aligned lessons",
+    subtext:
+      "Willow provides districts with a comprehensive, AI-native curriculum designed to help students navigate this changing landscape.",
   },
   {
     number: "50%",
-    label: "Higher ROI",
+    label: "higher enrollment in high-ROI programs",
     subtext:
-      "Students using Willow are more likely to choose programs that lead to family-sustaining wages.",
-  },
-  {
-    number: "220,000+",
-    label: "Vetted Pathways",
-    subtext:
-      "Explore college and professional programs side-by-side to find the best-fit future.",
+      "Students on Willow's data-driven guidance are 50% more likely to choose and enroll in high-quality, high-ROI postsecondary programs, setting them on a direct path toward economic mobility.",
   },
 ];
 
@@ -55,7 +55,7 @@ export function DataStats() {
               <p className="font-heading text-[60px] font-medium text-primary mb-3 tracking-tight">
                 {stat.number}
               </p>
-              <p className="text-[14px] font-semibold text-heading mb-4">
+              <p className="text-[14px] font-semibold text-[#252B37] mb-4">
                 {stat.label}
               </p>
               <p className="text-secondary text-[14px] leading-relaxed">

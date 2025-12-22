@@ -36,10 +36,10 @@ export function HowItWorks() {
         {/* Section Header */}
         <div className="text-center mb-16 md:mb-20">
           <h2 className="text-heading mb-6">
-            A Proven Roadmap That Doesn't Add to Your Workload
+            A Proven Roadmap That Doesn&apos;t Add to Your Workload
           </h2>
           <p className="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed">
-            We know your team is at capacity. That's why we don't just give you a login; we provide a{" "}
+            We know your team is at capacity. That&apos;s why we don&apos;t just give you a login; we provide a{" "}
             <span className="relative inline-block font-semibold text-gray-900">
               fully facilitated curriculum
               <svg className="absolute bottom-0 left-0 w-full h-2" viewBox="0 0 200 8" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">

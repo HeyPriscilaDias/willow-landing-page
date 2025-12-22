@@ -181,7 +181,7 @@ export function Hero() {
         className="relative z-10 text-center px-5 md:px-10 max-w-4xl mx-auto"
       >
         <h1 className="font-heading text-[32px] md:text-5xl lg:text-[60px] font-medium text-heading mb-6 leading-tight">
-          The &ldquo;Science of Reading&rdquo; for Postsecondary Success
+          Career & Postsecondary Readiness Built for Economic Mobility
         </h1>
         <p className="text-base md:text-lg text-secondary mb-8 max-w-2xl mx-auto">
           Beyond &ldquo;random acts of dual enrollment.&rdquo; An AI-native roadmap built for economic mobility.

@@ -29,9 +29,9 @@ const features: Feature[] = [
     imagePlaceholder: "Scripted Lesson / Curriculum View",
   },
   {
-    title: "Alma: AI Success Coach",
+    title: "Alma: Scaling Personalized Guidance Across Your District",
     description:
-      "A safe, 24/7 AI counselor that acts as a force multiplier for your overstretched staff.",
+      "Bridge the gap between student needs and counselor capacity with Alma, our AI-native mentor. By automating routine career exploration and data-driven program matching, Alma provides every student with 24/7 personalized guidance. This scalable support ensures no student falls through the cracks while freeing your staff to focus on high-impact, 1-on-1 interventions.",
     imagePlaceholder: "Alma AI Chat Interface",
   },
 ];

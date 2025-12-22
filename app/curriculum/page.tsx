@@ -111,7 +111,7 @@ export default function CurriculumPage() {
                 Help every student graduate with purpose
               </h1>
               <p className="text-secondary text-lg md:text-xl leading-relaxed mb-8 max-w-3xl">
-                Willow's career and college readiness curriculum empowers students with the self-awareness, future planning, and durable skills they need to thrive during and after high school. Our rigorous lessons make it easy for educators to meet state mandates while delivering engaging, meaningful experiences for students.
+                Willow&apos;s career and college readiness curriculum empowers students with the self-awareness, future planning, and durable skills they need to thrive during and after high school. Our rigorous lessons make it easy for educators to meet state mandates while delivering engaging, meaningful experiences for students.
               </p>
               <Link href="/curriculum-sample">
                 <Button>Get a curriculum sample</Button>
