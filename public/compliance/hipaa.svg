@@ -1,7 +1,0 @@
-<svg width="80" height="56" viewBox="0 0 80 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="80" height="56" rx="8" fill="#062F29"/>
-  <path d="M40 16C40 16 32 19 32 24V30C32 35 36 38 40 40C44 38 48 35 48 30V24C48 19 40 16 40 16Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M36 28L38.5 30.5L44 25" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  <text x="40" y="50" font-family="Inter, sans-serif" font-size="7" font-weight="600" fill="white" text-anchor="middle">HIPAA</text>
-  <text x="40" y="8" font-family="Inter, sans-serif" font-size="6" font-weight="500" fill="white" text-anchor="middle">COMPLIANT</text>
-</svg>

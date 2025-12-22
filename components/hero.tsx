@@ -2,13 +2,11 @@
 
 import { useRef } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
-import { useProposalModal } from "@/lib/proposal-modal-context";
 import { Button } from "./button";
 import Link from "next/link";
 import Image from "next/image";
 
 export function Hero() {
-  const { openModal } = useProposalModal();
   const sectionRef = useRef<HTMLElement>(null);
 
   const { scrollYProgress } = useScroll({
@@ -194,9 +192,11 @@ export function Hero() {
               Get a curriculum sample
             </Button>
           </Link>
-          <Button onClick={openModal}>
-            Request a proposal
-          </Button>
+          <a href="https://calendly.com/d/cq6c-qdg-hjw/willow-curriculum-platform-demo-meeting?month=2025-12" target="_blank" rel="noopener noreferrer">
+            <Button>
+              Request a proposal
+            </Button>
+          </a>
         </div>
       </motion.div>
 
@@ -211,7 +211,7 @@ export function Hero() {
           {/* UI Frame - Base layer */}
           <div className="overflow-hidden [aspect-ratio:1223/743]">
             <Image
-              src="/hero-img-ui.png"
+              src="/hero-assets/hero-img-ui.png"
               alt="Willow curriculum interface"
               width={1223}
               height={919}
@@ -229,7 +229,7 @@ export function Hero() {
             className="absolute top-[15%] right-[-30%] w-[62%] z-10"
           >
             <Image
-              src="/hero-img-slide.png"
+              src="/hero-assets/hero-img-slide.png"
               alt="Curriculum slide preview"
               width={927}
               height={532}

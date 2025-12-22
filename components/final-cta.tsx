@@ -2,15 +2,21 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { useProposalModal } from "@/lib/proposal-modal-context";
 import { Button } from "./button";
 import Link from "next/link";
 import Image from "next/image";
 
-export function FinalCTA() {
+interface FinalCTAProps {
+  headline?: string;
+  singleButton?: {
+    text: string;
+    href: string;
+  };
+}
+
+export function FinalCTA({ headline, singleButton }: FinalCTAProps = {}) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
-  const { openModal } = useProposalModal();
 
   return (
     <section className="py-20 md:py-30 bg-white">
@@ -30,17 +36,29 @@ export function FinalCTA() {
           />
           <div className="relative z-10">
             <h2 className="font-heading text-[26px] md:text-[30px] font-medium text-heading mb-8 max-w-4xl mx-auto leading-tight">
-              Ready to bridge the gap from graduation to career?
+              {headline || "Ready to bridge the gap from graduation to career?"}
             </h2>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/curriculum-sample">
-                <Button variant="white">
-                  Get a curriculum sample
-                </Button>
-              </Link>
-              <Button onClick={openModal} variant="primary">
-                Request a proposal
-              </Button>
+              {singleButton ? (
+                <Link href={singleButton.href}>
+                  <Button variant="primary">
+                    {singleButton.text}
+                  </Button>
+                </Link>
+              ) : (
+                <>
+                  <Link href="/curriculum-sample">
+                    <Button variant="white">
+                      Get a curriculum sample
+                    </Button>
+                  </Link>
+                  <a href="https://calendly.com/d/cq6c-qdg-hjw/willow-curriculum-platform-demo-meeting?month=2025-12" target="_blank" rel="noopener noreferrer">
+                    <Button variant="primary">
+                      Request a proposal
+                    </Button>
+                  </a>
+                </>
+              )}
             </div>
           </div>
         </motion.div>

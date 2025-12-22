@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 import { List, X } from "phosphor-react";
 import { cn } from "@/lib/utils";
-import { useProposalModal } from "@/lib/proposal-modal-context";
 import { WillowLogo } from "./willow-logo";
 import { Button } from "./button";
 
@@ -16,7 +15,6 @@ const navLinks = [
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const { openModal } = useProposalModal();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -57,9 +55,11 @@ export function Header() {
             >
               Login
             </a>
-            <Button onClick={openModal}>
-              Request a proposal
-            </Button>
+            <a href="https://calendly.com/d/cq6c-qdg-hjw/willow-curriculum-platform-demo-meeting?month=2025-12" target="_blank" rel="noopener noreferrer">
+              <Button>
+                Request a proposal
+              </Button>
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -102,15 +102,16 @@ export function Header() {
             >
               Login
             </a>
-            <Button
-              onClick={() => {
-                openModal();
-                setMobileMenuOpen(false);
-              }}
-              className="w-full"
+            <a
+              href="https://calendly.com/d/cq6c-qdg-hjw/willow-curriculum-platform-demo-meeting?month=2025-12"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setMobileMenuOpen(false)}
             >
-              Request a proposal
-            </Button>
+              <Button className="w-full">
+                Request a proposal
+              </Button>
+            </a>
           </div>
         </div>
       </nav>
