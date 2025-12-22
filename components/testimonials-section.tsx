@@ -127,6 +127,7 @@ function TestimonialCard({
 
 export function TestimonialsSection() {
   const [isDragging, setIsDragging] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
 
   // Duplicate testimonials for seamless infinite scroll
   const duplicatedTestimonials = [...testimonials, ...testimonials];
@@ -161,7 +162,9 @@ export function TestimonialsSection() {
 
         {/* Scrolling Track */}
         <div
-          className={`flex items-start gap-6 testimonial-carousel py-8 ${isDragging ? 'paused' : ''}`}
+          className={`flex items-start gap-6 testimonial-carousel py-8 ${isDragging || isHovered ? 'paused' : ''}`}
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
         >
           {duplicatedTestimonials.map((testimonial, index) => (
             <TestimonialCard

@@ -184,7 +184,7 @@ export function Hero() {
           Career & Postsecondary Readiness Built for Economic Mobility
         </h1>
         <p className="text-base md:text-lg text-secondary mb-8 max-w-2xl mx-auto">
-          Beyond &ldquo;random acts of dual enrollment.&rdquo; An AI-native roadmap built for economic mobility.
+          An AI-native curriculum and platform that transforms exploration into actionable student pathways at scale.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link href="/curriculum-sample">

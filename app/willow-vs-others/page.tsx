@@ -4,9 +4,7 @@ import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
-import { Button } from "@/components/button";
-import { ProposalForm } from "@/components/proposal-form";
-import { useProposalModal } from "@/lib/proposal-modal-context";
+import { FinalCTA } from "@/components/final-cta";
 import {
   CheckCircle,
   XCircle,
@@ -17,8 +15,6 @@ import {
 } from "phosphor-react";
 
 export default function WillowVsOthersPage() {
-  const { isOpen, closeModal, openModal } = useProposalModal();
-
   return (
     <>
       <Header />
@@ -36,30 +32,35 @@ export default function WillowVsOthersPage() {
         <ScienceOfReadingSection />
 
         {/* Final CTA */}
-        <FinalCTASection openModal={openModal} />
+        <FinalCTA />
       </main>
       <Footer />
-      <ProposalForm isOpen={isOpen} onClose={closeModal} />
     </>
   );
 }
 
 function HeroSection() {
+  const heroRef = useRef(null);
+  const heroInView = useInView(heroRef, { once: true });
+
   return (
-    <section className="relative bg-gradient-to-b from-gray-50 to-white pt-16 md:pt-24 pb-16 md:pb-20">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        className="text-center px-5 md:px-10 max-w-4xl mx-auto"
-      >
-        <h1 className="font-heading text-[32px] md:text-5xl lg:text-[60px] font-medium text-heading mb-6 leading-tight">
-          From Graduation Compliance to Economic Mobility
-        </h1>
-        <p className="text-base md:text-lg text-secondary max-w-3xl mx-auto leading-relaxed">
-          Legacy platforms help you track who graduates. Willow helps you ensure they thrive. We provide a structured, data-driven roadmap designed to meet district KPIs and break the cycle of student debt.
-        </p>
-      </motion.div>
+    <section className="pt-32 pb-20 md:pt-40 md:pb-30 bg-white">
+      <div className="max-w-7xl mx-auto px-5 md:px-10 lg:px-16">
+        <motion.div
+          ref={heroRef}
+          initial={{ opacity: 0, y: 30 }}
+          animate={heroInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          transition={{ duration: 0.6 }}
+          className="max-w-4xl"
+        >
+          <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-medium text-heading mb-6 leading-tight">
+            From Graduation Compliance to Economic Mobility
+          </h1>
+          <p className="text-secondary text-lg md:text-xl leading-relaxed max-w-3xl">
+            Legacy platforms help you track who graduates. Willow helps you ensure they thrive. We provide a structured, data-driven roadmap designed to meet district KPIs and break the cycle of student debt.
+          </p>
+        </motion.div>
+      </div>
     </section>
   );
 }
@@ -388,10 +389,10 @@ function ScienceOfReadingSection() {
           className="text-center"
         >
           <h2 className="font-heading text-3xl sm:text-4xl font-medium text-heading mb-6">
-            The Science of Reading for Postsecondary Success.
+            The &ldquo;Science of Reading&rdquo; for Postsecondary Success.
           </h2>
           <p className="text-lg text-secondary leading-relaxed">
-            Just as the Science of Reading replaced &ldquo;guessing&rdquo; with structure, Willow replaces &ldquo;career exposure&rdquo; with a data-backed process. Most platforms are just libraries of options; Willow is the literacy required to navigate them. We don&rsquo;t just add a tool to your district; we provide a proven framework for mobility.
+            Just as the &ldquo;Science of Reading&rdquo; replaced guessing with structure, Willow replaces &ldquo;career exposure&rdquo; with a data-backed process. Most platforms are just libraries of options; Willow is the literacy required to navigate them. We don&rsquo;t just add a tool to your district; we provide a proven framework for mobility.
           </p>
         </motion.div>
       </div>
@@ -399,28 +400,3 @@ function ScienceOfReadingSection() {
   );
 }
 
-function FinalCTASection({ openModal }: { openModal: () => void }) {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
-
-  return (
-    <section className="py-16 md:py-24 bg-[#062F29]">
-      <div className="max-w-3xl mx-auto px-5 md:px-10 lg:px-16">
-        <motion.div
-          ref={ref}
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.6 }}
-          className="text-center"
-        >
-          <p className="text-lg md:text-xl text-white/90 mb-8">
-            See how Willow compares to your current platform in a live demo.
-          </p>
-          <Button variant="white" onClick={openModal}>
-            Book a 15-Minute Comparison Call
-          </Button>
-        </motion.div>
-      </div>
-    </section>
-  );
-}

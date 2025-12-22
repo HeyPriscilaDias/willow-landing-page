@@ -83,7 +83,7 @@ function FeatureBlock({
       <div className={`${reverse ? "lg:order-2" : ""}`}>
         {feature.customImage ? (
           <div
-            className={`w-full overflow-hidden rounded-[12px] ${feature.customBgColor ? "p-8 lg:p-12" : ""}`}
+            className={`w-full overflow-hidden rounded-[12px] ${feature.customBgColor ? "py-8 pl-8 lg:py-12 lg:pl-12" : ""}`}
             style={{
               backgroundColor: feature.customBgColor,
             }}
