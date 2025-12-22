@@ -44,15 +44,38 @@ export function Hero() {
         priority
       />
       {/* Paper scrap decorations - Right side */}
-      <Image
-        src="/hero-assets/paper-scrap-1.svg"
-        alt=""
-        width={1006}
-        height={478}
-        className="absolute bottom-[-2px] right-0 w-[65%] max-w-[723px] h-auto z-[1] pointer-events-none"
-        aria-hidden="true"
-      />
-      <div className="absolute bottom-[-2px] right-0 w-[68%] max-w-[765px] h-auto z-0 pointer-events-none drop-shadow-[0_4px_12px_rgba(0,0,0,0.15)]">
+      <div className="absolute bottom-[-2px] right-0 w-[65%] max-w-[723px] h-auto z-[1] pointer-events-none">
+        <Image
+          src="/hero-assets/paper-scrap-1.svg"
+          alt=""
+          width={1006}
+          height={478}
+          className="w-full h-auto opacity-0"
+          aria-hidden="true"
+        />
+        <div
+          className="absolute inset-0 overflow-hidden"
+          style={{
+            maskImage: "url(/hero-assets/paper-scrap-1.svg)",
+            maskSize: "100% 100%",
+            WebkitMaskImage: "url(/hero-assets/paper-scrap-1.svg)",
+            WebkitMaskSize: "100% 100%",
+          }}
+          aria-hidden="true"
+        >
+          <div
+            className="absolute inset-[-20%] w-[140%] h-[140%]"
+            style={{
+              backgroundImage: "url(/hero-assets/notebook-pattern.png)",
+              backgroundSize: "cover",
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "center",
+              transform: "rotate(10deg)",
+            }}
+          />
+        </div>
+      </div>
+      <div className="absolute bottom-[-2px] right-0 w-[68%] max-w-[765px] h-auto z-0 pointer-events-none">
         <Image
           src="/hero-assets/paper-scrap-2.svg"
           alt=""
@@ -81,10 +104,10 @@ export function Hero() {
         alt=""
         width={1373}
         height={570}
-        className="absolute bottom-[-2px] left-0 w-[83%] max-w-[918px] h-auto z-0 pointer-events-none drop-shadow-[0_4px_12px_rgba(0,0,0,0.15)]"
+        className="absolute bottom-[-2px] left-0 w-[83%] max-w-[918px] h-auto z-0 pointer-events-none"
         aria-hidden="true"
       />
-      {/* Paper scrap 3 (black) - in front */}
+      {/* Paper scrap 3 - in front */}
       <div className="absolute bottom-[-2px] left-0 w-[75%] max-w-[826px] h-auto z-[1] pointer-events-none">
         <Image
           src="/hero-assets/paper-scrap-3.svg"
@@ -97,8 +120,10 @@ export function Hero() {
         <div
           className="absolute inset-0 opacity-15"
           style={{
-            backgroundImage: "url(/hero-assets/noise-1.png)",
-            backgroundSize: "200px",
+            backgroundImage: "url(/hero-assets/black-texture.jpg)",
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
             maskImage: "url(/hero-assets/paper-scrap-3.svg)",
             maskSize: "100% 100%",
             WebkitMaskImage: "url(/hero-assets/paper-scrap-3.svg)",
@@ -113,17 +138,28 @@ export function Hero() {
         alt=""
         width={924}
         height={519}
-        className="absolute bottom-[-2px] left-0 w-[30%] max-w-[319px] h-auto z-[2] pointer-events-none drop-shadow-[0_4px_12px_rgba(0,0,0,0.15)]"
+        className="absolute bottom-[-2px] left-0 w-[30%] max-w-[319px] h-auto z-[2] pointer-events-none"
         aria-hidden="true"
       />
-      {/* Paper scrap 5 (black) - in front */}
+      {/* Paper scrap 5 - in front */}
       <div className="absolute bottom-[-2px] left-0 w-[27%] max-w-[298px] h-auto z-[3] pointer-events-none">
         <Image
           src="/hero-assets/paper-scrap-5.svg"
           alt=""
           width={930}
           height={458}
-          className="w-full h-auto"
+          className="w-full h-auto opacity-0"
+          aria-hidden="true"
+        />
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundColor: "#ACF7B2",
+            maskImage: "url(/hero-assets/paper-scrap-5.svg)",
+            maskSize: "100% 100%",
+            WebkitMaskImage: "url(/hero-assets/paper-scrap-5.svg)",
+            WebkitMaskSize: "100% 100%",
+          }}
           aria-hidden="true"
         />
         <div
