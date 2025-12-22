@@ -33,7 +33,7 @@ export function Hero() {
   });
 
   return (
-    <section ref={sectionRef} className="relative overflow-hidden pt-16 md:pt-24 pb-0 bg-[#EDEAE5]">
+    <section ref={sectionRef} className="relative overflow-hidden pt-24 md:pt-32 pb-0 bg-gradient-to-b from-white to-[#F5F1EB]">
       {/* Paper texture background */}
       <Image
         src="/hero-assets/paper.avif"
