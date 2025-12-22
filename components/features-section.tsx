@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { GreyPlaceholder } from "./grey-placeholder";
@@ -8,6 +9,8 @@ interface Feature {
   title: string;
   description: string;
   imagePlaceholder: string;
+  customImage?: string;
+  customBgColor?: string;
 }
 
 const features: Feature[] = [
@@ -16,6 +19,8 @@ const features: Feature[] = [
     description:
       "Compare 220,000+ college and professional programs side-by-side with personalized ROI projections.",
     imagePlaceholder: "Recommendation Engine / ROI Dashboard",
+    customImage: "/feature-assets/personalized-roi.png",
+    customBgColor: "#D8FBDB",
   },
   {
     title: "Plug-and-Play Curriculum",
@@ -75,11 +80,34 @@ function FeatureBlock({
     >
       {/* Image Placeholder */}
       <div className={`${reverse ? "lg:order-2" : ""}`}>
-        <GreyPlaceholder aspectRatio="video" className="w-full">
-          <span className="text-gray-500 text-sm text-center px-4">
-            {feature.imagePlaceholder}
-          </span>
-        </GreyPlaceholder>
+        {feature.customImage ? (
+          <div
+            className="w-full overflow-hidden p-[48px] pr-0"
+            style={{
+              backgroundColor: feature.customBgColor,
+              borderRadius: "12px",
+            }}
+          >
+            <div className="overflow-hidden -mt-4 -mb-6 -ml-4 pt-4 pb-6 pl-4">
+              <Image
+                src={feature.customImage}
+                alt={feature.title}
+                width={800}
+                height={600}
+                className="w-full h-auto"
+                style={{
+                  filter: "drop-shadow(0 4px 12px rgba(0, 0, 0, 0.15))",
+                }}
+              />
+            </div>
+          </div>
+        ) : (
+          <GreyPlaceholder aspectRatio="video" className="w-full">
+            <span className="text-gray-500 text-sm text-center px-4">
+              {feature.imagePlaceholder}
+            </span>
+          </GreyPlaceholder>
+        )}
       </div>
 
       {/* Content */}
