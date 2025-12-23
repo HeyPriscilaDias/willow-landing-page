@@ -122,7 +122,7 @@ function FAQItem({ faq }: { faq: FAQ }) {
             transition={{ duration: 0.3, ease: "easeInOut" }}
             className="overflow-hidden"
           >
-            <div className="px-6 pb-5 text-secondary leading-relaxed">
+            <div className="px-6 pb-5 text-base text-secondary leading-relaxed">
               {faq.answer}
             </div>
           </motion.div>

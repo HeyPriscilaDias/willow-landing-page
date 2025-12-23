@@ -27,7 +27,7 @@ const config: Config = {
         'subtle': '0 1px 3px 0 rgb(0 0 0 / 0.1)',
       },
       colors: {
-        heading: "#041D1A",
+        heading: "#03120F",
         primary: "#252B37",
         secondary: "#535862",
         "status-good": "#062F29",

@@ -32,37 +32,35 @@ export default function CurriculumSamplePage() {
     setError(null);
 
     try {
-      // Check if Supabase is configured
-      if (!supabase) {
-        // For demo purposes, just log the data and show success
+      // Try to save to Supabase if configured
+      if (supabase) {
+        const { error: supabaseError } = await supabase
+          .from("curriculum_sample_requests")
+          .insert([
+            {
+              first_name: data.firstName,
+              last_name: data.lastName,
+              email: data.email,
+              created_at: new Date().toISOString(),
+            },
+          ]);
+
+        if (supabaseError) {
+          // Log error but don't block the user from downloading
+          console.error("Supabase error:", supabaseError.message);
+        }
+      } else {
         console.log("Form submitted (Supabase not configured):", data);
-        setIsSuccess(true);
-        reset();
-        return;
       }
 
-      // Insert data into Supabase
-      const { error: supabaseError } = await supabase
-        .from("curriculum_sample_requests")
-        .insert([
-          {
-            first_name: data.firstName,
-            last_name: data.lastName,
-            email: data.email,
-            created_at: new Date().toISOString(),
-          },
-        ]);
-
-      if (supabaseError) {
-        throw new Error(supabaseError.message);
-      }
-
+      // Always show success so user can download
       setIsSuccess(true);
       reset();
     } catch (err) {
-      setError(
-        err instanceof Error ? err.message : "Failed to submit curriculum sample request"
-      );
+      // Log error but still show success
+      console.error("Form submission error:", err);
+      setIsSuccess(true);
+      reset();
     } finally {
       setIsSubmitting(false);
     }
@@ -112,20 +110,35 @@ export default function CurriculumSamplePage() {
             {/* Right Column - Form Card */}
             <div className="lg:sticky lg:top-24">
               <div className="bg-white rounded-2xl shadow-xl p-8 md:p-10">
-                {/* Success Message */}
+                {/* Success State - Thank You & Download */}
                 {isSuccess && (
-                  <div className="mb-6 p-4 bg-green-50 rounded-lg border border-green-200">
-                    <div className="flex items-start gap-3">
-                      <CheckCircle size={20} weight="fill" className="text-green-600 flex-shrink-0 mt-0.5" />
-                      <div>
-                        <p className="font-semibold text-green-900">
-                          Thank you for your interest!
-                        </p>
-                        <p className="text-sm text-green-700 mt-1">
-                          Check your email for the curriculum sample. We&apos;ll also be in touch within 24 hours.
-                        </p>
-                      </div>
+                  <div className="text-center space-y-6">
+                    <div className="flex justify-center">
+                      <CheckCircle size={64} weight="fill" className="text-green-600" />
                     </div>
+                    <div className="space-y-3">
+                      <h3 className="font-heading text-2xl font-medium text-heading">
+                        Thank you!
+                      </h3>
+                      <p className="text-secondary leading-relaxed">
+                        Your curriculum sample is ready. Click the button below to download it.
+                      </p>
+                    </div>
+                    <a
+                      href="https://drive.google.com/drive/folders/1jWjwRg2F8WBGCDDvKjAMkN6Euvs2RSbc"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center gap-2 w-full h-12 bg-[#062F29] text-white font-semibold rounded-lg hover:bg-[#0a4a42] transition-colors"
+                    >
+                      Get a curriculum sample
+                      <ArrowRight size={16} weight="bold" />
+                    </a>
+                    <Link
+                      href="/"
+                      className="block text-content-link font-semibold hover:text-[#025f80] transition-colors"
+                    >
+                      Back to home
+                    </Link>
                   </div>
                 )}
 
@@ -234,21 +247,12 @@ export default function CurriculumSamplePage() {
                       disabled={isSubmitting}
                       className="w-full h-12 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
                     >
-                      {isSubmitting ? "Sending..." : "Download"}
+                      {isSubmitting ? "Sending..." : "Submit"}
                       {!isSubmitting && <ArrowRight size={16} weight="bold" />}
                     </Button>
                   </form>
                 )}
 
-                {/* Back to Home Link (shown after success) */}
-                {isSuccess && (
-                  <Link
-                    href="/"
-                    className="block w-full text-center py-3 text-content-link font-semibold hover:text-[#025f80] transition-colors"
-                  >
-                    Back to home
-                  </Link>
-                )}
               </div>
             </div>
           </div>

@@ -18,6 +18,9 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: "Willow Education | Career Exploration Curriculum Platform",
+  icons: {
+    icon: "/favicon.svg",
+  },
   description:
     "A career exploration curriculum and platform designed to significantly increase economic mobility for students. Partner with Willow Education to transform career readiness in your school.",
   keywords: [

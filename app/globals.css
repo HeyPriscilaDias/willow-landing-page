@@ -23,11 +23,11 @@
   }
 
   h1 {
-    @apply font-heading font-medium text-6xl leading-tight;
+    @apply font-heading font-medium text-[64px] leading-tight;
   }
 
   h2 {
-    @apply font-heading font-medium text-[50px] leading-tight;
+    @apply font-heading font-medium text-[52px] leading-tight;
   }
 
   h3 {
@@ -35,7 +35,7 @@
   }
 
   h4 {
-    @apply font-heading font-medium text-[26px] leading-tight;
+    @apply font-heading font-medium text-[28px] leading-tight;
   }
 
   h5 {
