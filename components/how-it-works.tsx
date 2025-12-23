@@ -16,7 +16,7 @@ const steps: Step[] = [
     icon: "/how-it-works/plan.svg",
   },
   {
-    title: "Kickoff",
+    title: "Launch",
     description:
       "Seamless staff onboarding and student launch to start the curriculum on day one.",
     icon: "/how-it-works/launch.svg",
@@ -41,7 +41,7 @@ export function HowItWorks() {
           <p className="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed">
             We know your team is at capacity. That&apos;s why we don&apos;t just give you a login; we provide a{" "}
             <span className="relative inline-block font-semibold text-gray-900">
-              fully facilitated curriculum
+              ready to deliver curriculum
               <svg className="absolute bottom-0 left-0 w-full h-2" viewBox="0 0 200 8" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
                 <path d="M2 5c40-1 80 1 120 0s50 1 76 0" stroke="currentColor" strokeWidth="1" strokeLinecap="round" fill="none" />
               </svg>
@@ -53,7 +53,7 @@ export function HowItWorks() {
                 <path d="M2 4c50 1 100-1 150 0c16 .3 32 0 46 0" stroke="currentColor" strokeWidth="1" strokeLinecap="round" fill="none" />
               </svg>
             </span>{" "}
-            to ensure a low-friction launch and long-term results.
+            to ensure a seamless launch and long-term results.
           </p>
         </div>
 

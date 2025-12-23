@@ -32,7 +32,7 @@ const features: Feature[] = [
   {
     title: "Alma: Scaling Personalized Guidance",
     description:
-      "Bridge the gap between student needs and counselor capacity with Alma, our AI-native mentor. By automating routine career exploration and data-driven program matching, Alma provides every student with 24/7 personalized guidance. This scalable support ensures no student falls through the cracks while freeing your staff to focus on high-impact, 1-on-1 interventions.",
+      "Bridge the gap between student needs and counselor capacity with Alma, our AI-native counselor. By automating routine career exploration and data-driven program matching, Alma provides every student with 24/7 personalized guidance. This scalable support ensures no student falls through the cracks while freeing your staff to focus on high-impact, 1-on-1 interventions.",
     imagePlaceholder: "Alma AI Chat Interface",
   },
 ];
