@@ -15,7 +15,7 @@ interface Feature {
 
 const features: Feature[] = [
   {
-    title: "ROI-Focused Discovery",
+    title: "ROI-focused discovery",
     description:
       "Compare 220,000+ college and professional programs side-by-side with personalized ROI projections.",
     imagePlaceholder: "Recommendation Engine / ROI Dashboard",
@@ -23,17 +23,18 @@ const features: Feature[] = [
     customBgColor: "#D8FBDB",
   },
   {
-    title: "Career Discovery with Short-Form Videos",
+    title: "Career discovery with short-form videos",
     description:
       "Meet students where they are with an engaging, video-first discovery experience. Willow offers a library of short-form, \"day-in-the-life\" social media videos that bring careers to life. Combined with psychometric assessments, students can explore high-growth, high-paying roles through the eyes of real professionals rather than just reading static job descriptions.",
     imagePlaceholder: "Scripted Lesson / Curriculum View",
     customImage: "/feature-assets/short-videos.gif",
   },
   {
-    title: "Alma: Scaling Personalized Guidance",
+    title: "Alma: Scaling personalized guidance",
     description:
       "Bridge the gap between student needs and counselor capacity with Alma, our AI-native counselor. By automating routine career exploration and data-driven program matching, Alma provides every student with 24/7 personalized guidance. This scalable support ensures no student falls through the cracks while freeing your staff to focus on high-impact, 1-on-1 interventions.",
     imagePlaceholder: "Alma AI Chat Interface",
+    customImage: "/feature-assets/alma.png",
   },
 ];
 
@@ -111,9 +112,9 @@ function FeatureBlock({
 
       {/* Content */}
       <div className={`${reverse ? "lg:order-1" : ""}`}>
-        <h4 className="text-heading mb-4">
+        <h3 className="font-heading text-2xl md:text-3xl font-medium text-heading mb-4">
           {feature.title}
-        </h4>
+        </h3>
         <p className="text-secondary text-base leading-relaxed">
           {feature.description}
         </p>

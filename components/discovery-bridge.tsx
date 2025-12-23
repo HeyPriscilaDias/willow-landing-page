@@ -174,7 +174,7 @@ export function DiscoveryBridge() {
           className="relative z-10 text-center py-16 md:py-24"
         >
           <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-medium text-heading mb-8">
-            Discovery Starts Here
+            Discovery starts here
           </h2>
 
           <blockquote className="text-lg md:text-xl text-secondary leading-relaxed mb-4 max-w-2xl mx-auto">

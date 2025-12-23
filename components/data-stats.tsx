@@ -52,9 +52,9 @@ export function DataStats() {
               transition={{ duration: 0.5, delay: 0.1 * (index + 1) }}
               className="text-center px-4"
             >
-              <p className="font-heading text-[60px] font-medium text-primary mb-3 tracking-tight">
+              <h3 className="font-heading text-[60px] font-medium text-primary mb-3 tracking-tight">
                 {stat.number}
-              </p>
+              </h3>
               <p className="text-[14px] font-semibold text-[#252B37] mb-4">
                 {stat.label}
               </p>

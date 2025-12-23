@@ -139,7 +139,7 @@ export function TestimonialsSection() {
     >
       {/* Header Section */}
       <div className="max-w-5xl mx-auto px-6 mb-16 md:mb-20 text-center">
-        <h2 className="text-heading">
+        <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-medium text-heading">
           <span className="inline">&ldquo;</span>Partnering with Willow has truly transformed the way my team and students thrive<span className="inline">&rdquo;</span>
         </h2>
       </div>

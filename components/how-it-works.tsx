@@ -35,8 +35,8 @@ export function HowItWorks() {
       <div className="max-w-5xl mx-auto px-5 md:px-10 lg:px-16">
         {/* Section Header */}
         <div className="text-center mb-16 md:mb-20">
-          <h2 className="text-heading mb-6">
-            A Proven Roadmap That Doesn&apos;t Add to Your Workload
+          <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-medium text-heading mb-6">
+            A proven roadmap that doesn&apos;t add to your workload
           </h2>
           <p className="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed">
             We know your team is at capacity. That&apos;s why we don&apos;t just give you a login; we provide a{" "}

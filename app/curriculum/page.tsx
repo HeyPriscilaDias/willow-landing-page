@@ -30,7 +30,7 @@ const features: Feature[] = [
     image: "/curriculum-page-assets/img-3.avif",
   },
   {
-    title: "AI-Powered Insights & Feedback",
+    title: "AI-powered insights & feedback",
     description:
       "Willow leverages AI to give students tailored feedback on their work. For teachers, it synthesizes class trends and highlights specific responses that require immediate attention or follow-up.",
     image: "/curriculum-page-assets/willow-curriculum-ai-grading-feedback-exit-ticket.avif",

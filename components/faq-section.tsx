@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Plus, Minus } from "phosphor-react";
 
 interface FAQ {
   question: string;
@@ -67,62 +66,103 @@ const faqs: FAQ[] = [
   },
 ];
 
+function AnimatedPlusIcon({ isOpen }: { isOpen: boolean }) {
+  return (
+    <div className="relative w-6 h-6 flex items-center justify-center">
+      {/* Horizontal line (always visible) */}
+      <motion.span
+        className="absolute w-4 h-0.5 bg-current rounded-full"
+        initial={false}
+        animate={{ opacity: isOpen ? 0 : 1 }}
+        transition={{ duration: 0.2 }}
+      />
+      {/* Vertical line (rotates to become horizontal for minus) */}
+      <motion.span
+        className="absolute w-4 h-0.5 bg-current rounded-full"
+        initial={false}
+        animate={{ rotate: isOpen ? 0 : 90 }}
+        transition={{ duration: 0.3, ease: "easeInOut" }}
+      />
+    </div>
+  );
+}
+
 export function FAQSection() {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const handleToggle = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
   return (
     <section id="faq" className="py-20 md:py-30 bg-gray-50">
-      <div className="max-w-4xl mx-auto px-5 md:px-10 lg:px-16">
-        {/* Section Header */}
-        <div className="text-center mb-12">
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-heading mb-4">
-            The Questions We Get Asked Most
-          </h2>
-          <p className="text-lg text-secondary">
-            Answered by our CEO, James Cryan
-          </p>
-        </div>
+      <div className="max-w-7xl mx-auto px-5 md:px-10 lg:px-16">
+        {/* 2-Column Layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
+          {/* Left Column - Title */}
+          <div className="lg:col-span-4">
+            <div className="lg:sticky lg:top-32">
+              <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-medium text-heading mb-4 text-left">
+                The questions we get asked most
+              </h2>
+              <p className="text-lg text-secondary text-left">
+                Answered by our CEO, James Cryan
+              </p>
+            </div>
+          </div>
 
-        {/* FAQ Accordion */}
-        <div className="space-y-4">
-          {faqs.map((faq, index) => (
-            <FAQItem key={index} faq={faq} />
-          ))}
+          {/* Right Column - FAQ Accordion */}
+          <div className="lg:col-span-8">
+            <div className="divide-y divide-gray-200 max-w-[600px] ml-auto">
+              {faqs.map((faq, index) => (
+                <FAQItem
+                  key={index}
+                  faq={faq}
+                  isOpen={openIndex === index}
+                  onToggle={() => handleToggle(index)}
+                />
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>
   );
 }
 
-function FAQItem({ faq }: { faq: FAQ }) {
-  const [isOpen, setIsOpen] = useState(false);
-
+function FAQItem({
+  faq,
+  isOpen,
+  onToggle,
+}: {
+  faq: FAQ;
+  isOpen: boolean;
+  onToggle: () => void;
+}) {
   return (
-    <div className="bg-white rounded-[12px] border border-gray-200 overflow-hidden">
+    <div className="py-5">
       <button
-        onClick={() => setIsOpen(!isOpen)}
-        className="w-full px-6 py-5 flex items-center justify-between gap-4 hover:bg-gray-50 transition-colors text-left"
+        onClick={onToggle}
+        className="w-full flex items-start justify-between gap-4 text-left group"
       >
-        <span className="font-sans font-semibold text-primary text-base">
+        <span className="font-sans font-semibold text-primary text-base group-hover:text-heading transition-colors">
           {faq.question}
         </span>
-        <div className="flex-shrink-0">
-          {isOpen ? (
-            <Minus size={24} weight="regular" className="text-primary" />
-          ) : (
-            <Plus size={24} weight="regular" className="text-primary" />
-          )}
+        <div className="flex-shrink-0 mt-1 text-primary group-hover:text-heading transition-colors">
+          <AnimatedPlusIcon isOpen={isOpen} />
         </div>
       </button>
 
       <AnimatePresence initial={false}>
         {isOpen && (
           <motion.div
-            initial={{ height: 0 }}
-            animate={{ height: "auto" }}
-            exit={{ height: 0 }}
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
             className="overflow-hidden"
           >
-            <div className="px-6 pb-5 text-base text-secondary leading-relaxed">
+            <div className="pt-4 text-base text-secondary leading-relaxed pr-10">
               {faq.answer}
             </div>
           </motion.div>

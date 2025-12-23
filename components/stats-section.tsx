@@ -15,7 +15,7 @@ const stats: Stat[] = [
   {
     value: 300000,
     suffix: "+",
-    label: "Students Reached",
+    label: "Students reached",
     description: "Empowering students nationwide with career exploration tools.",
   },
   {
@@ -27,7 +27,7 @@ const stats: Stat[] = [
   {
     value: 95,
     suffix: "%",
-    label: "Satisfaction Rate",
+    label: "Satisfaction rate",
     description: "Educators love our platform and curriculum.",
   },
 ];

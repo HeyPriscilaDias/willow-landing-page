@@ -54,7 +54,7 @@ function HeroSection() {
           className="max-w-4xl"
         >
           <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-medium text-heading mb-6 leading-tight">
-            From Graduation Compliance to Economic Mobility
+            From graduation compliance to economic mobility
           </h1>
           <p className="text-secondary text-lg md:text-xl leading-relaxed max-w-3xl">
             Legacy platforms help you track who graduates. Willow helps you ensure they thrive. We provide a structured, data-driven roadmap designed to meet district KPIs and break the cycle of student debt.
@@ -72,17 +72,17 @@ function KPICardsSection() {
   const cards = [
     {
       icon: TrendUp,
-      heading: "50% Higher ROI Pathways",
+      heading: "50% higher ROI pathways",
       body: "The only platform prioritizing program-level ROI. Pilot students were 50% more likely to select high-value pathways.",
     },
     {
       icon: Book,
-      heading: "150+ Scripted Lessons",
+      heading: "150+ scripted lessons",
       body: "Low-prep, turnkey curriculum that fits directly into existing advisory blocks. No additional work for overstretched staff.",
     },
     {
       icon: Path,
-      heading: "220,000+ Vetted Pathways",
+      heading: "220,000+ vetted pathways",
       body: "Serve the 40% seeking professional certificates. Trade schools and professional programs side-by-side with college.",
     },
   ];
@@ -130,7 +130,7 @@ function ComparisonTableSection() {
 
   const features = [
     {
-      name: "Mission Aligned",
+      name: "Mission aligned",
       subtitle: "Nonprofit or PBC",
       values: [
         { status: "check", note: "Public Benefit Corporation" },
@@ -155,7 +155,7 @@ function ComparisonTableSection() {
       ],
     },
     {
-      name: "College & Professional Programs",
+      name: "College & professional programs",
       subtitle: "",
       values: [
         {
@@ -189,7 +189,7 @@ function ComparisonTableSection() {
       ],
     },
     {
-      name: "Career Exploration",
+      name: "Career exploration",
       subtitle: "",
       values: [
         { status: "check", note: "Fun assessment, and short-form video content" },
@@ -389,7 +389,7 @@ function ScienceOfReadingSection() {
           className="text-center"
         >
           <h2 className="font-heading text-3xl sm:text-4xl font-medium text-heading mb-6">
-            The &ldquo;Science of Reading&rdquo; for Postsecondary Success.
+            The &ldquo;Science of Reading&rdquo; for postsecondary success
           </h2>
           <p className="text-lg text-secondary leading-relaxed">
             Just as the &ldquo;Science of Reading&rdquo; replaced guessing with structure, Willow replaces &ldquo;career exposure&rdquo; with a data-backed process. Most platforms are just libraries of options; Willow is the literacy required to navigate them. We don&rsquo;t just add a tool to your district; we provide a proven framework for mobility.

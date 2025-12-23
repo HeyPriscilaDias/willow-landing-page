@@ -27,7 +27,7 @@ export default function PrivacyPolicyPage() {
             <div className="prose prose-lg max-w-none">
               {/* Introduction */}
               <h2 className="font-heading text-xl font-medium text-heading mb-4">
-                Privacy Policy for Willow Education
+                Privacy policy for Willow Education
               </h2>
               <p className="text-base text-secondary leading-relaxed mb-4">
                 Last updated: September 13, 2024
@@ -39,7 +39,7 @@ export default function PrivacyPolicyPage() {
               {/* Information We Collect */}
               <div className="mb-10">
                 <h2 className="font-heading text-xl font-medium text-heading mb-4">
-                  Information We Collect
+                  Information we collect
                 </h2>
                 <p className="text-secondary leading-relaxed mb-4">
                   We collect personal information from users in the following ways:
@@ -66,7 +66,7 @@ export default function PrivacyPolicyPage() {
               {/* Use of Collected Information */}
               <div className="mb-10">
                 <h2 className="font-heading text-xl font-medium text-heading mb-4">
-                  Use of Collected Information
+                  Use of collected information
                 </h2>
                 <p className="text-secondary leading-relaxed mb-4">
                   The personal information we collect is used for the following purposes:
@@ -85,7 +85,7 @@ export default function PrivacyPolicyPage() {
               {/* Third-Party Services */}
               <div className="mb-10">
                 <h2 className="font-heading text-xl font-medium text-heading mb-4">
-                  Third-Party Services
+                  Third-party services
                 </h2>
                 <p className="text-secondary leading-relaxed mb-4">
                   We use third-party services to improve our platform and enhance your experience:
@@ -100,7 +100,7 @@ export default function PrivacyPolicyPage() {
               {/* Data Security */}
               <div className="mb-10">
                 <h2 className="font-heading text-xl font-medium text-heading mb-4">
-                  Data Security
+                  Data security
                 </h2>
                 <p className="text-secondary leading-relaxed">
                   We take appropriate technical and organizational measures to safeguard the personal information we collect, protecting it from unauthorized access, disclosure, alteration, or destruction.
@@ -110,7 +110,7 @@ export default function PrivacyPolicyPage() {
               {/* Age Restrictions */}
               <div className="mb-10">
                 <h2 className="font-heading text-xl font-medium text-heading mb-4">
-                  Age Restrictions
+                  Age restrictions
                 </h2>
                 <p className="text-secondary leading-relaxed">
                   Willow Education is designed for high school students, including those under the age of 18. By using our services, users confirm that they are at least 13 years old. We recommend that minors seek consent from a parent or guardian before using our services.
@@ -120,7 +120,7 @@ export default function PrivacyPolicyPage() {
               {/* Sharing of User Information */}
               <div className="mb-10">
                 <h2 className="font-heading text-xl font-medium text-heading mb-4">
-                  Sharing of User Information
+                  Sharing of user information
                 </h2>
                 <p className="text-secondary leading-relaxed mb-4">
                   We only share user data with postsecondary programs that users have expressed interest in. This may include:
@@ -137,7 +137,7 @@ export default function PrivacyPolicyPage() {
               {/* FERPA Compliance */}
               <div className="mb-10">
                 <h2 className="font-heading text-xl font-medium text-heading mb-4">
-                  FERPA Compliance
+                  FERPA compliance
                 </h2>
                 <p className="text-secondary leading-relaxed mb-4">
                   Willow Education complies with the Family Educational Rights and Privacy Act (FERPA) to ensure the privacy of student education records. Our practices include:
@@ -151,7 +151,7 @@ export default function PrivacyPolicyPage() {
               {/* Access and Modification of Personal Information */}
               <div className="mb-10">
                 <h2 className="font-heading text-xl font-medium text-heading mb-4">
-                  Access and Modification of Personal Information
+                  Access and modification of personal information
                 </h2>
                 <p className="text-secondary leading-relaxed">
                   Users can access, update, or delete their personal information by contacting us at <a href="mailto:privacy@willowed.org" className="text-content-link underline hover:text-[#025f80]">privacy@willowed.org</a>. We will respond to such requests promptly.
@@ -161,7 +161,7 @@ export default function PrivacyPolicyPage() {
               {/* Opt-Out and Data Retention */}
               <div className="mb-10">
                 <h2 className="font-heading text-xl font-medium text-heading mb-4">
-                  Opt-Out and Data Retention
+                  Opt-out and data retention
                 </h2>
                 <p className="text-secondary leading-relaxed">
                   Users may request to delete their account and data at any time. However, essential data required for account security and service provision cannot be removed unless the account is closed. If you no longer wish to receive communication, you may opt-out by contacting <a href="mailto:privacy@willowed.org" className="text-content-link underline hover:text-[#025f80]">privacy@willowed.org</a>.
@@ -171,7 +171,7 @@ export default function PrivacyPolicyPage() {
               {/* Privacy Policy Changes */}
               <div className="mb-10">
                 <h2 className="font-heading text-xl font-medium text-heading mb-4">
-                  Privacy Policy Changes
+                  Privacy policy changes
                 </h2>
                 <p className="text-secondary leading-relaxed">
                   We may update this policy from time to time. If we make any significant changes, we will notify users by email or by posting an updated version on our website. Please review this policy periodically for updates.
