@@ -84,94 +84,94 @@ export default function AboutPage() {
 
         {/* Challenge Section */}
         <section className="py-16 md:py-20 bg-white">
-          <div className="max-w-5xl mx-auto px-5 md:px-10 lg:px-16">
-            <motion.div
-              ref={challengeRef}
-              initial={{ opacity: 0, y: 30 }}
-              animate={challengeInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-              transition={{ duration: 0.6 }}
-            >
-              {/* Section Header */}
-              <div className="text-center mb-16 md:mb-20">
-                <h4 className="font-heading text-2xl md:text-3xl font-medium text-heading mb-6">
-                  The challenge: a system in crisis
-                </h4>
-                <p className="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed">
-                  We have to be honest about the reality our students are facing:
+          <motion.div
+            ref={challengeRef}
+            initial={{ opacity: 0, y: 30 }}
+            animate={challengeInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+            transition={{ duration: 0.6 }}
+          >
+            {/* Section Header */}
+            <div className="max-w-3xl mx-auto px-5 md:px-10 lg:px-16 mb-16 md:mb-20">
+              <h4 className="font-heading text-2xl md:text-3xl font-medium text-heading mb-6">
+                The challenge: a system in crisis
+              </h4>
+              <p className="text-gray-600 text-lg leading-relaxed">
+                We have to be honest about the reality our students are facing:
+              </p>
+            </div>
+
+            {/* Three Column Grid */}
+            <div className="max-w-5xl mx-auto px-5 md:px-10 lg:px-16 flex flex-col md:flex-row justify-start items-start gap-12 md:gap-12 lg:gap-16 mb-16">
+              <div className="flex flex-col items-start max-w-[280px]">
+                <div className="w-16 h-16 mb-4 relative">
+                  <Image
+                    src="/about-is-assets/completion-gap-icon.svg"
+                    alt=""
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+                <h3 className="font-heading text-lg font-medium text-heading mb-2">
+                  The completion gap
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  85% of students from low-income households don&apos;t complete college by age 24.
                 </p>
               </div>
 
-              {/* Three Column Grid */}
-              <div className="flex flex-col md:flex-row justify-center items-start gap-12 md:gap-12 lg:gap-16 mb-16">
-                <div className="flex flex-col items-center text-center max-w-[280px] mx-auto md:mx-0">
-                  <div className="w-16 h-16 mb-4 relative">
-                    <Image
-                      src="/about-is-assets/completion-gap-icon.svg"
-                      alt=""
-                      fill
-                      className="object-contain"
-                    />
-                  </div>
-                  <h3 className="font-heading text-lg font-medium text-heading mb-2">
-                    The completion gap
-                  </h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">
-                    85% of students from low-income households don&apos;t complete college by age 24.
-                  </p>
+              <div className="flex flex-col items-start max-w-[280px]">
+                <div className="w-16 h-16 mb-4 relative">
+                  <Image
+                    src="/about-is-assets/debt-trap.svg"
+                    alt=""
+                    fill
+                    className="object-contain"
+                  />
                 </div>
-
-                <div className="flex flex-col items-center text-center max-w-[280px] mx-auto md:mx-0">
-                  <div className="w-16 h-16 mb-4 relative">
-                    <Image
-                      src="/about-is-assets/debt-trap.svg"
-                      alt=""
-                      fill
-                      className="object-contain"
-                    />
-                  </div>
-                  <h3 className="font-heading text-lg font-medium text-heading mb-2">
-                    The debt trap
-                  </h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">
-                    There is currently $300 billion in debt held by 40 million people who didn&apos;t even finish their degree.
-                  </p>
-                </div>
-
-                <div className="flex flex-col items-center text-center max-w-[280px] mx-auto md:mx-0">
-                  <div className="w-16 h-16 mb-4 relative">
-                    <Image
-                      src="/about-is-assets/underemployment-trap.svg"
-                      alt=""
-                      fill
-                      className="object-contain"
-                    />
-                  </div>
-                  <h3 className="font-heading text-lg font-medium text-heading mb-2">
-                    The underemployment trap
-                  </h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">
-                    More than half of recent college graduates are underemployed a year after they finish school.
-                  </p>
-                </div>
+                <h3 className="font-heading text-lg font-medium text-heading mb-2">
+                  The debt trap
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  There is currently $300 billion in debt held by 40 million people who didn&apos;t even finish their degree.
+                </p>
               </div>
 
-              {/* Closing statement */}
-              <p className="text-gray-600 text-base leading-relaxed text-center max-w-3xl mx-auto">
+              <div className="flex flex-col items-start max-w-[280px]">
+                <div className="w-16 h-16 mb-4 relative">
+                  <Image
+                    src="/about-is-assets/underemployment-trap.svg"
+                    alt=""
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+                <h3 className="font-heading text-lg font-medium text-heading mb-2">
+                  The underemployment trap
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  More than half of recent college graduates are underemployed a year after they finish school.
+                </p>
+              </div>
+            </div>
+
+            {/* Closing statement */}
+            <div className="max-w-3xl mx-auto px-5 md:px-10 lg:px-16">
+              <p className="text-gray-600 text-base leading-relaxed">
                 For a student taking on debt, this isn&apos;t just disappointing—it&apos;s devastating. We call it &ldquo;random acts of dual enrollment&rdquo; or &ldquo;prestige chasing,&rdquo; but the result is the same: students dropping out with debt and no clear path forward.
               </p>
-            </motion.div>
-          </div>
+            </div>
+          </motion.div>
         </section>
 
         {/* Platform Statement Section */}
         <section className="py-16 md:py-20 bg-white">
-          <div className="max-w-[1165px] mx-auto px-5 md:px-10 lg:px-16">
+          <div className="max-w-5xl mx-auto px-5 md:px-10 lg:px-16">
             <motion.p
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6 }}
-              className="text-heading text-xl md:text-2xl leading-relaxed text-center"
+              className="text-heading text-xl md:text-2xl leading-relaxed"
             >
               We&apos;ve built a student success platform that simplifies the noise. Whether it&apos;s an apprenticeship, a certification, or a four-year degree, we help students find their best-fit, best-quality education next step.
             </motion.p>
@@ -180,78 +180,76 @@ export default function AboutPage() {
 
         {/* Solution Section */}
         <section className="py-16 md:py-20 bg-white">
-          <div className="max-w-5xl mx-auto px-5 md:px-10 lg:px-16">
-            <motion.div
-              ref={solutionRef}
-              initial={{ opacity: 0, y: 30 }}
-              animate={solutionInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-              transition={{ duration: 0.6 }}
-            >
-              {/* Section Header */}
-              <div className="text-center mb-16 md:mb-20">
-                <h4 className="font-heading text-2xl md:text-3xl font-medium text-heading mb-6">
-                  The Willow solution: beyond &ldquo;college vs. career&rdquo;
-                </h4>
-                <p className="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed">
-                  At Willow, we don&apos;t believe in a &ldquo;college vs. workforce&rdquo; binary. It&apos;s about college AND professional pathways. Equity requires transparency about costs, outcomes, and quality.
+          <motion.div
+            ref={solutionRef}
+            initial={{ opacity: 0, y: 30 }}
+            animate={solutionInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+            transition={{ duration: 0.6 }}
+          >
+            {/* Section Header */}
+            <div className="max-w-3xl mx-auto px-5 md:px-10 lg:px-16 mb-16 md:mb-20">
+              <h4 className="font-heading text-2xl md:text-3xl font-medium text-heading mb-6">
+                The Willow solution: beyond &ldquo;college vs. career&rdquo;
+              </h4>
+              <p className="text-gray-600 text-lg leading-relaxed">
+                At Willow, we don&apos;t believe in a &ldquo;college vs. workforce&rdquo; binary. It&apos;s about college AND professional pathways. Equity requires transparency about costs, outcomes, and quality.
+              </p>
+            </div>
+
+            {/* Three Column Grid */}
+            <div className="max-w-5xl mx-auto px-5 md:px-10 lg:px-16 flex flex-col md:flex-row justify-start items-start gap-12 md:gap-12 lg:gap-16">
+              <div className="flex flex-col items-start max-w-[280px]">
+                <div className="w-16 h-16 mb-4 relative">
+                  <Image
+                    src="/about-is-assets/roi-transparency.svg"
+                    alt=""
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+                <h3 className="font-heading text-lg font-medium text-heading mb-2">
+                  ROI transparency
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  We provide personalized ROI projections so students understand the financial impact of their choices before they sign on the dotted line.
                 </p>
               </div>
 
-              {/* Three Column Grid */}
-              <div className="flex flex-col md:flex-row justify-center items-start gap-12 md:gap-12 lg:gap-16">
-                <div className="flex flex-col items-center text-center max-w-[280px] mx-auto md:mx-0">
-                  <div className="w-16 h-16 mb-4 relative">
-                    <Image
-                      src="/about-is-assets/roi-transparency.svg"
-                      alt=""
-                      fill
-                      className="object-contain"
-                    />
-                  </div>
-                  <h3 className="font-heading text-lg font-medium text-heading mb-2">
-                    ROI transparency
-                  </h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">
-                    We provide personalized ROI projections so students understand the financial impact of their choices before they sign on the dotted line.
-                  </p>
+              <div className="flex flex-col items-start max-w-[280px]">
+                <div className="w-16 h-16 mb-4 relative">
+                  <Image
+                    src="/about-is-assets/comprehensive-pathways.svg"
+                    alt=""
+                    fill
+                    className="object-contain"
+                  />
                 </div>
-
-                <div className="flex flex-col items-center text-center max-w-[280px] mx-auto md:mx-0">
-                  <div className="w-16 h-16 mb-4 relative">
-                    <Image
-                      src="/about-is-assets/comprehensive-pathways.svg"
-                      alt=""
-                      fill
-                      className="object-contain"
-                    />
-                  </div>
-                  <h3 className="font-heading text-lg font-medium text-heading mb-2">
-                    Comprehensive pathways
-                  </h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">
-                    Our database includes 220,000+ verified programs, from traditional degrees to high-quality professional certifications.
-                  </p>
-                </div>
-
-                <div className="flex flex-col items-center text-center max-w-[280px] mx-auto md:mx-0">
-                  <div className="w-16 h-16 mb-4 relative">
-                    <Image
-                      src="/about-is-assets/ai-powered-support.svg"
-                      alt=""
-                      fill
-                      className="object-contain"
-                    />
-                  </div>
-                  <h3 className="font-heading text-lg font-medium text-heading mb-2">
-                    AI-powered support
-                  </h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">
-                    Our 24/7 career coach, Alma, ensures that no student has to navigate these massive life decisions alone.
-                  </p>
-                </div>
+                <h3 className="font-heading text-lg font-medium text-heading mb-2">
+                  Comprehensive pathways
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Our database includes 220,000+ verified programs, from traditional degrees to high-quality professional certifications.
+                </p>
               </div>
-            </motion.div>
-          </div>
+
+              <div className="flex flex-col items-start max-w-[280px]">
+                <div className="w-16 h-16 mb-4 relative">
+                  <Image
+                    src="/about-is-assets/ai-powered-support.svg"
+                    alt=""
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+                <h3 className="font-heading text-lg font-medium text-heading mb-2">
+                  AI-powered support
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Our 24/7 career coach, Alma, ensures that no student has to navigate these massive life decisions alone.
+                </p>
+              </div>
+            </div>
+          </motion.div>
         </section>
 
         {/* Progress Section */}
@@ -307,16 +305,16 @@ export default function AboutPage() {
                 <div className="flex gap-4">
                   <div className="flex-shrink-0 w-1 bg-[#ACF7B2] rounded-full" />
                   <div>
-                    <p className="font-semibold text-heading">James Cryan (CEO)</p>
+                    <a href="https://www.linkedin.com/in/jamescryan/" target="_blank" rel="noopener noreferrer" className="font-semibold text-heading hover:underline">James Cryan, Founder &amp; CEO</a>
                     <p className="text-secondary text-base leading-relaxed">
-                      Former founder of Rocky Mountain Prep and TFA alum.
+                      The founder and former CEO of Rocky Mountain Prep—one of Colorado&apos;s most successful public charter school networks—James carries with him over 15 years of experience in the education sector. He believes all learners deserve support to navigate their post-secondary education journey with confidence.
                     </p>
                   </div>
                 </div>
                 <div className="flex gap-4">
                   <div className="flex-shrink-0 w-1 bg-[#ACF7B2] rounded-full" />
                   <div>
-                    <p className="font-semibold text-heading">Jaime Hudgins</p>
+                    <a href="https://www.linkedin.com/in/jaime-hudgins/" target="_blank" rel="noopener noreferrer" className="font-semibold text-heading hover:underline">Jaime Hudgins</a>
                     <p className="text-secondary text-base leading-relaxed">
                       Lorem ipsum.
                     </p>
@@ -325,9 +323,9 @@ export default function AboutPage() {
                 <div className="flex gap-4">
                   <div className="flex-shrink-0 w-1 bg-[#ACF7B2] rounded-full" />
                   <div>
-                    <p className="font-semibold text-heading">Ryan (Product &amp; Tech)</p>
+                    <a href="https://www.linkedin.com/in/ryan-york-148356a9/" target="_blank" rel="noopener noreferrer" className="font-semibold text-heading hover:underline">Ryan York, Chief Product &amp; Technology Officer</a>
                     <p className="text-secondary text-base leading-relaxed">
-                      Expert in school operations and education technology.
+                      Ryan has worked in education for 18 years as a teacher, instructional coach, principal, and charter school founder/co-CEO. He began writing software over a decade ago, creating online tools for teachers. He went on to design a computer science curriculum and learning management platform that served over 10,000 students and won the Sally Ride &amp; Deloitte National Award for Innovation.
                     </p>
                   </div>
                 </div>
