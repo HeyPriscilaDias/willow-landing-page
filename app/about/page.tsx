@@ -165,7 +165,7 @@ export default function AboutPage() {
 
         {/* Platform Statement Section */}
         <section className="py-16 md:py-20 bg-white">
-          <div className="max-w-5xl mx-auto px-5 md:px-10 lg:px-16">
+          <div className="max-w-3xl mx-auto px-5 md:px-10 lg:px-16">
             <motion.p
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}

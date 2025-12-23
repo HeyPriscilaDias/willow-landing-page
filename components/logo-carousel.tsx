@@ -4,14 +4,14 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 export function LogoCarousel() {
-  // Partner logos
+  // Partner logos (invert: true for white logos that need color inversion)
   const logos = [
     { id: 1, src: "/partner-logos/achievement_first.svg", alt: "Achievement First" },
-    { id: 2, src: "/partner-logos/activate_work.svg", alt: "Activate Work" },
-    { id: 3, src: "/partner-logos/colorado_succeeds.svg", alt: "Colorado Succeeds" },
-    { id: 4, src: "/partner-logos/denver_scholarship_foundation.svg", alt: "Denver Scholarship Foundation" },
-    { id: 5, src: "/partner-logos/hope-ignites.svg", alt: "Hope Ignites" },
-    { id: 6, src: "/partner-logos/kipp.svg", alt: "KIPP" },
+    { id: 2, src: "/partner-logos/colorado_succeeds.svg", alt: "Colorado Succeeds" },
+    { id: 3, src: "/partner-logos/denver_scholarship_foundation.svg", alt: "Denver Scholarship Foundation" },
+    { id: 4, src: "/partner-logos/hope-ignites.svg", alt: "Hope Ignites" },
+    { id: 5, src: "/partner-logos/kipp-colorado.png", alt: "KIPP Colorado", invert: true },
+    { id: 6, src: "/partner-logos/kipp-nc.svg", alt: "KIPP NC" },
     { id: 7, src: "/partner-logos/pathsmith.svg", alt: "Pathsmith" },
   ];
 
@@ -54,7 +54,12 @@ export function LogoCarousel() {
                   src={logo.src}
                   alt={logo.alt}
                   fill
-                  className="object-contain grayscale opacity-70"
+                  className="object-contain"
+                  style={{
+                    filter: logo.invert
+                      ? 'brightness(0) saturate(100%) invert(84%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(95%)'
+                      : 'grayscale(100%) opacity(0.7)'
+                  }}
                 />
               </div>
             ))
