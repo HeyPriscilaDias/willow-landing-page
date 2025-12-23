@@ -26,7 +26,7 @@ const stats: Stat[] = [
     number: "50%",
     label: "higher enrollment in high-ROI programs",
     subtext:
-      "Students on Willow's data-driven guidance are 50% more likely to choose and enroll in high-quality, high-ROI postsecondary programs, setting them on a direct path toward economic mobility.",
+      "Students on Willow's data-driven guidance were 50% more likely to choose and enroll in high-quality, high-ROI postsecondary programs, setting them on a direct path toward economic mobility.",
   },
 ];
 

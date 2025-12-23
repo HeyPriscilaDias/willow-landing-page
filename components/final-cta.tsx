@@ -35,9 +35,9 @@ export function FinalCTA({ headline, singleButton }: FinalCTAProps = {}) {
             className="object-cover opacity-10 pointer-events-none"
           />
           <div className="relative z-10">
-            <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-medium text-heading mb-8 max-w-4xl mx-auto leading-tight">
-              {headline || "Ready to bridge the gap from graduation to career?"}
-            </h2>
+            <h3 className="font-heading text-2xl md:text-3xl font-medium text-heading mb-8 max-w-4xl mx-auto leading-tight">
+              {headline || "Ready to put your students on a purposeful path to social and economic mobility?"}
+            </h3>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               {singleButton ? (
                 <Link href={singleButton.href}>

@@ -14,44 +14,44 @@ const testimonials: Testimonial[] = [
   {
     quote:
       "Willow is incredible! It helps me, my students, and families find high-quality post-secondary educational options. I would highly recommend working with Willow.",
-    author: "Cassidy",
+    author: "Cassidy Grief",
     role: "Counselor",
-    school: "",
+    school: "DSST Byers",
   },
   {
     quote:
       "Partnering with Willow has truly transformed the way my team and students thrive. I have complete peace of mind knowing my team is equipped with a top-tier curriculum, meticulously tailored to align with our unique vision and needs. Even more importantly, my students now engage with a high-quality, real-world curriculum that empowers them to navigate and excel during some of the most pivotal years of their lives.",
-    author: "Wauneta",
+    author: "Wauneta Vann",
     role: "High School Principal",
-    school: "",
+    school: "Rocky Mountain Prep RISE",
   },
   {
     quote:
       "Willow is providing students the opportunity to expand their horizons and explore professional pathways that otherwise tend to get overlooked. My students too often miss out on these paths because they simply don't know about them. Being informed is half the battle.",
-    author: "Nuvia",
+    author: "Nuvia Mendoza",
     role: "Counselor",
-    school: "",
+    school: "DSST Public Schools",
   },
   {
     quote:
       "Willow is helping us serve all of our students with excellence.",
-    author: "Annalise",
+    author: "Analise Gonzalez-Fine",
     role: "Charter Network Leader",
-    school: "",
+    school: "DSST Public Schools",
   },
   {
     quote:
       "Willow Ed has enhanced my seminar class by providing me with great tools. This has allowed me to focus on providing high quality classroom instruction and building strong student relationships. Willow Ed has made it a priority to implement my feedback and my students as well. We are lucky to have the Willow Ed curriculum and platform in our classroom to support the future generation of leaders.",
-    author: "Yosedit",
+    author: "Yosedit Romero",
     role: "College Seminar Teacher",
-    school: "",
+    school: "RMP Rise",
   },
   {
     quote:
       "I'm seeing students engage in a different way than they ever have before. Students are now interested in applying for summer programs, getting involved in community service, advocating for themselves. It's been really exciting to see how this work is translating into students taking ownership of their futures earlier.",
     author: "Vincent Caricato",
-    role: "",
-    school: "KIPP Colorado",
+    role: "Director of KIPP Forward",
+    school: "",
   },
   {
     quote:
@@ -104,14 +104,11 @@ function TestimonialCard({
           <div className="font-semibold text-gray-900 text-sm">
             {testimonial.author}
           </div>
-          {testimonial.role && (
+          {(testimonial.role || testimonial.school) && (
             <div className="text-xs text-gray-500">
-              {testimonial.role}
-            </div>
-          )}
-          {testimonial.school && (
-            <div className="text-xs text-gray-500">
-              {testimonial.school}
+              {testimonial.role && testimonial.school
+                ? `${testimonial.role} @ ${testimonial.school}`
+                : testimonial.role || testimonial.school}
             </div>
           )}
         </div>
