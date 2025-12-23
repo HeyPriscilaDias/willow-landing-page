@@ -180,7 +180,7 @@ function ComparisonTableSection() {
       values: [
         {
           status: "check",
-          note: "Alma, our friendly and safe AI counselor supports at every step",
+          note: "Alma, our friendly and safe AI career coach supports at every step",
         },
         { status: "x", note: "" },
         { status: "x", note: "" },

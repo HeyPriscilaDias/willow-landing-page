@@ -11,6 +11,7 @@ interface Feature {
   imagePlaceholder: string;
   customImage?: string;
   customBgColor?: string;
+  overlayImage?: string;
 }
 
 const features: Feature[] = [
@@ -32,9 +33,10 @@ const features: Feature[] = [
   {
     title: "Alma: Scaling personalized guidance",
     description:
-      "Bridge the gap between student needs and counselor capacity with Alma, our AI-native counselor. By automating routine career exploration and data-driven program matching, Alma provides every student with 24/7 personalized guidance. This scalable support ensures no student falls through the cracks while freeing your staff to focus on high-impact, 1-on-1 interventions.",
+      "Bridge the gap between student needs and counselor capacity with Alma, our AI-native career coach. By automating routine career exploration and data-driven program matching, Alma provides every student with 24/7 personalized guidance. This scalable support ensures no student falls through the cracks while freeing your staff to focus on high-impact, 1-on-1 interventions.",
     imagePlaceholder: "Alma AI Chat Interface",
     customImage: "/feature-assets/alma.png",
+    overlayImage: "/feature-assets/alma-convo.png",
   },
 ];
 
@@ -84,7 +86,7 @@ function FeatureBlock({
       <div className={`${reverse ? "lg:order-2" : ""}`}>
         {feature.customImage ? (
           <div
-            className={`w-full overflow-hidden rounded-[12px] ${feature.customBgColor ? "py-8 pl-8 lg:py-12 lg:pl-12" : ""}`}
+            className={`relative w-full overflow-visible rounded-[12px] ${feature.customBgColor ? "py-8 pl-8 lg:py-12 lg:pl-12" : ""}`}
             style={{
               backgroundColor: feature.customBgColor,
             }}
@@ -100,6 +102,21 @@ function FeatureBlock({
                 filter: feature.customBgColor ? "drop-shadow(0 4px 12px rgba(0, 0, 0, 0.15))" : "none",
               }}
             />
+            {feature.overlayImage && (
+              <div className="absolute top-8 right-8 w-[50%] z-10">
+                <Image
+                  src={feature.overlayImage}
+                  alt=""
+                  width={400}
+                  height={400}
+                  unoptimized
+                  className="w-full h-auto rounded-[12px]"
+                  style={{
+                    boxShadow: "0 25px 50px rgba(0, 0, 0, 0.35), 0 10px 20px rgba(0, 0, 0, 0.2)",
+                  }}
+                />
+              </div>
+            )}
           </div>
         ) : (
           <GreyPlaceholder aspectRatio="video" className="w-full">
