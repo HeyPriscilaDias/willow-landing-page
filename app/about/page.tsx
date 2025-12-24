@@ -296,7 +296,7 @@ export default function AboutPage() {
               transition={{ duration: 0.6 }}
             >
               <h2 className="font-heading text-2xl md:text-3xl font-medium text-heading mb-4">
-                The team
+                Meet the team
               </h2>
               <p className="text-secondary text-base leading-relaxed mb-8">
                 We&apos;re a group of educators, designers, and builders who believe the system is fixable.
@@ -320,7 +320,7 @@ export default function AboutPage() {
                 <div>
                   <h3 className="font-heading text-lg font-semibold text-heading mb-2">Jaime Hudgins</h3>
                   <p className="text-secondary text-sm leading-relaxed mb-2">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Jaime brings over 17 years in education as a teacher, curriculum specialist, assistant principal, and Chief Academic Officer. She&apos;s led academics for a five-school network and scaled instructional practices nationally, and her deepest passion lives in future-focused curriculum—the work that helps students discover who they are and chart their own paths forward.
                   </p>
                   <a
                     href="https://www.linkedin.com/in/jaime-hudgins/"
@@ -335,7 +335,7 @@ export default function AboutPage() {
                 <div>
                   <h3 className="font-heading text-lg font-semibold text-heading mb-2">Liz Wise</h3>
                   <p className="text-secondary text-sm leading-relaxed mb-2">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Liz brings several years of experience in education operations, with a focus on enrollment coordination, social media and quality assurance.
                   </p>
                   <a
                     href="https://www.linkedin.com/in/lizwise487/"
