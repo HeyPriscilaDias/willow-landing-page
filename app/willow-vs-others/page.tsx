@@ -5,13 +5,11 @@ import { motion, useInView } from "framer-motion";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { FinalCTA } from "@/components/final-cta";
+import Image from "next/image";
 import {
   CheckCircle,
   XCircle,
   MinusCircle,
-  TrendUp,
-  Book,
-  Path,
 } from "phosphor-react";
 
 export default function WillowVsOthersPage() {
@@ -71,17 +69,17 @@ function KPICardsSection() {
 
   const cards = [
     {
-      icon: TrendUp,
+      icon: "/willow-compared/higher-roi-pathways.svg",
       heading: "50% higher ROI pathways",
       body: "The only platform prioritizing program-level ROI. Pilot students were 50% more likely to select high-value pathways.",
     },
     {
-      icon: Book,
+      icon: "/willow-compared/scripted-lessons.svg",
       heading: "150+ scripted lessons",
       body: "Low-prep, turnkey curriculum that fits directly into existing advisory blocks. No additional work for overstretched staff.",
     },
     {
-      icon: Path,
+      icon: "/willow-compared/vetted-pathways.svg",
       heading: "220,000+ vetted pathways",
       body: "Serve the 40% seeking professional certificates. Trade schools and professional programs side-by-side with college.",
     },
@@ -95,26 +93,24 @@ function KPICardsSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6 }}
-          className="grid md:grid-cols-3 gap-8"
-        >
-          {cards.map((card, index) => (
-            <motion.div
-              key={card.heading}
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-gray-50 rounded-card p-8 border border-gray-100"
-            >
-              <div className="w-12 h-12 bg-[#062F29] rounded-full flex items-center justify-center mb-6">
-                <card.icon size={24} weight="regular" className="text-white" />
+          className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 lg:gap-16">
+          {cards.map((card) => (
+            <div key={card.heading} className="flex flex-col items-start">
+              <div className="w-16 h-16 mb-4 relative">
+                <Image
+                  src={card.icon}
+                  alt=""
+                  fill
+                  className="object-contain"
+                />
               </div>
-              <h3 className="font-heading text-xl font-medium text-heading mb-3">
+              <h3 className="font-heading text-lg font-medium text-heading mb-2">
                 {card.heading}
               </h3>
-              <p className="text-secondary leading-relaxed">
+              <p className="text-gray-600 text-sm leading-relaxed">
                 {card.body}
               </p>
-            </motion.div>
+            </div>
           ))}
         </motion.div>
       </div>
