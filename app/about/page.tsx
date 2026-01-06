@@ -59,7 +59,7 @@ export default function AboutPage() {
                 <span>A note from our</span>
                 <span className="relative inline-block w-[80px] h-[50px] md:w-[100px] md:h-[60px] rounded-full overflow-hidden">
                   <Image
-                    src="/about-is-assets/james-cryan-profile.jpeg"
+                    src="/about-us-assets/james-cryan-profile.jpeg"
                     alt="James Cryan"
                     fill
                     className="object-cover"
@@ -105,7 +105,7 @@ export default function AboutPage() {
               <div className="flex flex-col items-start max-w-[280px]">
                 <div className="w-16 h-16 mb-4 relative">
                   <Image
-                    src="/about-is-assets/completion-gap-icon.svg"
+                    src="/about-us-assets/completion-gap-icon.svg"
                     alt=""
                     fill
                     className="object-contain"
@@ -122,7 +122,7 @@ export default function AboutPage() {
               <div className="flex flex-col items-start max-w-[280px]">
                 <div className="w-16 h-16 mb-4 relative">
                   <Image
-                    src="/about-is-assets/debt-trap.svg"
+                    src="/about-us-assets/debt-trap.svg"
                     alt=""
                     fill
                     className="object-contain"
@@ -139,7 +139,7 @@ export default function AboutPage() {
               <div className="flex flex-col items-start max-w-[280px]">
                 <div className="w-16 h-16 mb-4 relative">
                   <Image
-                    src="/about-is-assets/underemployment-trap.svg"
+                    src="/about-us-assets/underemployment-trap.svg"
                     alt=""
                     fill
                     className="object-contain"
@@ -201,7 +201,7 @@ export default function AboutPage() {
               <div className="flex flex-col items-start max-w-[280px]">
                 <div className="w-16 h-16 mb-4 relative">
                   <Image
-                    src="/about-is-assets/roi-transparency.svg"
+                    src="/about-us-assets/roi-transparency.svg"
                     alt=""
                     fill
                     className="object-contain"
@@ -218,7 +218,7 @@ export default function AboutPage() {
               <div className="flex flex-col items-start max-w-[280px]">
                 <div className="w-16 h-16 mb-4 relative">
                   <Image
-                    src="/about-is-assets/comprehensive-pathways.svg"
+                    src="/about-us-assets/comprehensive-pathways.svg"
                     alt=""
                     fill
                     className="object-contain"
@@ -235,7 +235,7 @@ export default function AboutPage() {
               <div className="flex flex-col items-start max-w-[280px]">
                 <div className="w-16 h-16 mb-4 relative">
                   <Image
-                    src="/about-is-assets/ai-powered-support.svg"
+                    src="/about-us-assets/ai-powered-support.svg"
                     alt=""
                     fill
                     className="object-contain"
@@ -276,7 +276,7 @@ export default function AboutPage() {
                 </p>
               </div>
               <Image
-                src="/about-is-assets/james-cryan-signature.png"
+                src="/about-us-assets/james-cryan-signature.png"
                 alt="James Cryan signature"
                 width={270}
                 height={90}
