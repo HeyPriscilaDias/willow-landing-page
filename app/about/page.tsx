@@ -306,7 +306,7 @@ export default function AboutPage() {
                   <h3 className="font-heading text-lg font-semibold text-heading">James Cryan</h3>
                   <p className="text-secondary text-sm font-medium mb-2">Founder & CEO</p>
                   <p className="text-secondary text-sm leading-relaxed mb-2">
-                  The founder and former CEO of Rocky Mountain Prep, one of Colorado's most successful public charter school networks. James has almost two decades of experience as a public school teacher and leader.
+                  The founder and former CEO of Rocky Mountain Prep, one of Colorado&apos;s most successful public charter school networks. James has almost two decades of experience as a public school teacher and leader.
                   </p>
                   <a
                     href="https://www.linkedin.com/in/jamescryan/"
