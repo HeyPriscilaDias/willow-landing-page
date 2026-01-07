@@ -127,18 +127,18 @@ export function Footer() {
             <p className="text-gray-600 text-sm mb-3">
               Get the latest product updates in your inbox
             </p>
-            <form onSubmit={handleSubmit} className="flex gap-2">
+            <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-2">
               <input
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email"
-                className="px-4 py-2 bg-white border border-gray-300 rounded-lg text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:border-gray-500 w-64"
+                className="px-4 py-2 bg-white border border-gray-300 rounded-lg text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:border-gray-500 w-full sm:w-64"
                 required
               />
               <button
                 type="submit"
-                className="px-4 py-2 bg-[#062F29] text-white rounded-lg text-sm font-semibold transition-all duration-300 hover:rounded-[14px]"
+                className="w-full sm:w-auto px-4 py-2 bg-[#062F29] text-white rounded-lg text-sm font-semibold transition-all duration-300 hover:rounded-[14px]"
               >
                 Subscribe
               </button>
@@ -148,7 +148,7 @@ export function Footer() {
 
         {/* Divider */}
         <div className="border-t border-gray-200 mt-10 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
             {/* Copyright */}
             <p className="text-gray-500 text-sm">
               Willow Education 2025 &copy; All Rights Reserved
