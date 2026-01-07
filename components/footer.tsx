@@ -123,7 +123,7 @@ export function Footer() {
           </div>
 
           {/* Right Side - Newsletter Subscription */}
-          <div>
+          <div className="w-full md:w-auto">
             <p className="text-gray-600 text-sm mb-3">
               Get the latest product updates in your inbox
             </p>
