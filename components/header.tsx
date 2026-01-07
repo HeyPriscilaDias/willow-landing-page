@@ -24,6 +24,9 @@ export function Header() {
   }, []);
 
   useEffect(() => {
+    // Check initial scroll position on mount
+    updateScrolled();
+
     const handleScroll = () => {
       if (!ticking.current) {
         requestAnimationFrame(updateScrolled);
