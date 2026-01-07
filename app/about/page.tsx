@@ -281,6 +281,8 @@ export default function AboutPage() {
                 width={270}
                 height={90}
                 className="mt-8"
+                placeholder="blur"
+                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAECAYAAAC3OK7NAAAAAklEQVR4AewaftIAAAA+SURBVBXBsQ2AMBAEwT3LjqADOqACCnBEQU744cTb7MzXsXTg7sG7hWuFvYF3HdcIPGp4lnCPcM/h3MC/jT/4PRITlRNZFgAAAABJRU5ErkJggg=="
               />
             </motion.div>
           </div>
