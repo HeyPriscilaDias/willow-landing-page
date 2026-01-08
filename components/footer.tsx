@@ -89,12 +89,36 @@ function FooterLogo() {
 
 export function Footer() {
   const [email, setEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle newsletter subscription
-    console.log("Newsletter subscription:", email);
-    setEmail("");
+    setIsSubmitting(true);
+    setStatus("idle");
+
+    try {
+      const response = await fetch("/api/newsletter", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: email.trim() }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        console.error("Newsletter error:", data.error);
+        setStatus("error");
+      } else {
+        setStatus("success");
+        setEmail("");
+      }
+    } catch (err) {
+      console.error("Newsletter submission error:", err);
+      setStatus("error");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -135,14 +159,22 @@ export function Footer() {
                 placeholder="Enter your email"
                 className="h-12 md:h-[36px] px-4 bg-white border border-gray-300 rounded-lg text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:border-gray-500 w-full sm:w-64"
                 required
+                disabled={isSubmitting}
               />
               <button
                 type="submit"
-                className="w-full sm:w-auto h-12 md:h-[36px] px-4 bg-[#062F29] text-white rounded-lg text-sm font-semibold transition-all duration-300 hover:rounded-[14px]"
+                disabled={isSubmitting}
+                className="w-full sm:w-auto h-12 md:h-[36px] px-4 bg-[#062F29] text-white rounded-lg text-sm font-semibold transition-all duration-300 hover:rounded-[14px] disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                Subscribe
+                {isSubmitting ? "..." : "Subscribe"}
               </button>
             </form>
+            {status === "success" && (
+              <p className="text-green-600 text-sm mt-2">Thanks for subscribing!</p>
+            )}
+            {status === "error" && (
+              <p className="text-red-600 text-sm mt-2">Something went wrong. Please try again.</p>
+            )}
           </div>
         </div>
 

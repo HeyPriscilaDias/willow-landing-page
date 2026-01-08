@@ -5,12 +5,12 @@ import { sendFormNotification } from "@/lib/resend";
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { email, personalityTypeId } = body;
+    const { firstName, lastName, email } = body;
 
-    // Validate email
-    if (!email || typeof email !== "string") {
+    // Validate required fields
+    if (!firstName || !lastName || !email) {
       return NextResponse.json(
-        { error: "Email is required" },
+        { error: "First name, last name, and email are required" },
         { status: 400 }
       );
     }
@@ -32,41 +32,35 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Insert email into quiz_emails table
-    const { data, error } = await supabase
-      .from("quiz_emails")
+    // Insert into curriculum_sample_requests table
+    const { error } = await supabase
+      .from("curriculum_sample_requests")
       .insert({
+        first_name: firstName.trim(),
+        last_name: lastName.trim(),
         email: email.trim().toLowerCase(),
-        personality_type_id: personalityTypeId || null,
         created_at: new Date().toISOString(),
-      })
-      .select()
-      .single();
+      });
 
     if (error) {
-      // Check for duplicate email (unique constraint violation)
-      if (error.code === "23505") {
-        // Email already exists - that's okay, just proceed
-        return NextResponse.json({ success: true, duplicate: true });
-      }
-
       console.error("Supabase error:", error);
       return NextResponse.json(
-        { error: "Failed to save email" },
+        { error: "Failed to save request" },
         { status: 500 }
       );
     }
 
     // Send email notification
     await sendFormNotification({
-      formName: "Personality Quiz",
+      formName: "Curriculum Sample Request",
       data: {
+        "First Name": firstName.trim(),
+        "Last Name": lastName.trim(),
         Email: email.trim(),
-        "Personality Type": personalityTypeId || "Not determined",
       },
     });
 
-    return NextResponse.json({ success: true, data });
+    return NextResponse.json({ success: true });
   } catch (error) {
     console.error("API error:", error);
     return NextResponse.json(

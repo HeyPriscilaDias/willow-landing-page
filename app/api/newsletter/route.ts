@@ -5,7 +5,7 @@ import { sendFormNotification } from "@/lib/resend";
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { email, personalityTypeId } = body;
+    const { email } = body;
 
     // Validate email
     if (!email || typeof email !== "string") {
@@ -32,16 +32,13 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Insert email into quiz_emails table
-    const { data, error } = await supabase
-      .from("quiz_emails")
+    // Insert email into newsletter_signups table
+    const { error } = await supabase
+      .from("newsletter_signups")
       .insert({
         email: email.trim().toLowerCase(),
-        personality_type_id: personalityTypeId || null,
         created_at: new Date().toISOString(),
-      })
-      .select()
-      .single();
+      });
 
     if (error) {
       // Check for duplicate email (unique constraint violation)
@@ -59,14 +56,13 @@ export async function POST(request: NextRequest) {
 
     // Send email notification
     await sendFormNotification({
-      formName: "Personality Quiz",
+      formName: "Newsletter Signup",
       data: {
         Email: email.trim(),
-        "Personality Type": personalityTypeId || "Not determined",
       },
     });
 
-    return NextResponse.json({ success: true, data });
+    return NextResponse.json({ success: true });
   } catch (error) {
     console.error("API error:", error);
     return NextResponse.json(

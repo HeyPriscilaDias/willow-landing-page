@@ -5,13 +5,11 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { CheckCircle, ArrowRight, Check } from "phosphor-react";
 import { curriculumSampleSchema, type CurriculumSampleData } from "@/lib/validations";
-import { supabase } from "@/lib/supabase";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/button";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import Link from "next/link";
-import Image from "next/image";
 
 export default function CurriculumSamplePage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -32,25 +30,19 @@ export default function CurriculumSamplePage() {
     setError(null);
 
     try {
-      // Try to save to Supabase if configured
-      if (supabase) {
-        const { error: supabaseError } = await supabase
-          .from("curriculum_sample_requests")
-          .insert([
-            {
-              first_name: data.firstName,
-              last_name: data.lastName,
-              email: data.email,
-              created_at: new Date().toISOString(),
-            },
-          ]);
+      const response = await fetch("/api/curriculum-sample", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          firstName: data.firstName,
+          lastName: data.lastName,
+          email: data.email,
+        }),
+      });
 
-        if (supabaseError) {
-          // Log error but don't block the user from downloading
-          console.error("Supabase error:", supabaseError.message);
-        }
-      } else {
-        console.log("Form submitted (Supabase not configured):", data);
+      if (!response.ok) {
+        const result = await response.json();
+        console.error("API error:", result.error);
       }
 
       // Always show success so user can download
