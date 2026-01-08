@@ -10,6 +10,7 @@ interface Feature {
   description: string;
   imagePlaceholder: string;
   customImage?: string;
+  customVideo?: string;
   customBgColor?: string;
   overlayImage?: string;
 }
@@ -20,7 +21,7 @@ const features: Feature[] = [
     description:
       "Compare 220,000+ college and professional programs side-by-side with personalized ROI projections.",
     imagePlaceholder: "Recommendation Engine / ROI Dashboard",
-    customImage: "/feature-assets/personalized-roi.png",
+    customImage: "/feature-assets/personalized-roi.webp",
     customBgColor: "#D8FBDB",
   },
   {
@@ -28,14 +29,14 @@ const features: Feature[] = [
     description:
       "Meet students where they are with an engaging, video-first discovery experience. Willow offers a library of short-form, \"day-in-the-life\" social media videos that bring careers to life. Combined with psychometric assessments, students can explore high-growth, high-paying roles through the eyes of real professionals rather than just reading static job descriptions.",
     imagePlaceholder: "Scripted Lesson / Curriculum View",
-    customImage: "/feature-assets/short-videos.gif",
+    customVideo: "/feature-assets/short-videos.mp4",
   },
   {
     title: "Alma: Scaling personalized guidance",
     description:
       "Bridge the gap between student needs and counselor capacity with Alma, our AI-native career coach. By automating routine career exploration and data-driven program matching, Alma provides every student with 24/7 personalized guidance. This scalable support ensures no student falls through the cracks while freeing your staff to focus on high-impact, 1-on-1 interventions.",
     imagePlaceholder: "Alma AI Chat Interface",
-    customImage: "/feature-assets/alma.png",
+    customImage: "/feature-assets/alma.webp",
     overlayImage: "/feature-assets/alma-convo.png",
   },
 ];
@@ -82,9 +83,18 @@ function FeatureBlock({
         reverse ? "lg:flex-row-reverse" : ""
       }`}
     >
-      {/* Image Placeholder */}
+      {/* Image/Video Placeholder */}
       <div className={`${reverse ? "lg:order-2" : ""}`}>
-        {feature.customImage ? (
+        {feature.customVideo ? (
+          <video
+            src={feature.customVideo}
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-auto block rounded-[12px]"
+          />
+        ) : feature.customImage ? (
           <div
             className={`relative w-full overflow-visible rounded-[12px] ${feature.customBgColor ? "py-8 pl-8 lg:py-12 lg:pl-12" : ""}`}
             style={{
