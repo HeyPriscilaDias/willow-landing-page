@@ -23,27 +23,28 @@
   }
 
   h1 {
-    @apply font-heading font-medium text-[64px] leading-tight;
+    @apply font-heading font-medium;
+    line-height: 1.2 !important;
   }
 
   h2 {
-    @apply font-heading font-medium text-[52px] leading-tight;
+    @apply font-heading font-medium text-[52px] leading-[1.2];
   }
 
   h3 {
-    @apply font-heading font-medium text-[40px] leading-tight;
+    @apply font-heading font-medium text-[40px] leading-[1.2];
   }
 
   h4 {
-    @apply font-heading font-medium text-[28px] leading-tight;
+    @apply font-heading font-medium text-[28px] leading-[1.3];
   }
 
   h5 {
-    @apply font-heading font-medium text-2xl leading-tight;
+    @apply font-heading font-medium text-2xl leading-[1.3];
   }
 
   h6 {
-    @apply font-heading font-medium text-xl leading-tight;
+    @apply font-heading font-medium text-xl leading-[1.3];
   }
 
   p, li, span {

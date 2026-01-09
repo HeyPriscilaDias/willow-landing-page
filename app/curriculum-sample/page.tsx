@@ -68,7 +68,7 @@ export default function CurriculumSamplePage() {
             <div className="space-y-8">
               {/* Main Heading */}
               <div className="space-y-6">
-                <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-medium text-heading leading-tight">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl text-heading">
                   Get your free curriculum sample
                 </h1>
                 <p className="text-lg text-secondary leading-relaxed">

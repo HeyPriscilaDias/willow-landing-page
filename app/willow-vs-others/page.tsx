@@ -51,7 +51,7 @@ function HeroSection() {
           transition={{ duration: 0.6 }}
           className="max-w-4xl"
         >
-          <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-medium text-heading mb-6 leading-tight">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl text-heading mb-6">
             From graduation compliance to economic mobility
           </h1>
           <p className="text-secondary text-lg md:text-xl leading-relaxed max-w-3xl">

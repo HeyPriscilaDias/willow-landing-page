@@ -347,7 +347,7 @@ export function Hero() {
         transition={{ duration: 0.6 }}
         className="relative z-10 text-center px-5 md:px-10 max-w-4xl mx-auto"
       >
-        <h1 className="font-heading text-[32px] md:text-5xl lg:text-[60px] font-medium text-heading mb-6 leading-tight">
+        <h1 className="text-[32px] md:text-5xl lg:text-[60px] text-heading mb-6">
           Career & postsecondary readiness built for economic mobility
         </h1>
         <p className="text-lg text-secondary mb-8 max-w-2xl mx-auto">

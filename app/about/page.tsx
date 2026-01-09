@@ -36,7 +36,7 @@ export default function AboutPage() {
               animate={heroInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
               transition={{ duration: 0.6 }}
             >
-              <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-medium text-heading mb-6 leading-tight">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl text-heading mb-6">
                 Why we&apos;re building Willow
               </h1>
               <p className="text-secondary text-base leading-relaxed">
