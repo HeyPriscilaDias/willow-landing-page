@@ -21,7 +21,7 @@ const features: Feature[] = [
     title: "Fully scripted, ready-to-teach lessons",
     description:
       "Every lesson is scripted bell to bell for teachers and counselors. Willow includes timers, slide decks, graphic organizers, and checks for understanding, making implementation seamless.",
-    image: "/curriculum-page-assets/img-2-willow-curriculum-script-slide-deck.avif",
+    image: "/curriculum-page-assets/willow-curriculum-script-slide-deck.avif",
   },
   {
     title: "Dynamic student portfolios",
