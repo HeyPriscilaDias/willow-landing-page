@@ -39,8 +39,7 @@ const features: Feature[] = [
     title: "Durable skills every day",
     description:
       "Willow's curriculum is mapped to the nationally recognized Durable Skills framework, ensuring students develop core competencies like communication, collaboration, critical thinking, leadership, and resilience.",
-    image: "/curriculum-page-assets/durable-skills.avif",
-    imageScale: 0.7,
+    image: "/curriculum-page-assets/pathsmith-durable-skills-wheel.avif",
   },
 ];
 
