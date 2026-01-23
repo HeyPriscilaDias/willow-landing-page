@@ -41,7 +41,7 @@ export function HowItWorks() {
           <p className="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed">
             We know your team is at capacity. That&apos;s why we don&apos;t just give you a login; we provide a{" "}
             <span className="relative inline-block font-semibold text-gray-900">
-              ready to deliver curriculum
+              coherent, flexible curriculum
               <svg className="absolute bottom-0 left-0 w-full h-2" viewBox="0 0 200 8" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
                 <path d="M2 5c40-1 80 1 120 0s50 1 76 0" stroke="currentColor" strokeWidth="1" strokeLinecap="round" fill="none" />
               </svg>

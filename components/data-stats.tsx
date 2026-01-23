@@ -20,13 +20,13 @@ const stats: Stat[] = [
     number: "240+",
     label: "flexible, skill-aligned lessons",
     subtext:
-      "Willow provides districts with a comprehensive, AI-native curriculum designed to help students navigate this changing landscape.",
+      "Willow provides districts with a comprehensive, coherent, AI-native curriculum and high quality instructional materials.",
   },
   {
     number: "50%",
     label: "higher enrollment in high-ROI programs",
     subtext:
-      "Students on Willow's data-driven guidance were 50% more likely to choose and enroll in high-quality, high-ROI postsecondary programs, setting them on a direct path toward economic mobility.",
+      "Students in a Willow pilot were 50% more likely to choose high-quality, positive ROI postsecondary programs, setting them on a direct path toward economic mobility.",
   },
 ];
 

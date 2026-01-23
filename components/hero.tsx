@@ -351,7 +351,7 @@ export function Hero() {
           Career & postsecondary readiness built for economic mobility
         </h1>
         <p className="text-lg text-secondary mb-8 max-w-2xl mx-auto">
-          A curriculum and platform to purpose, AI fluency, and postsecondary
+          A curriculum and platform for purpose, AI fluency, and postsecondary
           success for your students.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
