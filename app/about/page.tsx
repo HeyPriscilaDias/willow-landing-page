@@ -272,7 +272,9 @@ export default function AboutPage() {
                   It&apos;s working. In our early pilots, students using Willow were 50% more likely to choose high-ROI programs compared to their peers. We&apos;re currently partnering with some of the most innovative schools systems in the country like Achievement First and DSST Public Schools to prove that when students have better information, they make better lives.
                 </p>
                 <p>
-                  Join us in building a better map for the next generation. Onwards,
+                  Join us in building a better map for the next generation.
+                  <br /><br />
+                  Onwards,
                 </p>
               </div>
               <Image
