@@ -10,59 +10,67 @@ interface FAQ {
 
 const faqs: FAQ[] = [
   {
-    question: "What makes this product truly different from all the other college and career planning tools out there?",
+    question:
+      "What makes this product truly different from all the other college and career planning tools out there?",
     answer:
-      "I've spent most of my career in schools, and I've seen firsthand how \"prestige\" often wins over \"quality\" in the college search. Most tools focus on where a student can get in. Willow focuses on where they will thrive and actually finish. We are the only platform that prioritizes ROI transparency across more than 220,000 programs—including professional pathways like apprenticeships and certifications that other tools often treat as an afterthought.",
+      "There are three things that make us different:\n\n1. Curriculum > Tech: We are a high-quality curriculum first and a platform second, because schools aren't great at using platforms to drive change and results effectively for all of their students. But they are great at having committed educators use great curriculum.\n\n2. All students: We serve all students, not just the ones who are going to college. We are the only platform on the market where you can compare a college program side by side with a high-quality professional program or a non-accredited degree pathway.\n\n3. Quality: We are honest with students and educators. We tell them which programs are working for students like them and which aren't. Throughout the Willow experience, we are constantly nudging students to higher-quality options where they will achieve economic mobility.",
   },
   {
-    question: "We already have a lot of tools. How is Willow different?",
+    question:
+      "We already have a lot of tools and platforms. How is Willow different?",
     answer:
-      "My wife Liz often reminds me that adding more \"stuff\" to a doctor's plate doesn't necessarily make the patient healthier; it just makes the doctor more tired. We didn't build Willow to be \"one more thing\" for counselors. We built it to be the \"one thing\" that actually works. Unlike legacy platforms that feel like a compliance checklist, Willow is mobile-first and built for student engagement. We simplify state-specific ICAP reporting so you can stop chasing paperwork and start chasing outcomes.",
+      "Platform fatigue is real. We design our platform with students and educators we serve. Every time we build a new feature, we're asking them for feedback.\n\nI used to be a school leader. I've had the experience of buying EdTech tools and being disappointed with how clunky they are, how hard they are to use, how ineffective they are, and just how much training and PD is required to make them successful.\n\nI refuse to bring another subpar EdTech tool into this world, so we are highly aware and cognizant of that as we are building Willow.",
   },
   {
-    question: "Does this program only focus on students going to college, or does it help students who want other career paths?",
+    question:
+      "Does this program only focus on students going to college, or does it help students who want other career paths?",
     answer:
-      "This is personal for me. For too long, we've framed this as \"college vs. workforce,\" but the reality is it's about \"college and professional pathways\". Every student deserves high-quality guidance. Whether a student is aiming for a four-year degree, a debt-free certification, or a high-paying apprenticeship, Willow provides the same level of data and ROI analysis. We believe that quality matters more than the name of the credential.",
+      "We are built to serve all students, not just the ones going to college.\n\nMore than 40 percent of students do not enroll in college right after high school. They deserve high-quality guidance towards a next step that leads to economic mobility.\n\nFor too long, this has been framed as college versus workforce. We see it as college and professional pathways. Whether a student is pursuing a four-year degree, a debt free certification, or a high-quality apprenticeship, Willow strives to provide the same level of data, outcomes insight, and ROI transparency so every student can make an informed choice.",
   },
   {
     question: "How does Willow actually improve key student results?",
     answer:
-      "We believe that when you give students better data, they make better choices. It's not just a theory—it's working. In our early work with partners like DSST Public Schools, students using Willow were 50% more likely to choose high-ROI programs. By helping students avoid \"bad investments\" (high debt, low outcomes), we are directly impacting their long-term economic mobility.",
+      "Our north star is clear: students enroll in a high-quality next step after high school that leads to economic mobility.\n\nWe define quality in simple terms:\n1) A program should have more than a 50 percent completion rate\n2) A positive projected ROI ten years out\n\nWhen students see that level of transparency, they make better choices. In early work with partners such as DSST Public Schools, students using Willow were 50 percent more likely to choose high-quality programs.\n\nBut enrollment is only part of it. Research from the Charter School Growth Fund shows that students who have nine meaningful career experiences in high school are far more likely to thrive and earn higher wages, regardless of the pathway they choose. Our curriculum is designed to deliver those experiences, help students build a strong postsecondary plan, and develop the adulting and AI fluency skills they need to flourish.\n\nYou can't be what you can't see. Willow helps students see high-quality options and act on them.",
   },
   {
-    question: "How does the AI make results 10 times better than what we do now?",
+    question:
+      "How does the AI make results 10 times better than what we do now?",
     answer:
-      "Think about the typical counselor's caseload. It's impossible to give every student 24/7 personalized attention. That's where Alma, our AI career coach, comes in. Alma doesn't just answer questions; she provides personalized guidance and automated check-ins based on each student's unique goals. Our team includes experts like Juan, who helped design Khan Academy's AI tools, so we're bringing that same level of \"cutting-edge\" support to the postsecondary maze.",
+      "To be honest, it doesn't... yet. That is the vision, and we are moving aggressively in that direction.\n\nToday, AI increases the level of personalized support each student receives. The typical counselor cannot provide ongoing, individualized guidance to every student. Alma, our AI career coach, helps expand that capacity through regular check-ins, personalized nudges, and guidance aligned with each student's goals.\n\nIt is not magic. It is leverage. Over time, that leverage helps improve outcomes at scale.",
   },
   {
     question: "What grade levels does Willow serve?",
     answer:
-      "While the \"stress\" of the transition hits hardest in 12th grade, we believe the planning must start much earlier. Willow is primarily designed for high school students (grades 9-12), helping them build a digital portfolio and a meaningful plan over their entire high school career.",
+      "Willow is primarily designed for high school students in grades 9-12. The stress of the transition often hits in senior year, but strong planning needs to start much earlier. Our curriculum helps students build a digital portfolio and a meaningful plan across their entire high school journey.\n\nWe are also beginning to pilot with middle schools. If you are seeing challenges or opportunities at the middle school level, we would welcome a conversation. We are actively bringing on middle school partners now and would love to have you among them.",
   },
   {
-    question: "What level of staff involvement does Willow require, and how can we set our team up for success?",
+    question:
+      "What level of staff involvement does Willow require, and how can we set our team up for success?",
     answer:
-      "We know counselors are overwhelmed. Willow is designed to be a \"force multiplier\" for your team, not a burden. We recommend identifying a small group of \"champions\"—usually counselors or career advisors—who can lead the rollout. Because the platform automates so much of the progress tracking and reporting, it actually frees up staff time to have deeper, more human conversations with students.",
+      "It is important to have one dedicated leader for this work. Clear ownership matters. Beyond that, we recommend identifying a small group of champions, often counselors or career advisors, who can support the rollout and model strong implementation.\n\nWe know counselors are stretched thin. Willow is designed to be a force multiplier, not an added burden. Because the platform automates progress tracking and reporting, it helps free up staff time for deeper, more meaningful conversations with students.",
   },
   {
-    question: "How does Willow fit into our existing schedule and programming?",
+    question:
+      "How does Willow fit into our existing schedule and programming?",
     answer:
-      "We've built Willow to be flexible. Whether you have a dedicated \"Advisory\" period, a CTE block, or you integrate it into senior seminars, the platform's mobile-first design means students can engage with it whenever and wherever they are.",
+      "We've built Willow to be flexible. Whether you have a dedicated \"Advisory\" period, a CTE block, or integrate it into senior seminars, Willow is designed to enable students to engage with it whenever and wherever they are.",
   },
   {
     question: "What is the setup process like?",
     answer:
-      "We aim for \"simple and meaningful\". The process starts with a kickoff to align Willow with your district's specific goals and ICAP requirements. We handle the heavy lifting of data integration and program mapping so your team can focus on the students.",
+      "We aim for simple and meaningful.\n\nThe process starts with a kickoff to align Willow with your district's goals and graduation or career planning requirements. We handle the heavy lifting around data integration and program mapping so your team can stay focused on students.\n\nFrom there, we provide the professional development and coaching needed for success. We can do it for you, do it with you, or provide turnkey training so you can lead it yourself for your team.",
   },
   {
-    question: "What kind of ongoing support will we get to make sure the program succeeds?",
+    question:
+      "What kind of ongoing support will we get to make sure the program succeeds?",
     answer:
       "We don't just \"hand over the keys\" and walk away. We provide ongoing support including automated check-ins for students and robust administrative reporting for your team. You'll have access to our team to ensure you're meeting state compliance and, more importantly, seeing the student growth you expect.",
   },
   {
-    question: "What technology or materials do we need to implement Willow?",
+    question:
+      "What technology or materials do we need to implement Willow?",
     answer:
-      "Willow is a web-based, mobile-first platform, so there's no special hardware required. As long as students have access to a smartphone, tablet, or laptop, they have everything they need to start exploring their future.",
+      "Willow is a web-based platform, so there's no software required. As long as students have access to a tablet or laptop, they have everything they need to start exploring their future.",
   },
 ];
 
@@ -162,7 +170,7 @@ function FAQItem({
             transition={{ duration: 0.3, ease: "easeInOut" }}
             className="overflow-hidden"
           >
-            <div className="pt-4 text-base text-secondary leading-relaxed pr-10">
+            <div className="pt-4 text-base text-secondary leading-relaxed pr-10 whitespace-pre-line">
               {faq.answer}
             </div>
           </motion.div>
