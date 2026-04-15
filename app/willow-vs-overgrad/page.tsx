@@ -273,7 +273,7 @@ export default function WillowVsOvergrad() {
             description={section.description}
             willowCaption={section.willowCaption}
             overgradCaption={section.overgradCaption}
-            reversed={i % 2 === 1}
+            reversed={false}
             {...(i === 1 && {
               willowContent: (
                 <div className="relative aspect-video rounded-card overflow-hidden bg-[#062F29] p-6">
@@ -296,31 +296,33 @@ export default function WillowVsOvergrad() {
                 </div>
               ),
             })}
-            {...(i === 1 && {
+            {...(i === 2 && {
               overgradContent: (
-                <Image
-                  src="/vs-overgrad/overgrad-basic-support.png"
-                  alt="Overgrad basic AI chat and support center"
-                  width={1200}
-                  height={800}
-                  className="w-full h-auto rounded-card"
-                />
+                <div className="relative aspect-video rounded-card overflow-hidden bg-[#D1D5DB] flex items-center justify-center p-6">
+                  <Image
+                    src="/vs-overgrad/overgrad-basic-support.png"
+                    alt="Overgrad basic AI chat and support center"
+                    width={800}
+                    height={600}
+                    className="w-auto max-h-full rounded-md drop-shadow-lg"
+                  />
+                </div>
               ),
               willowContent: (
-                <div className="flex flex-col gap-3">
+                <div className="relative aspect-video rounded-card overflow-hidden bg-[#062F29] flex items-center justify-center gap-4 p-6">
                   <Image
                     src="/vs-overgrad/willow-alma-student-experience-1.png"
                     alt="Willow Alma AI career coach — student experience"
-                    width={1200}
+                    width={600}
                     height={800}
-                    className="w-full h-auto rounded-card"
+                    className="w-auto max-h-full rounded-md drop-shadow-lg"
                   />
                   <Image
                     src="/vs-overgrad/willow-alma-student-experience-2.png"
                     alt="Willow Alma AI career coach — personalized guidance"
-                    width={1200}
+                    width={600}
                     height={800}
-                    className="w-full h-auto rounded-card"
+                    className="w-auto max-h-full rounded-md drop-shadow-lg"
                   />
                 </div>
               ),
