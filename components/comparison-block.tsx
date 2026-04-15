@@ -48,7 +48,9 @@ export function ComparisonBlock({
           )}
         </div>
       )}
-      <p className="text-sm text-secondary">{overgradCaption}</p>
+      {overgradCaption && (
+        <p className="text-sm text-secondary">{overgradCaption}</p>
+      )}
     </div>
   );
 
@@ -70,7 +72,9 @@ export function ComparisonBlock({
           )}
         </div>
       )}
-      <p className="text-sm text-secondary">{willowCaption}</p>
+      {willowCaption && (
+        <p className="text-sm text-secondary">{willowCaption}</p>
+      )}
     </div>
   );
 

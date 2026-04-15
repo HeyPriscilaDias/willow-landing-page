@@ -327,6 +327,118 @@ export default function WillowVsOvergrad() {
                 </div>
               ),
             })}
+            {...(i === 4 && {
+              overgradCaption: "",
+              willowCaption: "",
+              overgradContent: (
+                <div className="flex flex-col gap-8">
+                  <div className="flex flex-col gap-3">
+                    <div className="relative aspect-video rounded-card overflow-hidden bg-[#D1D5DB] p-6 flex items-center justify-center">
+                      <Image
+                        src="/vs-overgrad/overgrad-college-search.png"
+                        alt="Overgrad college search with institutional completion rates"
+                        width={1200}
+                        height={800}
+                        className="w-full h-auto rounded-md"
+                      />
+                    </div>
+                    <p className="text-sm text-secondary">
+                      Overgrad: College-focused search with institutional completion rates.
+                    </p>
+                  </div>
+                  <div className="flex flex-col gap-3">
+                    <div className="relative aspect-video rounded-card overflow-hidden bg-[#D1D5DB] p-6 flex items-center justify-center">
+                      <Image
+                        src="/vs-overgrad/overgrad-college-details.png"
+                        alt="Overgrad college details page"
+                        width={1200}
+                        height={800}
+                        className="w-full h-auto rounded-md"
+                      />
+                    </div>
+                    <p className="text-sm text-secondary">
+                      Overgrad: College-focused search with institutional completion rates.
+                    </p>
+                  </div>
+                </div>
+              ),
+              willowContent: (
+                <div className="flex flex-col gap-8">
+                  <div className="flex flex-col gap-3">
+                    <div className="relative aspect-video rounded-card overflow-hidden bg-[#062F29] p-6">
+                      <div className="relative w-full h-full">
+                        <Image
+                          src="/vs-overgrad/willow-school-exploration.png"
+                          alt="Willow school exploration with personalized ROI"
+                          width={1200}
+                          height={700}
+                          className="absolute top-0 left-0 w-[75%] h-auto rounded-md drop-shadow-lg"
+                        />
+                        <Image
+                          src="/vs-overgrad/professional-program-card.png"
+                          alt="Willow professional program card with ROI"
+                          width={400}
+                          height={500}
+                          className="absolute bottom-0 right-0 w-[30%] h-auto rounded-md drop-shadow-2xl z-10"
+                        />
+                      </div>
+                    </div>
+                    <p className="text-sm text-secondary">
+                      Willow: College + professional programs with personalized, program-level ROI.
+                    </p>
+                  </div>
+                  <div className="flex flex-col gap-3">
+                    <div className="relative aspect-video rounded-card overflow-hidden bg-[#062F29] p-6 flex items-start justify-center">
+                      <Image
+                        src="/vs-overgrad/willow-college-details.png"
+                        alt="Willow college details page"
+                        width={1200}
+                        height={800}
+                        className="w-full h-auto rounded-md"
+                      />
+                    </div>
+                    <p className="text-sm text-secondary">
+                      Willow: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                  </div>
+                </div>
+              ),
+            })}
+            {...(i === 3 && {
+              overgradContent: (
+                <div className="relative aspect-video rounded-card overflow-hidden bg-[#D1D5DB] flex items-center justify-center p-6">
+                  <Image
+                    src="/vs-overgrad/overgrad-career-exploration.png"
+                    alt="Overgrad text-based career clusters from O*NET"
+                    width={1200}
+                    height={800}
+                    className="w-auto max-h-full rounded-md drop-shadow-lg"
+                  />
+                </div>
+              ),
+              willowContent: (
+                <div className="relative aspect-video rounded-card overflow-hidden bg-[#062F29] p-6">
+                  <div className="relative w-full h-full">
+                    {/* Video carousel — top right, bleeds into padding to get clipped */}
+                    <Image
+                      src="/vs-overgrad/video-based-career-exploration-1.png"
+                      alt="Willow short-form career video carousel"
+                      width={800}
+                      height={500}
+                      className="absolute -top-6 -right-6 w-[55%] h-auto rounded-md drop-shadow-lg z-20"
+                    />
+                    {/* Career exploration page — bottom left, behind */}
+                    <Image
+                      src="/vs-overgrad/video-based-career-exploration-3.png"
+                      alt="Willow career exploration page with video cards"
+                      width={1200}
+                      height={700}
+                      className="absolute bottom-0 -left-1 w-[90%] h-auto rounded-md drop-shadow-xl z-10 origin-bottom-left"
+                    />
+                  </div>
+                </div>
+              ),
+            })}
           />
         ))}
         <FinalCTA />
