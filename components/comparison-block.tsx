@@ -13,6 +13,7 @@ interface ComparisonBlockProps {
   overgradImage?: string;
   willowContent?: React.ReactNode;
   overgradContent?: React.ReactNode;
+  fullWidthContent?: React.ReactNode;
   reversed?: boolean;
 }
 
@@ -25,6 +26,7 @@ export function ComparisonBlock({
   overgradImage,
   willowContent,
   overgradContent,
+  fullWidthContent,
   reversed = false,
 }: ComparisonBlockProps) {
   const ref = useRef(null);
@@ -92,19 +94,23 @@ export function ComparisonBlock({
             <p className="text-secondary text-lg">{description}</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
-            {reversed ? (
-              <>
-                {willowPanel}
-                {overgradPanel}
-              </>
-            ) : (
-              <>
-                {overgradPanel}
-                {willowPanel}
-              </>
-            )}
-          </div>
+          {fullWidthContent ? (
+            <div>{fullWidthContent}</div>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
+              {reversed ? (
+                <>
+                  {willowPanel}
+                  {overgradPanel}
+                </>
+              ) : (
+                <>
+                  {overgradPanel}
+                  {willowPanel}
+                </>
+              )}
+            </div>
+          )}
         </motion.div>
       </div>
     </section>

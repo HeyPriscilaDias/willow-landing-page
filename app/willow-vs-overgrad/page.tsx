@@ -9,6 +9,7 @@ import { FinalCTA } from "@/components/final-cta";
 import { ComparisonBlock } from "@/components/comparison-block";
 import { CheckCircle } from "phosphor-react";
 import { WillowLogo } from "@/components/willow-logo";
+import { ImageComparisonSlider } from "@/components/image-comparison-slider";
 
 /* ─── Comparison table data ─── */
 
@@ -401,6 +402,32 @@ export default function WillowVsOvergrad() {
                       Willow: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     </p>
                   </div>
+                </div>
+              ),
+            })}
+            {...(i === 5 && {
+              overgradCaption: "",
+              willowCaption: "",
+              fullWidthContent: (
+                <div className="flex flex-col gap-8">
+                  <ImageComparisonSlider
+                    leftImage="/vs-overgrad/overgrad-app-tracking-1.png"
+                    rightImage="/vs-overgrad/willow-app-tracking-1.png"
+                    leftAlt="Overgrad application tracking — student list view"
+                    rightAlt="Willow application tracking — dashboard view"
+                  />
+                  <ImageComparisonSlider
+                    leftImage="/vs-overgrad/overgrad-app-tracking-2.png"
+                    rightImage="/vs-overgrad/willow-app-tracking-1.png"
+                    leftAlt="Overgrad application tracking — applications table"
+                    rightAlt="Willow application tracking — prioritized view"
+                  />
+                  <ImageComparisonSlider
+                    leftImage="/vs-overgrad/overgrad-app-tracking-3.png"
+                    rightImage="/vs-overgrad/willow-app-tracking-1.png"
+                    leftAlt="Overgrad application tracking — district view"
+                    rightAlt="Willow application tracking — action-oriented view"
+                  />
                 </div>
               ),
             })}
