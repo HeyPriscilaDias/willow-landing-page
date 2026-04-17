@@ -5,7 +5,7 @@ const items = [
   },
   {
     title: "Curriculum & platform",
-    body: "The Opportunity Advising hybrid advising platform and curriculum at no cost during the cohort.",
+    body: "The Opportunity Advising platform and curriculum at no cost during the cohort. Hybrid advising — human-led, AI in support of the advisor.",
   },
   {
     title: "Implementation support",

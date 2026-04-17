@@ -10,7 +10,7 @@ const faqs = [
   },
   {
     q: "Do we need to adopt Willow's platform to participate?",
-    a: "Cohort districts use the Opportunity Advising hybrid advising platform and curriculum during the co-build period. Both are included at no additional cost. We're looking for districts who want to build with us, and the platform is one of the things we're refining together.",
+    a: "Cohort districts use the Opportunity Advising platform and curriculum during the co-build period — hybrid advising, human-led and AI-supported. Both are included at no additional cost. We're looking for districts who want to build with us, and the platform is one of the things we're refining together.",
   },
   {
     q: "Is $50,000 enough to fund this work?",

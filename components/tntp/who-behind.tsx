@@ -6,7 +6,7 @@ const partners = [
   },
   {
     name: "Willow Education",
-    body: "Building the leading platform for career-connected learning and postsecondary readiness. Human-led, AI-enabled hybrid advising — curriculum plus platform plus practice. Founded by James Cryan, former founder and CEO of Rocky Mountain Prep.",
+    body: "Building the leading platform for career-connected learning and postsecondary readiness. Hybrid advising — curriculum, platform, and practice, with AI in support of the advisor. Founded by James Cryan, former founder and CEO of Rocky Mountain Prep.",
     chips: ["Platform", "Curriculum", "Practice"],
   },
   {

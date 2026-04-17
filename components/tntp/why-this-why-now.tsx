@@ -13,13 +13,13 @@ export function WhyThisWhyNow() {
         {/* Display stat + pull quote */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-10 mb-16 md:mb-24 items-start">
           <div className="md:col-span-5">
-            <div className="font-heading font-medium leading-[0.88] tracking-[-0.04em] text-[120px] md:text-[160px] lg:text-[200px] text-[#0A0A0A]">
-              38
+            <div className="font-heading font-medium leading-[0.88] tracking-[-0.04em] text-[96px] md:text-[128px] lg:text-[160px] text-[#0A0A0A]">
+              38 minutes
               <span className="text-[#B45309]">.</span>
             </div>
-            <p className="mt-5 text-base md:text-lg text-[#2D2D2D] max-w-[28ch] leading-[1.45]">
-              Minutes of real advising the average American high schooler
-              receives across a full school year.
+            <p className="mt-5 text-base md:text-lg text-[#2D2D2D] max-w-[30ch] leading-[1.45]">
+              The average amount of real advising a student receives in a year
+              of high school.
             </p>
           </div>
 

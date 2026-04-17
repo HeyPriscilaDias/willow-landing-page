@@ -4,10 +4,6 @@ const items = [
     body: "At least 30 minutes once a week, treated as core time. Not a catch-all, not a study hall, not a prep period for teachers.",
   },
   {
-    title: "Every student known by multiple trusted adults.",
-    body: "Belonging is a structural property of the school, not a relationship lottery. Every student has an advisor who knows them well — and at least one more adult who can speak to their strengths, story, and aspirations.",
-  },
-  {
     title: "A high-quality, sequenced, shared curriculum.",
     body: "Every advisor works from the same scope and sequence. Purpose-building, career exploration, and postsecondary planning show up on a schedule.",
   },
@@ -51,7 +47,7 @@ export function NonNegotiables() {
                 The non-negotiables.
               </h2>
               <p className="mt-6 text-[15px] md:text-base text-[#2D2D2D] leading-[1.6] max-w-[38ch]">
-                Every cohort district commits to these six. They come straight
+                Every cohort district commits to these five. They come straight
                 from the research. If any is missing, it isn&rsquo;t
                 Opportunity Advising. It&rsquo;s a rebranded homeroom.
               </p>

@@ -372,7 +372,7 @@ export function Application() {
             <SectionHeader num="04" title="Commitments" />
             <div className="flex flex-col gap-4">
               {[
-                "We commit to the non-negotiables of Opportunity Advising.",
+                "We commit to the five non-negotiables of Opportunity Advising.",
                 "We will send a team of two to three district leaders to both in-person convenings (fall 2026 and spring 2027).",
                 "We will craft a plan to scale Opportunity Advising to all middle and high school students by year two.",
               ].map((c, i) => (

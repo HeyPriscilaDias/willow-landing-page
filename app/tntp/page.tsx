@@ -4,9 +4,16 @@ import { TntpFooter } from "@/components/tntp/footer";
 import { Hero } from "@/components/tntp/hero";
 import { WhyThisWhyNow } from "@/components/tntp/why-this-why-now";
 import { WhatItIs } from "@/components/tntp/what-it-is";
+import { WhatStudentsBuild } from "@/components/tntp/what-students-build";
 import { WhyDifferent } from "@/components/tntp/why-different";
-import { Testimonials } from "@/components/tntp/testimonials";
+import {
+  InlineTestimonial,
+  testimonialVinny,
+  testimonialWauneta,
+  testimonialTim,
+} from "@/components/tntp/testimonials";
 import { CoBuild } from "@/components/tntp/co-build";
+import { LearningAgenda } from "@/components/tntp/learning-agenda";
 import { DistrictReceives } from "@/components/tntp/district-receives";
 import { Timeline } from "@/components/tntp/timeline";
 import { NonNegotiables } from "@/components/tntp/non-negotiables";
@@ -45,13 +52,17 @@ export default function OpportunityAdvisingPage() {
         <Hero />
         <WhyThisWhyNow />
         <WhatItIs />
+        <WhatStudentsBuild />
         <WhyDifferent />
-        <Testimonials />
+        <InlineTestimonial {...testimonialVinny} />
         <CoBuild />
+        <LearningAgenda />
         <DistrictReceives />
+        <InlineTestimonial {...testimonialWauneta} tone="alt" />
         <Timeline />
         <NonNegotiables />
         <WhoBehind />
+        <InlineTestimonial {...testimonialTim} />
         <Application />
         <Faq />
         <FinalCta />

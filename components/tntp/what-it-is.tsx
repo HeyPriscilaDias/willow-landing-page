@@ -52,8 +52,15 @@ export function WhatItIs() {
             </p>
             <p>
               Grounded in TNTP&rsquo;s Paths of Opportunity and Opportunity
-              Makers research. Delivered through a hybrid advising platform
-              that unlocks the human relationship rather than replacing it.
+              Makers research. TNTP&rsquo;s Opportunity Makers research
+              identified 1,300 trajectory-changing schools where students who
+              start behind catch up at dramatically higher rates. All three
+              share the same qualities: belonging, coherence, and consistency.
+              Advisory is where those three get built, or don&rsquo;t.
+            </p>
+            <p>
+              Delivered through a hybrid advising platform that unlocks the
+              human relationship rather than replacing it.
             </p>
           </div>
         </div>
