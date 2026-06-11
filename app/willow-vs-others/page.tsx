@@ -166,7 +166,7 @@ function ComparisonTableSection() {
         },
         {
           status: "check",
-          note: "Multi-pathway via SkillUp partnership; no program-level ROI projections",
+          note: "",
         },
       ],
     },
