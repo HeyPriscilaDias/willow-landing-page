@@ -213,7 +213,7 @@ function ComparisonTableSection() {
       ],
     },
     {
-      name: "Comprehensive curriculum",
+      name: "Comprehensive, Coherent Curriculum",
       subtitle: "",
       values: [
         {
