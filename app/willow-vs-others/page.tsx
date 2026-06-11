@@ -165,7 +165,7 @@ function ComparisonTableSection() {
           note: "College only, but districts can add industry partners",
         },
         {
-          status: "partial",
+          status: "check",
           note: "Multi-pathway via SkillUp partnership; no program-level ROI projections",
         },
       ],
