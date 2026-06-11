@@ -138,7 +138,7 @@ function ComparisonTableSection() {
     },
     {
       name: "Quality indicators",
-      subtitle: "",
+      subtitle: "Personalized ROI & Completion Rates?",
       values: [
         { status: "check", note: "Personalized, program-level ROI projections" },
         { status: "x", note: "" },
