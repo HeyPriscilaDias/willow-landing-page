@@ -172,7 +172,7 @@ function ComparisonTableSection() {
     },
     {
       name: "Teaches AI fluency",
-      subtitle: "",
+      subtitle: "Literacy as the rubric",
       values: [
         {
           status: "check",
